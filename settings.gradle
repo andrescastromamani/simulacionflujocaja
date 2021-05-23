@@ -1,0 +1,2 @@
+rootProject.name = "simulacionflujocaja"
+include ':app'
