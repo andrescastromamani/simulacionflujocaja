@@ -8,7 +8,9 @@ import androidx.core.view.GravityCompat
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var toogle: ActionBarDrawerToggle
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,26 +25,31 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_inputs->{
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.fragmentContainerView,InputsFragment())
+                        commit()
                     }
                 }
                 R.id.nav_sueldos->{
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.fragmentContainerView,SueldosFragment())
+                        commit()
                     }
                 }
                 R.id.nav_iva->{
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.fragmentContainerView,IvaFragment())
+                        commit()
                     }
                 }
                 R.id.nav_it->{
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.fragmentContainerView,ItFragment())
+                        commit()
                     }
                 }
                 R.id.nav_iue->{
                     supportFragmentManager.beginTransaction().apply {
                         replace(R.id.fragmentContainerView,IueFragment())
+                        commit()
                     }
                 }
             }
