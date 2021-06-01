@@ -64,11 +64,13 @@
                         android:layout_weight="1" />
 
                     <TextView
+
                         android:id="@+id/tvPrecio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Precio/ud(bs)" />
+                        android:text="Precio/ud(bs)"
+                        />
 
                     <Space
                         android:layout_width="17dp"
@@ -150,6 +152,7 @@
                     android:orientation="horizontal">
 
                     <EditText
+                        android:id="@+id/ptMesH1"
                         android:layout_width="105dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -164,11 +167,12 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/ptVentasH1"
                         android:layout_width="106dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="number" />
 
                     <Space
                         android:layout_width="17dp"
@@ -176,24 +180,25 @@
                         android:layout_weight="1" />
 
                     <EditText
+
+                        android:id="@+id/ptPrecioUdh1"
+
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
 
                     <Space
                         android:layout_width="17dp"
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName5"
-                        android:layout_width="88dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="textPersonName" />
+                    <TextView
+                        android:id="@+id/tvIngresoM1"
+                        android:layout_width="106dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1" />
 
                     <Space
                         android:layout_width="17dp"
@@ -268,6 +273,7 @@
                     android:orientation="horizontal">
 
                     <EditText
+                        android:id="@+id/ptMesH2"
                         android:layout_width="105dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -282,11 +288,12 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/ptVentasH2"
                         android:layout_width="106dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="number" />
 
                     <Space
                         android:layout_width="17dp"
@@ -294,23 +301,23 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/ptPrecioUdh2"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
 
                     <Space
                         android:layout_width="17dp"
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
-                        android:layout_width="88dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="textPersonName" />
+                    <TextView
+                        android:id="@+id/tvIngresoM2"
+                        android:layout_width="106dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1" />
 
                     <Space
                         android:layout_width="17dp"
@@ -382,6 +389,7 @@
                     android:orientation="horizontal">
 
                     <EditText
+                        android:id="@+id/ptMesP1"
                         android:layout_width="105dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -395,11 +403,12 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/ptVentasP1"
                         android:layout_width="106dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="number" />
 
                     <Space
                         android:layout_width="17dp"
@@ -407,23 +416,23 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/ptPrecioUdp1"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
 
                     <Space
                         android:layout_width="17dp"
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
-                        android:layout_width="88dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="textPersonName" />
+                    <TextView
+                        android:id="@+id/tvIngresoM3"
+                        android:layout_width="106dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1" />
 
                     <Space
                         android:layout_width="17dp"
@@ -495,6 +504,7 @@
                     android:orientation="horizontal">
 
                     <EditText
+                        android:id="@+id/ptMesP2"
                         android:layout_width="105dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -508,11 +518,12 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/ptVentasP2"
                         android:layout_width="106dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="number" />
 
                     <Space
                         android:layout_width="17dp"
@@ -520,23 +531,23 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/ptPrecioUdp2"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
 
                     <Space
                         android:layout_width="17dp"
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
-                        android:layout_width="88dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="textPersonName" />
+                    <TextView
+                        android:id="@+id/tvIngresoM4"
+                        android:layout_width="106dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1" />
 
                     <Space
                         android:layout_width="17dp"
@@ -608,6 +619,7 @@
                     android:orientation="horizontal">
 
                     <EditText
+                        android:id="@+id/ptMesP3"
                         android:layout_width="105dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -621,11 +633,12 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/ptVentasP3"
                         android:layout_width="106dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="number" />
 
                     <Space
                         android:layout_width="17dp"
@@ -633,23 +646,23 @@
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/ptPrecioUdp3"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="textPersonName" />
+                        android:inputType="numberDecimal" />
 
                     <Space
                         android:layout_width="17dp"
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
-                        android:layout_width="88dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="textPersonName" />
+                    <TextView
+                        android:id="@+id/tvIngresoM5"
+                        android:layout_width="106dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1" />
 
                     <Space
                         android:layout_width="17dp"
@@ -1030,7 +1043,7 @@
                             android:textColor="@android:color/holo_orange_dark" />
 
                         <Button
-                            android:id="@+id/btnEliminar"
+                            android:id="@+id/btnEliminarInputs"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

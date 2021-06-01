@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "173820340793",
+    "project_id": "flujo-de-caja-530ea",
+    "storage_bucket": "flujo-de-caja-530ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173820340793:android:ddae220a2d5d9cfd683be8",
+        "android_client_info": {
+          "package_name": "com.acm.simulacionflujocaja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173820340793-aq5bms2ikb0uebu4ec4n5otqr5v4bm80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHyjGoD-HrqukCCT_nn1uW6eyDICiPBeA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173820340793-aq5bms2ikb0uebu4ec4n5otqr5v4bm80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
