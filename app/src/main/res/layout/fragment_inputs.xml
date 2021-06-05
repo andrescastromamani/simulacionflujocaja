@@ -10,7 +10,7 @@
     <ScrollView
         android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="610dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dip"
         android:fillViewport="true"
         android:scrollbarStyle="outsideInset"
@@ -27,6 +27,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
+
 
 
                 <LinearLayout
@@ -69,8 +71,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Precio/ud(bs)"
-                        />
+                        android:text="Precio/ud(bs)" />
 
                     <Space
                         android:layout_width="17dp"
@@ -1051,16 +1052,23 @@
                             android:text="Eliminar"
                             android:textColor="@color/design_default_color_error" />
 
+                        <Button
+                            android:id="@+id/btnSend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Send" />
+
                         <Space
                             android:layout_width="688dp"
                             android:layout_height="19dp"
                             android:layout_weight="1" />
+
                     </LinearLayout>
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="69dp"
+                    android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -1068,6 +1076,50 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
+                        <Space
+                            android:layout_width="19dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/btnSave1"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Guardar"
+                            android:textColor="@color/teal_700" />
+
+                        <Button
+                            android:id="@+id/btnRecuperar1"
+
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Recuperar"
+                            android:textColor="@android:color/holo_orange_dark" />
+
+                        <Button
+                            android:id="@+id/btnEliminarInputs1"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Eliminar"
+                            android:textColor="@color/design_default_color_error" />
+
+                        <Button
+                            android:id="@+id/btnSend2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Send" />
+
+                        <Space
+                            android:layout_width="688dp"
+                            android:layout_height="19dp"
+                            android:layout_weight="1" />
 
                     </LinearLayout>
                 </LinearLayout>

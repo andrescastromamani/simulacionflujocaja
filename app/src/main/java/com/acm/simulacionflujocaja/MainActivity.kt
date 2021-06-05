@@ -1,7 +1,10 @@
 package com.acm.simulacionflujocaja
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
+import com.acm.simulacionflujocaja.ItFragment
+import com.acm.simulacionflujocaja.InputsFragment
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -18,24 +21,26 @@ import kotlinx.android.synthetic.main.nav_header.view.*
 
 enum class ProviderType{   // enum class declara palabra clave para definir un conjunto de constantes
     BASIC}
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Communicator {
 
 
 
     private lateinit var toogle: ActionBarDrawerToggle
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
+
         val bundle = intent.extras
         val email: String? = bundle?.getString("email")
-        println(email)
-        //textView_email.text=email
+        val headerView : View = nav_view.getHeaderView(0)
+        val navUserEmail : TextView = headerView.findViewById(R.id.textView_email)
+        navUserEmail.text = email
+        val fragmentA = InputsFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView, fragmentA).commit()
 
-        /*val navUserEmail : TextView = nav_view.findViewById(R.id.textView_email)
-        navUserEmail.text = email.toString()*/
 
 
 
@@ -90,6 +95,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (toogle.onOptionsItemSelected(item)){
             return true
@@ -97,9 +104,20 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun passDataCom(editTextInput: String, a: String, b: String) {
+        val bundle =Bundle()
+        bundle.putString("message", editTextInput)
+        bundle.putString("a", a)
+        bundle.putString("b", b)
 
+        val transaction = this.supportFragmentManager.beginTransaction()
+        val fragmentoIt = ItFragment()
+        fragmentoIt.arguments=bundle
 
-
-
+        transaction.replace(R.id.fragmentContainerView,fragmentoIt)
+        transaction.commit()
     }
+
+
+}
 
