@@ -1,5 +1,5 @@
 package com.acm.simulacionflujocaja
 
 interface Communicator {
-fun passDataCom(editTextInput: String, a:String,b:String)
+fun passDataMeses(editTextMes3:String,editTextMes4:String,editTextMes5:String)
 }

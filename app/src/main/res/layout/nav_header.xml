@@ -27,7 +27,7 @@
         android:id="@+id/textView_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="8dp"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="italic"

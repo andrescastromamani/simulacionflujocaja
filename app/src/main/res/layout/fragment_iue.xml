@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InputsFragment">
+    tools:context=".IueFragment"
+   >
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -45,11 +46,13 @@
                         android:layout_height="match_parent"
                         android:hint=""
                         android:layout_margin="10dp"/>
+
                     <EditText
+                        android:id="@+id/ptPorcentajeDiv"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:hint="0 %"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:hint="0 %" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
