@@ -5,9 +5,6 @@
         android:title="Inputs"
         android:icon="@drawable/inputs"/>
 
-    <item android:id="@+id/nav_caja"
-        android:title="Caja"
-        android:icon="@drawable/caja"/>
 
     <item android:id="@+id/nav_sueldos"
         android:title="Sueldos"
