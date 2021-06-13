@@ -24,4 +24,12 @@
     <item android:id="@+id/nav_iue"
         android:title="IUE"
         android:icon="@drawable/iue"/>
+
+    <item android:id="@+id/nav_flujo"
+        android:title="Flujo de Efectivo"
+        android:icon="@drawable/flujo_efectivo"/>
+
+    <item android:id="@+id/nav_presupuesto"
+        android:title="Presupuesto de Caja"
+        android:icon="@drawable/presupuesto_caja"/>
 </menu>
