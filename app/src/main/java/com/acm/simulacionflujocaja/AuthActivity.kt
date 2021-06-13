@@ -14,10 +14,8 @@ class AuthActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         val binding = ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setup()
     }
     private fun setup(){
@@ -41,6 +39,7 @@ class AuthActivity : AppCompatActivity() {
 
         }
         binding1.btnLogIn.setOnClickListener {
+
             if (binding1.etEmail.text.isNotEmpty() && binding1.etPassword.text.isNotEmpty() ){
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(binding1.etEmail.
                 text.toString(),binding1.etPassword.text.toString()).addOnCompleteListener {
@@ -74,11 +73,6 @@ class AuthActivity : AppCompatActivity() {
 
         }
         startActivity(MainIntent)
-       /* class AuthActivity : AppCompatActivity() {
-            override fun onCreate(savedInstanceState: Bundle?) {
-                super.onCreate(savedInstanceState)
-                setContentView(R.layout.activity_auth)
-            }
-        }*/
+
     }
 }

@@ -206,8 +206,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName12"
+                    <TextView
+                        android:id="@+id/etVenCont1"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -219,8 +219,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName14"
+                    <TextView
+                        android:id="@+id/etRec30d1"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -232,8 +232,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName16"
+                    <TextView
+                        android:id="@+id/etRec60d1"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -245,7 +245,7 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextTextPersonName17"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
@@ -258,7 +258,7 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextTextPersonName18"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
@@ -325,7 +325,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etVenCont2"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -337,7 +338,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etRec30d2"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -349,7 +351,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etRec60d2"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -361,7 +364,7 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextTextPersonName19"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
@@ -374,7 +377,7 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextTextPersonName20"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
@@ -440,7 +443,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etVenCont3"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -452,7 +456,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etRec30d3"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -464,7 +469,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etRec60d3"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -476,7 +482,7 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextTextPersonName21"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
@@ -489,7 +495,7 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextTextPersonName22"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
@@ -555,7 +561,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etVenCont4"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -567,7 +574,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etRec30d4"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -579,7 +587,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etRec60d4"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -591,7 +600,7 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextTextPersonName23"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
@@ -604,7 +613,7 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextTextPersonName24"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
@@ -670,7 +679,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etVenCont5"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -682,7 +692,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etRec30d5"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -694,7 +705,8 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/etRec60d5"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -706,7 +718,7 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextTextPersonName25"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
@@ -719,7 +731,7 @@
                         android:layout_height="19dp"
                         android:layout_weight="1" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/editTextTextPersonName26"
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
@@ -731,12 +743,12 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="72dp"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <Space
@@ -745,12 +757,13 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:layout_width="89dp"
-                            android:layout_height="30dp"
+                            android:layout_width="91dp"
+                            android:layout_height="36dp"
                             android:layout_weight="1"
                             android:text="Numero de empleados:" />
 
                         <EditText
+                            android:id="@+id/etNrEmpl"
                             android:layout_width="12dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -766,7 +779,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="65dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -786,6 +799,7 @@
                             android:text="Sueldo/empleado:" />
 
                         <EditText
+                            android:id="@+id/etSueldoEmp"
                             android:layout_width="12dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -801,12 +815,12 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="69dp"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <Space
@@ -821,6 +835,7 @@
                             android:text="Incremento Salarial:" />
 
                         <EditText
+                            android:id="@+id/etIncrementoSalarial"
                             android:layout_width="12dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -836,12 +851,12 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="68dp"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <Space
@@ -872,12 +887,12 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="65dp"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <Space
@@ -886,8 +901,8 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:layout_width="89dp"
-                            android:layout_height="30dp"
+                            android:layout_width="96dp"
+                            android:layout_height="46dp"
                             android:layout_weight="1"
                             android:text="% Ventas a credito 30d:" />
 
@@ -908,12 +923,12 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="72dp"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <Space
@@ -922,8 +937,8 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:layout_width="89dp"
-                            android:layout_height="30dp"
+                            android:layout_width="95dp"
+                            android:layout_height="44dp"
                             android:layout_weight="1"
                             android:text="% Ventas a credito 60d:" />
 
@@ -964,6 +979,7 @@
                             android:text="% Incobrabilidad" />
 
                         <EditText
+                            android:id="@+id/etPorcIncobrabilidad"
                             android:layout_width="12dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -999,6 +1015,7 @@
                             android:text="% Interes" />
 
                         <EditText
+                            android:id="@+id/etInteresCredito"
                             android:layout_width="12dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -1033,35 +1050,27 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Guardar"
                             android:textColor="@color/teal_700"
-                            app:icon="@android:drawable/ic_popup_sync" />
+                            app:icon="@android:drawable/stat_sys_upload_done" />
 
                         <Button
                             android:id="@+id/btnRecuperar"
 
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="67dp"
+                            android:layout_height="52dp"
                             android:layout_weight="1"
-                            android:text="Recuperar"
-                            android:textColor="@android:color/holo_orange_dark" />
+                            android:textColor="@android:color/holo_orange_dark"
+                            app:icon="@android:drawable/stat_notify_sync" />
 
                         <Button
                             android:id="@+id/btnEliminarInputs"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="52dp"
                             android:layout_weight="1"
-                            android:text="Eliminar"
-                            android:textColor="@color/design_default_color_error" />
-
-                        <Button
-                            android:id="@+id/btnSend"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Send" />
+                            android:textColor="@color/design_default_color_error"
+                            app:icon="@android:drawable/ic_menu_delete" />
 
                         <Space
                             android:layout_width="688dp"
