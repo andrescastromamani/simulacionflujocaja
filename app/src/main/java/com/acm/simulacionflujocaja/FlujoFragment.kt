@@ -7,5 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 
 class FlujoFragment : Fragment(R.layout.fragment_flujo) {
-
+    companion object {
+        @JvmStatic
+        fun newInstance() = FlujoFragment()
+    }
 }

@@ -20,6 +20,8 @@ private const val TAG_SECOND = "second"
 private const val TAG_THIRD = "third"
 private const val TAG_FOURTH = "fourth"
 private const val TAG_FIVE = "cinco"
+private const val TAG_SIX = "seis"
+private const val TAG_SEVEN = "siete"
 private const val MAX_HISTORIC = 20
 
 class MainActivity : AppCompatActivity(), Communicator {
@@ -79,6 +81,8 @@ class MainActivity : AppCompatActivity(), Communicator {
                     R.id.nav_iva -> changeFragment(TAG_THIRD, IvaFragment.newInstance())
                     R.id.nav_it -> changeFragment(TAG_FOURTH, ItFragment.newInstance())
                     R.id.nav_iue -> changeFragment(TAG_FIVE, IueFragment.newInstance())
+                    R.id.nav_flujo -> changeFragment(TAG_SIX, FlujoFragment.newInstance())
+                    R.id.nav_presupuesto -> changeFragment(TAG_SEVEN, PresupuestoFragment.newInstance())
                 }
 
                 return@setNavigationItemSelectedListener true
@@ -171,6 +175,8 @@ class MainActivity : AppCompatActivity(), Communicator {
                 TAG_THIRD -> setMenuItem(menu.getItem(2))
                 TAG_FOURTH -> setMenuItem(menu.getItem(3))
                 TAG_FIVE -> setMenuItem(menu.getItem(4))
+                TAG_SIX -> setMenuItem(menu.getItem(5))
+                TAG_SEVEN -> setMenuItem(menu.getItem(6))
             }
 
             //Remove from Stack

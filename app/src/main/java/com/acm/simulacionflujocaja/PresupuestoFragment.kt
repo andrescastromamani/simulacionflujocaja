@@ -7,5 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 
 class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
+    companion object {
 
+        @JvmStatic
+        fun newInstance() = PresupuestoFragment()
+    }
 }
