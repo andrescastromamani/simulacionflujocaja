@@ -22,7 +22,7 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
     private val db = FirebaseFirestore.getInstance()
     private var _binding: FragmentInputsBinding? = null
     private val binding get() = _binding!!
-    private lateinit var communicator: Communicator
+    //private lateinit var communicator: Communicator
     val user = FirebaseAuth.getInstance().currentUser
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,10 +42,11 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
 
         _binding = FragmentInputsBinding.inflate(inflater, container, false)
         val view = binding.root
-        communicator=activity as Communicator
+        //communicator=activity as Communicator
 
 
         GuardarVariables(user?.email.toString())
+        recuperarTodo()
         return view
 
 
@@ -57,6 +58,7 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
             ingresoBruto()
             otrosDatos()
             ventasContado()
+
         }
         //recuperar variables
         binding.btnRecuperar.setOnClickListener {
@@ -104,6 +106,16 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
                             binding.etInteresCredito.setText(it.get("Interes Credito") as String?)
 
                         }
+            db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Ventas Contado").get().addOnSuccessListener {
+
+                binding.etVenCont1.setText(it.get("Ventas contado mes 1") as String?)
+                binding.etVenCont2.setText(it.get("Ventas contado mes 2") as String?)
+                binding.etVenCont3.setText(it.get("Ventas contado mes 3") as String?)
+                binding.etVenCont4.setText(it.get("Ventas contado mes 4") as String?)
+                binding.etVenCont5.setText(it.get("Ventas contado mes 5") as String?)
+
+
+            }
 
             db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Recuperacion 30 dias").get().addOnSuccessListener {
 
@@ -121,6 +133,7 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
                 binding.etRec60d4.setText(it.get("Recuperacion 60 dias mes 4") as String?)
                 binding.etRec60d5.setText(it.get("Recuperacion 60 dias mes 5") as String?)
             }
+
 
                     }
 
@@ -423,6 +436,81 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
 
         @JvmStatic
         fun newInstance() = InputsFragment()//para instanciar con los TAG designados
+    }
+    fun recuperarTodo(){
+        val user= FirebaseAuth.getInstance().currentUser
+        val email=user?.email
+        db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {
+            binding.ptMesH1.setText(it.get("Mes 1") as String?)
+            binding.ptMesH2.setText(it.get("Mes 2") as String?)
+            binding.ptMesP1.setText(it.get("Mes 3") as String?)
+            binding.ptMesP2.setText(it.get("Mes 4") as String?)
+            binding.ptMesP3.setText(it.get("Mes 5") as String?)
+
+        }
+        db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas").get().addOnSuccessListener {
+            binding.ptVentasH1.setText(it.get("VentasMes1") as String?)
+            binding.ptVentasH2.setText(it.get("VentasMes2") as String?)
+            binding.ptVentasP1.setText(it.get("VentasMes3") as String?)
+            binding.ptVentasP2.setText(it.get("VentasMes4") as String?)
+            binding.ptVentasP3.setText(it.get("VentasMes5") as String?)
+
+        }
+        db.collection("Users").document(email.toString()).collection("Entradas").document("PrecioUd").get().addOnSuccessListener {
+            binding.ptPrecioUdh1.setText(it.get("PrecioMes1") as String?)
+            binding.ptPrecioUdh2.setText(it.get("PrecioMes2") as String?)
+            binding.ptPrecioUdp1.setText(it.get("PrecioMes3") as String?)
+            binding.ptPrecioUdp2.setText(it.get("PrecioMes4") as String?)
+            binding.ptPrecioUdp3.setText(it.get("PrecioMes5") as String?)
+
+        }
+        db.collection("Users").document(email.toString()).collection("Entradas").document("IngresoBruto").get().addOnSuccessListener {
+            binding.tvIngresoM1.setText(it.get("IngresoBrutoMes1") as String?)
+            binding.tvIngresoM2.setText(it.get("IngresoBrutoMes2") as String?)
+            binding.tvIngresoM3.setText(it.get("IngresoBrutoMes3") as String?)
+            binding.tvIngresoM4.setText(it.get("IngresoBrutoMes4") as String?)
+            binding.tvIngresoM5.setText(it.get("IngresoBrutoMes5") as String?)
+
+        }
+
+        db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
+            binding.etNrEmpl.setText(it.get("Nro Empleados") as String?)
+            binding.etSueldoEmp.setText(it.get("Sueldo Empleados") as String?)
+            binding.etIncrementoSalarial.setText(it.get("Incremento Salarial") as String?)
+            binding.etPorcCont.setText(it.get("Porcentaje Contado") as String?)
+            binding.etPorc30d.setText(it.get("Porcenta credito a 30 dias") as String?)
+            binding.etPorc60d.setText(it.get("Porcentaje credito a 60 dias") as String?)
+            binding.etPorcIncobrabilidad.setText(it.get("Porcentaje Incobrabilidad") as String?)
+            binding.etInteresCredito.setText(it.get("Interes Credito") as String?)
+
+        }
+        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Ventas Contado").get().addOnSuccessListener {
+
+            binding.etVenCont1.setText(it.get("Ventas contado mes 1") as String?)
+            binding.etVenCont2.setText(it.get("Ventas contado mes 2") as String?)
+            binding.etVenCont3.setText(it.get("Ventas contado mes 3") as String?)
+            binding.etVenCont4.setText(it.get("Ventas contado mes 4") as String?)
+            binding.etVenCont5.setText(it.get("Ventas contado mes 5") as String?)
+
+
+        }
+
+        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Recuperacion 30 dias").get().addOnSuccessListener {
+
+            binding.etRec30d1.setText(it.get("Recuperacion 30 dias mes 1") as String?)
+            binding.etRec30d2.setText(it.get("Recuperacion 30 dias mes 2") as String?)
+            binding.etRec30d3.setText(it.get("Recuperacion 30 dias mes 3") as String?)
+            binding.etRec30d4.setText(it.get("Recuperacion 30 dias mes 4") as String?)
+            binding.etRec30d5.setText(it.get("Recuperacion 30 dias mes 5") as String?)
+        }
+        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Recuperacion 60 dias").get().addOnSuccessListener {
+
+            binding.etRec60d1.setText(it.get("Recuperacion 60 dias mes 1") as String?)
+            binding.etRec60d2.setText(it.get("Recuperacion 60 dias mes 2") as String?)
+            binding.etRec60d3.setText(it.get("Recuperacion 60 dias mes 3") as String?)
+            binding.etRec60d4.setText(it.get("Recuperacion 60 dias mes 4") as String?)
+            binding.etRec60d5.setText(it.get("Recuperacion 60 dias mes 5") as String?)
+        }
     }
 
 
