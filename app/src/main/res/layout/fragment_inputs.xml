@@ -1000,7 +1000,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <Space
@@ -1036,7 +1036,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="82dp"
                         android:orientation="horizontal">
 
                         <Space
@@ -1047,8 +1047,9 @@
                         <Button
                             android:id="@+id/btnSave"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="40dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:textColor="@color/teal_700"
                             app:icon="@android:drawable/stat_sys_upload_done" />
@@ -1057,8 +1058,9 @@
                             android:id="@+id/btnRecuperar"
 
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                            android:layout_width="67dp"
-                            android:layout_height="52dp"
+                            android:layout_width="40dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:textColor="@android:color/holo_orange_dark"
                             app:icon="@android:drawable/stat_notify_sync" />
@@ -1066,8 +1068,9 @@
                         <Button
                             android:id="@+id/btnEliminarInputs"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="52dp"
+                            android:layout_width="40dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:textColor="@color/design_default_color_error"
                             app:icon="@android:drawable/ic_menu_delete" />

@@ -117,7 +117,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                         <EditText
-                            android:id="@+id/editText"
+                            android:id="@+id/ventas1"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
@@ -126,7 +126,7 @@
                             android:textAlignment="center" />
 
                         <EditText
-                            android:id="@+id/editText2"
+                            android:id="@+id/ventas2"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
@@ -136,7 +136,7 @@
                             android:textAlignment="center" />
 
                         <EditText
-                            android:id="@+id/editText3"
+                            android:id="@+id/ventas3"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"

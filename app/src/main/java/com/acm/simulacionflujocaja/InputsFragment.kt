@@ -104,7 +104,26 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
                             binding.etInteresCredito.setText(it.get("Interes Credito") as String?)
 
                         }
+
+            db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Recuperacion 30 dias").get().addOnSuccessListener {
+
+                binding.etRec30d1.setText(it.get("Recuperacion 30 dias mes 1") as String?)
+                binding.etRec30d2.setText(it.get("Recuperacion 30 dias mes 2") as String?)
+                binding.etRec30d3.setText(it.get("Recuperacion 30 dias mes 3") as String?)
+                binding.etRec30d4.setText(it.get("Recuperacion 30 dias mes 4") as String?)
+                binding.etRec30d5.setText(it.get("Recuperacion 30 dias mes 5") as String?)
+            }
+            db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Recuperacion 60 dias").get().addOnSuccessListener {
+
+                binding.etRec60d1.setText(it.get("Recuperacion 60 dias mes 1") as String?)
+                binding.etRec60d2.setText(it.get("Recuperacion 60 dias mes 2") as String?)
+                binding.etRec60d3.setText(it.get("Recuperacion 60 dias mes 3") as String?)
+                binding.etRec60d4.setText(it.get("Recuperacion 60 dias mes 4") as String?)
+                binding.etRec60d5.setText(it.get("Recuperacion 60 dias mes 5") as String?)
+            }
+
                     }
+
         //eliminar entradas
         binding.btnEliminarInputs.setOnClickListener {
                         db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").delete()
