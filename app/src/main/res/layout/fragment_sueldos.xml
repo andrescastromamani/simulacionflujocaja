@@ -1,24 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SueldosFragment">
+    tools:context=".IueFragment"
+    >
 
-    <TextView
-        android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="SUELDOS"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="42sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="horizontal|vertical">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal|vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:layout_width="395dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Sueldos y Salarios"
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="% Aportes Patronales" />
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:hint=""
+                        android:layout_margin="10dp"/>
+
+                    <EditText
+                        android:id="@+id/ptPorcentajeDiv"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp" />
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Caja" />
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:hint=""
+                        android:layout_margin="10dp"/>
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp" />
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Riesgo" />
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:hint=""
+                        android:layout_margin="10dp"/>
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:hint=""
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Sol" />
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:hint=""
+                        android:layout_margin="10dp"/>
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:hint=""
+                        android:layout_margin="10dp"/>
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Prov" />
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:hint=""
+                        android:layout_margin="10dp"/>
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:hint=""
+                        android:layout_margin="10dp"/>
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="699dp"
+                    android:layout_height="438dp" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
