@@ -5,9 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IueFragment"
-    >
-
+    tools:context=".IueFragment">
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -22,6 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -34,33 +33,19 @@
                         android:textAlignment="center"
                         android:textSize="20dp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="92dp">
 
                     <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="199dp"
+                        android:layout_height="56dp"
                         android:layout_margin="10dp"
                         android:text="% Aportes Patronales" />
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
 
-                    <EditText
-                        android:id="@+id/ptPorcentajeDiv"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp" />
-
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:hint="" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -70,11 +55,12 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="Caja" />
+
                     <EditText
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:hint="" />
 
                     <EditText
                         android:layout_width="100dp"
@@ -108,25 +94,28 @@
                         android:layout_margin="10dp"/>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="92dp">
 
                     <TextView
-                        android:layout_width="200dp"
+                        android:layout_width="197dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="Sol" />
+
+                    <EditText
+                        android:layout_width="107dp"
+                        android:layout_height="66dp"
+                        android:layout_margin="10dp"
+                        android:hint="" />
+
                     <EditText
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:hint="" />
 
                     <EditText
                         android:layout_width="100dp"
@@ -134,25 +123,28 @@
                         android:layout_margin="10dp"
                         android:hint="" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="84dp">
 
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="Prov" />
+
                     <EditText
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:hint="" />
+
                     <EditText
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:hint="" />
 
                     <EditText
                         android:layout_width="100dp"
@@ -175,8 +167,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="699dp"
-                    android:layout_height="438dp" />
+                    android:layout_width="719dp"
+                    android:layout_height="508dp" />
 
             </LinearLayout>
         </HorizontalScrollView>
