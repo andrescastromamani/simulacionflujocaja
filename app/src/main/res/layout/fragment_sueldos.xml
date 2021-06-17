@@ -7,8 +7,8 @@
     tools:context=".IueFragment">
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:fillViewport="true"
         android:scrollbarStyle="outsideInset"
         android:scrollbars="horizontal|vertical">
@@ -39,7 +39,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="261dp">
+                    android:layout_height="143dp">
 
                     <TextView
                         android:id="@+id/textView1"
@@ -136,101 +136,268 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="214dp">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName2"
+                            android:layout_width="59dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:translationX="-300dp"
+                            android:translationY="150dp" />
+
+                        <TextView
+                            android:id="@+id/textView56"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Total ganado mensual"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:translationX="-440dp"
+                            android:translationY="50dp" />
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="Antes de increm. salarial"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:translationX="-160dp" />
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:text="Despues de increm. salarial"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:translationX="-125dp" />
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName"
+                            android:layout_width="60dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="0"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:translationX="-450dp"
+                            android:translationY="150dp" />
+
+                        <TextView
+                            android:id="@+id/textView59"
+                            android:layout_width="171dp"
+                            android:layout_height="wrap_content"
+                            android:text="Aportes Patron. mensual"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:translationX="-360dp"
+                            android:translationY="110dp" />
+
+                        <EditText
+                            android:id="@+id/editText13"
+                            android:layout_width="60dp"
+                            android:layout_height="32dp"
+                            android:layout_margin="15dp"
+                            android:hint=""
+                            android:singleLine="false"
+                            android:translationX="-700dp"
+                            android:translationY="75dp" />
+
+                        <TextView
+                            android:id="@+id/textView55"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total ganado mensual"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:translationX="-805dp"
+                            android:translationY="50dp" />
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="32dp"
+                            android:layout_margin="10dp"
+                            android:hint=""
+                            android:translationX="-730dp"
+                            android:translationY="150dp" />
+
+                        <TextView
+                            android:id="@+id/textView57"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total ganado mensual"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:translationX="-839dp"
+                            android:translationY="50dp" />
+
+                        <TextView
+                            android:id="@+id/textView60"
+                            android:layout_width="171dp"
+                            android:layout_height="wrap_content"
+                            android:text="Aportes Patron. mensual"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:translationX="-1160dp"
+                            android:translationY="110dp" />
+
+                        <EditText
+                            android:layout_width="60dp"
+                            android:layout_height="32dp"
+                            android:layout_margin="10dp"
+                            android:hint=""
+                            android:translationX="-1120dp"
+                            android:translationY="75dp" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="277dp">
 
                     <EditText
-                        android:id="@+id/editText13"
-                        android:layout_width="46dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="15dp"
-                        android:hint=""
-                        android:singleLine="false"
-                        android:translationX="-205dp"
+                        android:id="@+id/editTextTextPersonName4"
+                        android:layout_width="49dp"
+                        android:layout_height="34dp"
+                        android:layout_weight="0"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:translationX="-450dp"
                         android:translationY="60dp" />
 
-                    <EditText
-                        android:id="@+id/editText11"
-                        android:layout_width="56dp"
+                    <TextView
+                        android:id="@+id/textView69"
+                        android:layout_width="103dp"
+                        android:layout_height="37dp"
+                        android:layout_weight="0"
+                        android:text="Total retroactivo aporte por mes"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:translationX="-15dp"
+                        android:translationY="200dp" />
+
+                    <TextView
+                        android:id="@+id/textView73"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:baselineAligned="false"
-                        android:hint=""
-                        android:singleLine="false"
-                        android:translationX="-310dp"
-                        android:translationY="75dp" />
+                        android:layout_weight="0"
+                        android:text="Nro. meses"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:translationX="-120dp"
+                        android:translationY="60dp" />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="151dp">
-
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:hint="" />
+                    <TextView
+                        android:id="@+id/textView72"
+                        android:layout_width="113dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="0"
+                        android:text="Total retroactivo sueldo por mes"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:translationX="-191dp"
+                        android:translationY="90dp" />
 
                     <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:hint="" />
+                        android:id="@+id/editTextNumber"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_weight="0"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:translationX="-20dp"
+                        android:translationY="96dp" />
 
-                </LinearLayout>
+                    <TextView
+                        android:id="@+id/textView75"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="RETROACTIVOS"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:translationX="-160dp"
+                        android:translationY="-11dp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="138dp">
+                    <TextView
+                        android:id="@+id/textView70"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="Nro. meses"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:translationX="-438dp"
+                        android:translationY="170dp" />
+
+                    <TextView
+                        android:id="@+id/textView71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="Retroactivo aporte por mes"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:translationX="-510dp"
+                        android:translationY="140dp" />
+
+                    <TextView
+                        android:id="@+id/textView74"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="Retroactivo sueldo por mes"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:translationX="-684dp"
+                        android:translationY="25dp" />
 
                     <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="110dp"
-                        android:layout_margin="10dp"
-                        android:hint="" />
+                        android:id="@+id/editTextTextPersonName3"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_weight="0"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:translationX="-571dp"
+                        android:translationY="29dp" />
 
                     <EditText
-                        android:layout_width="85dp"
-                        android:layout_height="68dp"
-                        android:layout_margin="10dp"
-                        android:hint="" />
+                        android:id="@+id/editTextTextPersonName5"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:translationX="-605dp"
+                        android:translationY="65dp" />
 
                     <EditText
-                        android:layout_width="79dp"
-                        android:layout_height="68dp"
-                        android:layout_margin="10dp"
-                        android:hint="" />
+                        android:id="@+id/editTextTextPersonName6"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_weight="0"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:translationX="-637dp"
+                        android:translationY="140dp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName7"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_weight="0"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:translationX="-670dp"
+                        android:translationY="170dp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName8"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_weight="0"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:translationX="-705dp"
+                        android:translationY="215dp" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="719dp"
-                    android:layout_height="508dp" />
 
             </LinearLayout>
         </HorizontalScrollView>
     </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 </LinearLayout>
