@@ -63,7 +63,7 @@
                         android:layout_margin="10dp"
                         android:text="Riesgo"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:translationX="20dp" />
+                        android:translationX="15dp" />
 
                     <EditText
                         android:layout_width="46dp"
@@ -80,7 +80,7 @@
                         android:layout_margin="10dp"
                         android:text="Sol."
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:translationX="-45dp" />
+                        android:translationX="-49dp" />
 
                     <EditText
                         android:id="@+id/editText3"
@@ -98,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
                         android:hint=""
-                        android:translationX="-249dp"
+                        android:translationX="-255dp"
                         android:translationY="60dp" />
 
                     <TextView
@@ -108,7 +108,7 @@
                         android:layout_margin="10dp"
                         android:text="Prov."
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:translationX="-169dp" />
+                        android:translationX="-179dp" />
 
                     <EditText
                         android:id="@+id/editText"
@@ -118,7 +118,7 @@
                         android:baselineAligned="false"
                         android:hint=""
                         android:singleLine="false"
-                        android:translationX="-302dp"
+                        android:translationX="-310dp"
                         android:translationY="60dp" />
 
                     <EditText
@@ -127,7 +127,7 @@
                         android:layout_margin="15dp"
                         android:hint=""
                         android:singleLine="true"
-                        android:translationX="-305dp"
+                        android:translationX="-315dp"
                         android:translationY="60dp" />
 
                 </LinearLayout>
