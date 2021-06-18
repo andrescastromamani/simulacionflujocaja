@@ -26,22 +26,25 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="395dp"
                         android:layout_height="match_parent"
-                        android:text="IVA"
-                        android:textSize="20dp"
                         android:layout_margin="10dp"
-                        android:textAlignment="center"/>
+                        android:text="IVA"
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
-                        android:text=""
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:text="" />
 
                     <TextView
                         android:id="@+id/etmes1"
@@ -64,14 +67,16 @@
                         android:layout_margin="10dp"
                         android:text="Junio" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
-                        android:text="Ventas"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:text="Ventas" />
 
                     <TextView
                         android:id="@+id/etVentas1"
@@ -94,425 +99,599 @@
                         android:layout_margin="10dp"
                         android:hint="80000" />
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Intereses Comerciales"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Venta de Activos Fijos"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Alquileres"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Otros"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="TOTAL VENTAS DE BIENES Y SERVICIOS FACTURADAS"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="DEBITO FISCAL DEL PERIODO"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="COMPRA DE MERCADERIAS, MATERIAS PRIMAS Y MATERIALES"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Intereses Comerciales"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Compra de Activos Fijos"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Subsidios"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Costos y gastos Operativos"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Otros"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="TOTAL COMPRAS DE BIENES Y SERVICIOS"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="CRÉDITO  FISCAL DEL PERIODO"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Saldo a Favor Fisco"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Saldo CF IVA mes Anterior"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="Saldo Definitivo a Favor del Fisco"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="80000"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <Button
-                        android:id="@+id/btnSaveIva"
-                        android:layout_width="395dp"
+                    <TextView
+                        android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Sync"
-                        app:icon="@android:drawable/stat_notify_sync" />
+                        android:text="Intereses Comerciales" />
+
+                    <EditText
+                        android:id="@+id/Inco1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/Inco2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/Inco3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Venta de Activos Fijos" />
+
+                    <EditText
+                        android:id="@+id/vaf1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/vaf2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/vaf3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Alquileres" />
+
+                    <EditText
+                        android:id="@+id/alq1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/alq2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/alq3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Otros" />
+
+                    <EditText
+                        android:id="@+id/ot1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/ot2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/ot3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="TOTAL VENTAS DE BIENES Y SERVICIOS FACTURADAS" />
+
+                    <TextView
+                        android:id="@+id/tot1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <TextView
+                        android:id="@+id/tot2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <TextView
+                        android:id="@+id/tot3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="DEBITO FISCAL DEL PERIODO" />
+
+                    <TextView
+                        android:id="@+id/defis1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <TextView
+                        android:id="@+id/defis2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <TextView
+                        android:id="@+id/defis3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="COMPRA DE MERCADERIAS, MATERIAS PRIMAS Y MATERIALES" />
+
+                    <EditText
+                        android:id="@+id/compMerc1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/compMerc2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/compMerc3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Intereses Comerciales" />
+
+                    <EditText
+                        android:id="@+id/inCoCF1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/inCoCF2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/inCoCF3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Compra de Activos Fijos" />
+
+                    <EditText
+                        android:id="@+id/coAF1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/coAF2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/coAF3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Subsidios" />
+
+                    <EditText
+                        android:id="@+id/sub1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/sub2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/sub3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Costos y gastos Operativos" />
+
+                    <EditText
+                        android:id="@+id/cgo1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/cgo2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/cgo3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Otros" />
+
+                    <EditText
+                        android:id="@+id/otCF1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/otCF2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/otCF3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="TOTAL COMPRAS DE BIENES Y SERVICIOS" />
+
+                    <TextView
+                        android:id="@+id/totComp1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <TextView
+                        android:id="@+id/totComp2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <TextView
+                        android:id="@+id/totComp3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="CRÉDITO  FISCAL DEL PERIODO" />
+
+                    <TextView
+                        android:id="@+id/totCF1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <TextView
+                        android:id="@+id/totCF2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <TextView
+                        android:id="@+id/totCF3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Saldo a Favor Fisco" />
+
+                    <EditText
+                        android:id="@+id/saldFF1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <EditText
+                        android:id="@+id/saldFF2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <EditText
+                        android:id="@+id/saldFF3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Saldo CF IVA mes Anterior" />
+
+                    <EditText
+                        android:id="@+id/saldMA1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <EditText
+                        android:id="@+id/saldMA2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <EditText
+                        android:id="@+id/saldMA3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Saldo Definitivo a Favor del Fisco" />
+
+                    <TextView
+                        android:id="@+id/totFinal1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <TextView
+                        android:id="@+id/totFinal2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+
+                    <TextView
+                        android:id="@+id/totFinal3"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:hint="80000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="351dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnSaveIva"
+                            android:layout_width="129dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Sync"
+                            app:icon="@android:drawable/stat_notify_sync" />
+                    </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
         </HorizontalScrollView>
