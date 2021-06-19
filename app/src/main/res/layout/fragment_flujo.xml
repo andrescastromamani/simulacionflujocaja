@@ -1,4 +1,4 @@
-?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -264,7 +264,7 @@
                         android:layout_weight="0"
                         android:text="Saldo de efectivo final proyectado"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:translationY="-10" />
+                        android:translationY="-10dp" />
 
                     <EditText
                         android:id="@+id/editText11"
