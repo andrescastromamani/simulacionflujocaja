@@ -34,18 +34,19 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         (activity as MainActivity?)?.getSupportActionBar()?.setTitle("IVA")
         _binding = FragmentIvaBinding.inflate(inflater, container, false)
         val view = binding.root
+        recuperarTodoIVA()
         recDatosMeses()//recupera los meses que esta en bd y establece como texto en los textView
         recDataVentCont()//recupera de la bd y manda la informacion a las ventas contado
-        saveInputsIVA(email.toString()) //guarda todas las entradas que existen en IVA
+        saveInputsIVA() //guarda todas las entradas que existen en IVA
 
 
-        recuperarTodoIVA()//al final
+
 
 
         return view
     }
 
-    private fun saveInputsIVA(email:String){
+    private fun saveInputsIVA(){
 
 
         binding.btnSaveIva.setOnClickListener {
@@ -123,7 +124,7 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         val porcIva:Double=0.13
 
 
-        // recuperando en variables lo que se escribe en los campos editables para calcular totales
+        // CALCULO PARA CREDITOS
         val ventasC1:Double= parseDouble(binding.etVentas1.text.toString())
         val ventasC2:Double= parseDouble(binding.etVentas2.text.toString())
         val ventasC3:Double= parseDouble(binding.etVentas3.text.toString())
@@ -156,86 +157,66 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         val totDebFiscal3:Double=r.redondear(totalVByS3*porcIva)
         binding.defis3.setText(totDebFiscal3.toString())
 
+        //CALCULO PARA CREDITOS
+        val compraM1:Double= parseDouble(binding.compMerc1.text.toString())
+        val compraM2:Double= parseDouble(binding.compMerc2.text.toString())
+        val compraM3:Double= parseDouble(binding.compMerc3.text.toString())
+        val interesCred1:Double= parseDouble(binding.inCoCF1.text.toString())
+        val interesCred2:Double= parseDouble(binding.inCoCF2.text.toString())
+        val interesCred3:Double= parseDouble(binding.inCoCF3.text.toString())
+        val compraAF1:Double= parseDouble(binding.coAF1.text.toString())
+        val compraAF2:Double= parseDouble(binding.coAF2.text.toString())
+        val compraAF3:Double= parseDouble(binding.coAF3.text.toString())
+        val subsid1:Double= parseDouble(binding.sub1.text.toString())
+        val subsid2:Double= parseDouble(binding.sub2.text.toString())
+        val subsid3:Double= parseDouble(binding.sub3.text.toString())
+        val costYGasOp1:Double= parseDouble(binding.cgo1.text.toString())
+        val costYGasOp2:Double= parseDouble(binding.cgo2.text.toString())
+        val costYGasOp3:Double= parseDouble(binding.cgo3.text.toString())
+        val otrosCred1:Double= parseDouble(binding.otCF1.text.toString())
+        val otrosCred2:Double= parseDouble(binding.otCF2.text.toString())
+        val otrosCred3:Double= parseDouble(binding.otCF3.text.toString())
+
+        val totalCompCred1:Double=r.redondear(compraM1+interesCred1+compraAF1+subsid1+costYGasOp1+otrosCred1)
+        val totalCompCred2:Double=r.redondear(compraM2+interesCred2+compraAF2+subsid2+costYGasOp2+otrosCred2)
+        val totalCompCred3:Double=r.redondear(compraM3+interesCred3+compraAF3+subsid3+costYGasOp3+otrosCred3)
+        binding.totComp1.setText(totalCompCred1.toString())
+        binding.totComp2.setText(totalCompCred2.toString())
+        binding.totComp3.setText(totalCompCred3.toString())
+        val totalCredFis1:Double=r.redondear(totalCompCred1*porcIva)
+        val totalCredFis2:Double=r.redondear(totalCompCred2*porcIva)
+        val totalCredFis3:Double=r.redondear(totalCompCred3*porcIva)
+        binding.totCF1.setText(totalCredFis1.toString())
+        binding.totCF2.setText(totalCredFis2.toString())
+        binding.totCF3.setText(totalCredFis3.toString())
+
+        //CALCULO PARA SALDO A FAVOR DEL FISCO
+
+        val saldoFavCon1:Double= r.redondear(totDebFiscal1-totalCredFis1)
+        val saldoFavCon2:Double= r.redondear(totDebFiscal2-totalCredFis2)
+        val saldoFavCon3:Double= r.redondear(totDebFiscal3-totalCredFis3)
+        binding.saldFF1.setText(saldoFavCon1.toString())
+        binding.saldFF2.setText(saldoFavCon2.toString())
+        binding.saldFF3.setText(saldoFavCon3.toString())
+
+
+        val saldoCFMesAnt1:Double= parseDouble(binding.saldMA1.text.toString())
+        val saldoCFMesAnt2:Double= parseDouble(binding.saldMA2.text.toString())
+        val saldoCFMesAnt3:Double= parseDouble(binding.saldMA3.text.toString())
+
+        //CALCULO SALDO DEFINITIVO A FAVOR DEL FISCO
+        val saldoFinalFisco1:Double=r.redondear(saldoFavCon1+saldoCFMesAnt1)
+        val saldoFinalFisco2:Double=r.redondear(saldoFavCon2+saldoCFMesAnt2)
+        val saldoFinalFisco3:Double=r.redondear(saldoFavCon3+saldoCFMesAnt3)
+        binding.totFinal1.setText(saldoFinalFisco1.toString())
+        binding.totFinal2.setText(saldoFinalFisco2.toString())
+        binding.totFinal3.setText(saldoFinalFisco3.toString())
 
 
 
-       /* val veAcFi1:Double= parseDouble(binding.ot1.text.toString())
-        val veAcFi2:Double= parseDouble(binding.ot2.text.toString())
-        val veAcFi3:Double= parseDouble(binding.ot3.text.toString())
-
-        val veAcFi1:Double= parseDouble(binding.vaf1.text.toString())
-        val veAcFi2:Double= parseDouble(binding.vaf2.text.toString())
-        val veAcFi3:Double= parseDouble(binding.vaf3.text.toString())
-
-        val veAcFi1:Double= parseDouble(binding.vaf1.text.toString())
-        val veAcFi2:Double= parseDouble(binding.vaf2.text.toString())
-        val veAcFi3:Double= parseDouble(binding.vaf3.text.toString())
-
-        val veAcFi1:Double= parseDouble(binding.vaf1.text.toString())
-        val veAcFi2:Double= parseDouble(binding.vaf2.text.toString())
-        val veAcFi3:Double= parseDouble(binding.vaf3.text.toString())
-
-        val veAcFi1:Double= parseDouble(binding.vaf1.text.toString())
-        val veAcFi2:Double= parseDouble(binding.vaf2.text.toString())
-        val veAcFi3:Double= parseDouble(binding.vaf3.text.toString())
-
-        val veAcFi1:Double= parseDouble(binding.vaf1.text.toString())
-        val veAcFi2:Double= parseDouble(binding.vaf2.text.toString())
-        val veAcFi3:Double= parseDouble(binding.vaf3.text.toString())
-
-        val veAcFi1:Double= parseDouble(binding.vaf1.text.toString())
-        val veAcFi2:Double= parseDouble(binding.vaf2.text.toString())
-        val veAcFi3:Double= parseDouble(binding.vaf3.text.toString())*/
 
 
 
-
-
-
-       /* db.collection("Users").document(email.toString()).collection("Entradas").document("DatosIva").get().addOnSuccessListener {
-           //calculo de Total de bienes y servicios facturados
-            val ventasC1:Double=parseDouble((it.get("VentCont1").toString()))
-            val intCom1:Double=parseDouble((it.get("InCoDF1").toString()))
-            val ventActFijo1:Double=parseDouble((it.get("VeAcFi1").toString()))
-            val alquiler1:Double=parseDouble((it.get("Alq1").toString()))
-            val otros1:Double=parseDouble((it.get("otros1").toString()))
-            val totVentDF:Double=ventasC1+intCom1+ventActFijo1+alquiler1+otros1
-            _binding?.tot1?.setText(totVentDF.toString())
-
-            /*binding.etVentas2.setText(it.get("VentCont2") as String?)
-            binding.etVentas3.setText(it.get("VentCont3") as String?)
-
-            binding.Inco2.setText(it.get("InCoDF2") as String?)
-            binding.Inco3.setText(it.get("InCoDF3") as String?)
-
-            binding.vaf2.setText(it.get("VeAcFi2") as String?)
-            binding.vaf3.setText(it.get("VeAcFi3") as String?)
-
-            binding.alq2.setText(it.get("Alq2") as String?)
-            binding.alq3.setText(it.get("Alq3") as String?)
-
-
-
-            binding.ot2.setText(it.get("otros2") as String?)
-            binding.ot3.setText(it.get("otros3") as String?)
-            binding.tot1.setText(it.get("tot1") as String?)
-            binding.tot2.setText(it.get("tot2") as String?)
-            binding.tot3.setText(it.get("tot3") as String?)
-            binding.defis1.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            binding.compMerc1.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            binding.inCoCF1.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            binding.coAF1.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            binding.sub1.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            binding.cgo1.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            binding.otCF1.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            binding.totComp1.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            binding.totCF1.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            binding.saldFF1.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            binding.saldMA1.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            binding.totFinal1.setText(it.get("Recuperacion 60 dias mes 5") as String?)*/
-
-
-        }*/
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("DatosIva").set(
             hashMapOf(
                 "VentCon1" to binding.etVentas1.text.toString(),
@@ -292,7 +273,9 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
                 "Tot1" to binding.totFinal1.text.toString(),
                 "Tot2" to binding.totFinal2.text.toString(),
                 "Tot3" to binding.totFinal3.text.toString(),
-                )) }
+                ))
+
+    }
 
     private fun recDatosMeses(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {
@@ -310,9 +293,9 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         } }
     private fun recuperarTodoIVA(){
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("DatosIva").get().addOnSuccessListener {
-        binding.etVentas1.setText(it.get("VentCont1") as String?)
+       /* binding.etVentas1.setText(it.get("VentCont1") as String?)
         binding.etVentas2.setText(it.get("VentCont2") as String?)
-        binding.etVentas3.setText(it.get("VentCont3") as String?)
+        binding.etVentas3.setText(it.get("VentCont3") as String?)*/
         binding.Inco1.setText(it.get("InCoDF1") as String?)
         binding.Inco2.setText(it.get("InCoDF2") as String?)
         binding.Inco3.setText(it.get("InCoDF3") as String?)
@@ -326,13 +309,64 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         binding.ot2.setText(it.get("otros2") as String?)
         binding.ot3.setText(it.get("otros3") as String?)
         binding.tot1.setText(it.get("tot1") as String?)
-        binding.tot2.setText(it.get("tot2") as String?)
-        binding.tot3.setText(it.get("tot3") as String?)
+           binding.tot2.setText(it.get("tot2") as String?)
+           binding.tot3.setText(it.get("tot3") as String?)
+            binding.defis1.setText(it.get("Defis1") as String?)
+            binding.defis2.setText(it.get("Defis2") as String?)
+            binding.defis3.setText(it.get("Defis3") as String?)
+
+            binding.compMerc1.setText(it.get("CompMerc1") as String?)
+            binding.compMerc2.setText(it.get("CompMerc2") as String?)
+            binding.compMerc3.setText(it.get("CompMerc3") as String?)
+            binding.inCoCF1.setText(it.get("InCoCF1") as String?)
+            binding.inCoCF2.setText(it.get("InCoCF2") as String?)
+            binding.inCoCF3.setText(it.get("InCoCF3") as String?)
+
+            binding.coAF1.setText(it.get("CoAF1") as String?)
+            binding.coAF2.setText(it.get("CoAF2") as String?)
+            binding.coAF3.setText(it.get("CoAF3") as String?)
+            binding.sub1.setText(it.get("Sub1") as String?)
+            binding.sub2.setText(it.get("Sub2") as String?)
+            binding.sub3.setText(it.get("Sub3") as String?)
+
+            binding.cgo1.setText(it.get("Cgo1") as String?)
+            binding.cgo2.setText(it.get("Cgo2") as String?)
+            binding.cgo3.setText(it.get("Cgo3") as String?)
+            binding.otCF1.setText(it.get("OtCF1") as String?)
+            binding.otCF2.setText(it.get("OtCF2") as String?)
+            binding.otCF3.setText(it.get("OtCF3") as String?)
+            binding.totComp1.setText(it.get("TotComp1") as String?)
+            binding.totComp2.setText(it.get("TotComp2") as String?)
+            binding.totComp3.setText(it.get("TotComp3") as String?)
+            binding.totCF1.setText(it.get("TotCF1") as String?)
+            binding.totCF2.setText(it.get("TotCF2") as String?)
+            binding.totCF3.setText(it.get("TotCF3") as String?)
+            binding.saldFF1.setText(it.get("SaldFF1") as String?)
+            binding.saldFF2.setText(it.get("SaldFF2") as String?)
+            binding.saldFF3.setText(it.get("SaldFF3") as String?)
+            binding.saldMA1.setText(it.get("SaldMA1") as String?)
+            binding.saldMA2.setText(it.get("SaldMA2") as String?)
+            binding.saldMA3.setText(it.get("SaldMA3") as String?)
+            binding.totFinal1.setText(it.get("Tot1") as String?)
+            binding.totFinal2.setText(it.get("Tot2") as String?)
+            binding.totFinal3.setText(it.get("Tot3") as String?)
+
+
+
         }
     }
     //metodo para evitar errores si se deja campo vacio
     private fun validarCampos(){
 
+        if(binding.etVentas1.text.toString().length==0){
+            binding.etVentas1.setText("0.0")
+        }else{}
+        if(binding.etVentas2.text.toString().length==0){
+            binding.etVentas2.setText("0.0")
+        }else{}
+        if(binding.etVentas3.text.toString().length==0){
+            binding.etVentas3.setText("0.0")
+        }else{}
         if(binding.Inco1.text.toString().length==0){
             binding.Inco1.setText("0.0")
         }else{}
@@ -368,6 +402,107 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         }else{}
         if(binding.ot3.text.toString().length==0){
             binding.ot3.setText("0.0")
+        }else{}
+        if(binding.compMerc1.text.toString().length==0){
+            binding.compMerc1.setText("0.0")
+        }else{}
+        if(binding.compMerc2.text.toString().length==0){
+            binding.compMerc2.setText("0.0")
+        }else{}
+        if(binding.compMerc3.text.toString().length==0){
+            binding.compMerc3.setText("0.0")
+        }else{}
+        if(binding.inCoCF1.text.toString().length==0){
+            binding.inCoCF1.setText("0.0")
+        }else{}
+        if(binding.inCoCF2.text.toString().length==0){
+            binding.inCoCF2.setText("0.0")
+        }else{}
+        if(binding.inCoCF3.text.toString().length==0){
+            binding.inCoCF3.setText("0.0")
+        }else{}
+
+        if(binding.coAF1.text.toString().length==0){
+            binding.coAF1.setText("0.0")
+        }else{}
+        if(binding.coAF2.text.toString().length==0){
+            binding.coAF2.setText("0.0")
+        }else{}
+        if(binding.coAF3.text.toString().length==0){
+            binding.coAF3.setText("0.0")
+        }else
+
+        if(binding.sub1.text.toString().length==0){
+                binding.sub1.setText("0.0")
+        }else{}
+        if(binding.sub2.text.toString().length==0){
+            binding.sub2.setText("0.0")
+        }else{}
+        if(binding.sub3.text.toString().length==0){
+            binding.sub3.setText("0.0")
+        }else{}
+        if(binding.cgo1.text.toString().length==0){
+            binding.cgo1.setText("0.0")
+        }else{}
+        if(binding.cgo2.text.toString().length==0){
+            binding.cgo2.setText("0.0")
+        }else{}
+        if(binding.cgo3.text.toString().length==0){
+            binding.cgo3.setText("0.0")
+        }else{}
+        if(binding.otCF1.text.toString().length==0){
+            binding.otCF1.setText("0.0")
+        }else{}
+        if(binding.otCF2.text.toString().length==0){
+            binding.otCF2.setText("0.0")
+        }else{}
+        if(binding.otCF3.text.toString().length==0){
+            binding.otCF3.setText("0.0")
+        }else{}
+        if(binding.totComp1.text.toString().length==0){
+            binding.totComp1.setText("0.0")
+        }else{}
+        if(binding.totComp2.text.toString().length==0){
+            binding.totComp2.setText("0.0")
+        }else{}
+        if(binding.totComp3.text.toString().length==0){
+            binding.totComp3.setText("0.0")
+        }else{}
+        if(binding.totCF1.text.toString().length==0){
+            binding.totCF1.setText("0.0")
+        }else{}
+        if(binding.totCF2.text.toString().length==0){
+            binding.totCF2.setText("0.0")
+        }else{}
+        if(binding.totCF3.text.toString().length==0){
+            binding.totCF3.setText("0.0")
+        }else{}
+        if(binding.saldFF1.text.toString().length==0){
+            binding.saldFF1.setText("0.0")
+        }else{}
+        if(binding.saldFF2.text.toString().length==0){
+            binding.saldFF2.setText("0.0")
+        }else{}
+        if(binding.saldFF3.text.toString().length==0){
+            binding.saldFF3.setText("0.0")
+        }else{}
+        if(binding.saldMA1.text.toString().length==0){
+            binding.saldMA1.setText("0.0")
+        }else{}
+        if(binding.saldMA2.text.toString().length==0){
+            binding.saldMA2.setText("0.0")
+        }else{}
+        if(binding.saldMA3.text.toString().length==0){
+            binding.saldMA3.setText("0.0")
+        }else{}
+        if(binding.totFinal1.text.toString().length==0){
+            binding.totFinal1.setText("0.0")
+        }else{}
+        if(binding.totFinal2.text.toString().length==0){
+            binding.totFinal2.setText("0.0")
+        }else{}
+        if(binding.totFinal3.text.toString().length==0){
+            binding.totFinal3.setText("0.0")
         }else{}
     }
     companion object {

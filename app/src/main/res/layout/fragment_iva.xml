@@ -83,21 +83,21 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/etVentas2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/etVentas3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -255,21 +255,21 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/tot2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/tot3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -287,21 +287,21 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/defis2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/defis3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -529,21 +529,21 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/totComp2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/totComp3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -561,21 +561,21 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/totCF2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/totCF3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -588,26 +588,26 @@
                         android:layout_margin="10dp"
                         android:text="Saldo a Favor Fisco" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/saldFF1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/saldFF2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/saldFF3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -657,21 +657,21 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/totFinal2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
 
                     <TextView
                         android:id="@+id/totFinal3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:hint="80000" />
+                        android:hint="0" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -685,10 +685,11 @@
 
                         <Button
                             android:id="@+id/btnSaveIva"
-                            android:layout_width="129dp"
+                            android:layout_width="147dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:text="Sync"
+                            android:backgroundTint="@color/teal_700"
+                            android:text="Calcular"
                             app:icon="@android:drawable/stat_notify_sync" />
                     </LinearLayout>
 
