@@ -17,7 +17,7 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as MainActivity?)?.getSupportActionBar()?.setTitle("SUELDOS Y SALARIOS")
+        (activity as MainActivity?)?.getSupportActionBar()?.setTitle("FLUJO EFECTIVO")
         _binding = FragmentFlujoBinding.inflate(inflater, container, false)
         val view = binding.root
 

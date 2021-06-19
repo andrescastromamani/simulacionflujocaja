@@ -9,8 +9,8 @@
     >
 
     <ScrollView
-        android:layout_width="628dp"
-        android:layout_height="925dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:fillViewport="true"
         android:scrollbarStyle="outsideInset"
         android:scrollbars="horizontal|vertical">
@@ -52,17 +52,17 @@
 
                     <EditText
                         android:id="@+id/ptPorcentajeDiv"
-                        android:layout_width="100dp"
+                        android:layout_width="80dp"
                         android:layout_height="match_parent"
 
                         android:layout_alignParentRight="true"
                         android:layout_margin="10dp"
                         android:gravity="left"
-                        android:translationX="120dp" />
+                        android:translationX="80dp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="503dp"
                     android:layout_height="wrap_content">
 
                     <TextView
@@ -72,7 +72,7 @@
                         android:text="Ingresos de operacion" />
 
                     <EditText
-                        android:layout_width="100dp"
+                        android:layout_width="73dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="" />
@@ -90,7 +90,7 @@
                         android:text="Gastos de operacion" />
 
                     <EditText
-                        android:layout_width="100dp"
+                        android:layout_width="73dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="" />
@@ -109,11 +109,11 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <EditText
-                        android:layout_width="100dp"
+                        android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint=""
-                        android:translationX="120dp" />
+                        android:translationX="80dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -127,7 +127,7 @@
                         android:text="Ingresos de capital" />
 
                     <EditText
-                        android:layout_width="100dp"
+                        android:layout_width="73dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="" />
@@ -145,7 +145,7 @@
                         android:text="Gastos de capital" />
 
                     <EditText
-                        android:layout_width="100dp"
+                        android:layout_width="73dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="" />
@@ -164,11 +164,11 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <EditText
-                        android:layout_width="100dp"
+                        android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint=""
-                        android:translationX="120dp" />
+                        android:translationX="80dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -182,7 +182,7 @@
                         android:text="Fuentes" />
 
                     <EditText
-                        android:layout_width="100dp"
+                        android:layout_width="73dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="" />
@@ -200,7 +200,7 @@
                         android:text="Usos" />
 
                     <EditText
-                        android:layout_width="100dp"
+                        android:layout_width="73dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="" />
@@ -219,11 +219,11 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <EditText
-                        android:layout_width="100dp"
+                        android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint=""
-                        android:translationX="120dp" />
+                        android:translationX="80dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -241,18 +241,17 @@
 
                     <EditText
                         android:id="@+id/editText10"
-                        android:layout_width="91dp"
-                        android:layout_height="56dp"
+                        android:layout_width="80dp"
+                        android:layout_height="55dp"
                         android:layout_margin="10dp"
-                        android:layout_weight="0"
                         android:hint=""
-                        android:translationX="120dp" />
+                        android:translationX="80dp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="88dp"
+                    android:layout_height="82dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -268,12 +267,11 @@
 
                     <EditText
                         android:id="@+id/editText11"
-                        android:layout_width="91dp"
-                        android:layout_height="56dp"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
                         android:layout_margin="10dp"
-                        android:layout_weight="0"
                         android:hint=""
-                        android:translationX="105dp" />
+                        android:translationX="67dp" />
 
                 </LinearLayout>
 
