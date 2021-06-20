@@ -463,6 +463,34 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
            _binding?.incob60d3?.setText(r.redondear(totIncob60d3).toString())
            _binding?.incob60d4?.setText(r.redondear(totIncob60d4).toString())
            _binding?.incob60d5?.setText(r.redondear(totIncob60d5).toString())
+           val incrementoSal:Double= parseDouble(binding.etIncrementoSalarial.text.toString())/100.0
+           val sueldoEmp:Double= parseDouble(binding.etSueldoEmp.text.toString())
+           if(incrementoSal==0.0){
+               val sueldo1:Double=sueldoEmp
+               val sueldo2:Double=sueldoEmp
+               val sueldo3:Double=sueldoEmp
+               db.collection("Users").document(user?.email.toString()).collection("Entradas").document("SueldosMes").set(
+                   hashMapOf(
+
+                       "sueldo1" to  sueldo1.toString(),
+                       "sueldo2" to  sueldo2.toString(),
+                       "sueldo3" to  sueldo3.toString()
+                   ))
+           }
+           else{
+               val sueldo1:Double=sueldoEmp
+               val sueldo2:Double=sueldoEmp
+               val sueldo3:Double=r.redondear(sueldoEmp+(sueldoEmp*incrementoSal))
+
+               db.collection("Users").document(user?.email.toString()).collection("Entradas").document("SueldosMes").set(
+                   hashMapOf(
+
+                       "sueldo1" to  sueldo1.toString(),
+                       "sueldo2" to  sueldo2.toString(),
+                       "sueldo3" to  sueldo3.toString()
+                   ))
+           }
+
 
            if(porcCont==totPorc && porc30dias ==0.0 && porc60dias==0.0 && porcCont+porc30dias+porc60dias==totPorc)
            {
