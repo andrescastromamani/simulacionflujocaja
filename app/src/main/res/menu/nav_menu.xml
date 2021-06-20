@@ -29,4 +29,8 @@
     <item android:id="@+id/nav_presupuesto"
         android:title="Presupuesto de Caja"
         android:icon="@drawable/presupuesto_caja"/>
+
+    <item android:id="@+id/nav_simulation"
+        android:title="Simulacion"
+        android:icon="@drawable/presupuesto_caja"/>
 </menu>

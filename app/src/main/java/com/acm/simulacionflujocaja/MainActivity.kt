@@ -24,6 +24,7 @@ private const val TAG_FOURTH = "fourth"
 private const val TAG_FIVE = "cinco"
 private const val TAG_SIX = "seis"
 private const val TAG_SEVEN = "siete"
+private const val TAG_OCHO = "ocho"
 private const val MAX_HISTORIC = 20
 
 class MainActivity : AppCompatActivity() ,Communicator{
@@ -92,6 +93,12 @@ class MainActivity : AppCompatActivity() ,Communicator{
                     R.id.nav_presupuesto->{
                         supportFragmentManager.beginTransaction().apply {
                             replace(R.id.fragmentContainerView,PresupuestoFragment())
+                            commit()
+                        }
+                    }
+                    R.id.nav_simulation->{
+                        supportFragmentManager.beginTransaction().apply {
+                            replace(R.id.fragmentContainerView,SimulationFragment())
                             commit()
                         }
                     }
