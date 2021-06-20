@@ -35,8 +35,10 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         _binding = FragmentIvaBinding.inflate(inflater, container, false)
         val view = binding.root
         recuperarTodoIVA()
+
         recDatosMeses()//recupera los meses que esta en bd y establece como texto en los textView
         recDataVentCont()//recupera de la bd y manda la informacion a las ventas contado
+        validarCampos()
         saveInputsIVA() //guarda todas las entradas que existen en IVA
 
 
@@ -47,13 +49,14 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
     }
 
     private fun saveInputsIVA(){
+
         binding.btnSaveIva.setOnClickListener {
             validarCampos()
-            saveTotalDebFisc()
+            saveTotalesIVA()
 
         }
     }
-    private fun saveTotalDebFisc(){//calcula y guarda total debito fiscal
+    private fun saveTotalesIVA(){//calcula y guarda total debito fiscal
         val porcIva:Double=0.13
         // CALCULO PARA CREDITOS
         val ventasC1:Double= parseDouble(binding.etVentas1.text.toString())

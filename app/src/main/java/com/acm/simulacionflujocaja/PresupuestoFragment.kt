@@ -33,11 +33,19 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
 
 
         recDatosMeses()
-        recDatosInputs()
-        calculoTotalesEntrada()
+        calculoTotalEntradas()
+        recDatosIVA()
+        recDatosSueldosInputs()
+        //recupDatosInputYcalculo()
 
 
         return view
+    }
+    private fun saveInputsPresCaja(){
+
+        binding.btnSavePreCaja.setOnClickListener {
+            validarCampos()
+        }
     }
     private fun recDatosMeses(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {
@@ -46,9 +54,56 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
             binding.mes3.setText(it.get("Mes 5") as String?)
 
         } }
+    private fun recDatosSueldosInputs(){
+        db.collection("Users").document(email.toString()).collection("Entradas").document("SueldosMes").get().addOnSuccessListener {
+            binding.editText19.setText(it.get("sueldo1") as String?)
+            binding.editText20.setText(it.get("sueldo2") as String?)
+            binding.editText21.setText(it.get("sueldo3") as String?)
+            val sueldo_1:Double= parseDouble(it.get("sueldo1") as String?)
+            val sueldo_2:Double= parseDouble(it.get("sueldo2") as String?)
+            val sueldo_3:Double= parseDouble(it.get("sueldo3") as String?)
+            val totalSueldos:Double=r.redondear(sueldo_1+sueldo_2+sueldo_3)
+            binding.totalv7.setText(totalSueldos.toString())
+
+        } }
+
+    private fun recDatosIVA(){
+        db.collection("Users").document(email.toString()).collection("Entradas").document("DatosIva").get().addOnSuccessListener {
+            binding.textView6.setText(it.get("SaldFF1") as String?)
+            binding.textView7.setText(it.get("SaldFF2") as String?)
+
+            val iva2:Double= r.redondear(parseDouble(it.get("SaldFF1") as String?))
+            val iva3:Double= r.redondear(parseDouble(it.get("SaldFF2") as String?))
 
 
-    private fun recDatosInputs(){
+        } }
+
+
+
+    private fun recDatosIT(){
+        db.collection("Users").document(email.toString()).collection("Entradas").document("IT").get().addOnSuccessListener {
+            binding.textView9.setText(it.get("1") as String?)
+
+            if(parseDouble(it.get("2") as String?)<=0.0)
+            {
+                binding.textView10.setText("0.0")
+            }
+            else{
+                binding.textView10.setText(it.get("2") as String?)
+            }
+        } }
+
+    private fun recDatosIUE(){
+        db.collection("Users").document(email.toString()).collection("Entradas").document("IUE").get().addOnSuccessListener {
+            binding.textView11.setText(it.get("1") as String?)
+            binding.textView13.setText("0.0")
+            binding.textView14.setText("0.0")
+            //val totalIUE:Double=parseDouble(it.get("1") as String?)
+
+        }
+
+    }
+    private fun calculoTotalEntradas(){ //RECUPERA DATOS DE INPUTS Y HACE CALCULOS DE LOS TOTALES DE LAS ENTRADAS
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Inputs").get().addOnSuccessListener {
 
 
@@ -82,65 +137,143 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
             val totalRec60d:Double= ventas60d1 + ventas60d2 + ventas60d3
             binding.totalv3.text = r.redondear(totalRec60d).toString()
 
+            val totalMes1:Double= ventas1!! + ventas30d1!! + ventas60d1!!
+            val totalMes2:Double= ventas2!! + ventas30d2!! + ventas60d2!!
+            val totalMes3:Double= ventas3!! + ventas30d3!! + totalRec60d!!
+            val total:Double=totalMes1+totalMes2+totalMes3
+            binding.textView.text = r.redondear(totalMes1).toString()
+            binding.textView2.text = r.redondear(totalMes2).toString()
+            binding.textView3.text = r.redondear(totalMes3).toString()
+            binding.totalv4.text = r.redondear(total).toString()
+
+        }
+        fun saveTotalesIVA(){//calcula y guarda total debito fiscal
+            val porcIva:Double=0.13
+            // CALCULO TOTAL SALIDAS
+            val totEntrada1:Double= parseDouble(binding.textView.text.toString())
+            val totEntrada2:Double= parseDouble(binding.textView2.text.toString())
+            val totEntrada3:Double= parseDouble(binding.textView3.text.toString())
+
+            val compras1:Double= parseDouble(binding.editText16.text.toString())
+            val compras2:Double= parseDouble(binding.editText17.text.toString())
+            val compras3:Double= parseDouble(binding.editText18.text.toString())
+            val totCompras:Double= parseDouble(binding.totalv6.text.toString())
+
+            /*val veAcFi1:Double= parseDouble(binding.vaf1.text.toString())
+            val veAcFi2:Double= parseDouble(binding.vaf2.text.toString())
+            val veAcFi3:Double= parseDouble(binding.vaf3.text.toString())
+            val Alq1:Double= parseDouble(binding.alq1.text.toString())
+            val Alq2:Double= parseDouble(binding.alq2.text.toString())
+            val Alq3:Double= parseDouble(binding.alq3.text.toString())
+            val otros1:Double= parseDouble(binding.ot1.text.toString())
+            val otros2:Double= parseDouble(binding.ot2.text.toString())
+            val otros3:Double= parseDouble(binding.ot3.text.toString())*/
         }
 
 
     }
+    private fun validarCampos(){
 
-    private fun calculoTotalesEntrada(){
-        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Calculo").get().addOnSuccessListener {
+        if(binding.editText16.text.toString().length==0){
+            binding.editText16.setText("0.0")
+        }else{}
+        if(binding.editText17.text.toString().length==0){
+            binding.editText17.setText("0.0")
+        }else{}
+        if(binding.editText18.text.toString().length==0){
+            binding.editText18.setText("0.0")
+        }else{}
+        if(binding.editText19.text.toString().length==0){
+            binding.editText19.setText("0.0")
+        }else{}
+        if(binding.editText20.text.toString().length==0){
+            binding.editText20.setText("0.0")
+        }else{}
+        if(binding.editText21.text.toString().length==0){
+            binding.editText21.setText("0.0")
+        }else{}
+        if(binding.editText22.text.toString().length==0){
+            binding.editText22.setText("0.0")
+        }else{}
+        if(binding.editText23.text.toString().length==0){
+            binding.editText23.setText("0.0")
+        }else{}
+        if(binding.editText24.text.toString().length==0){
+            binding.editText24.setText("0.0")
+        }else{}
+        if(binding.editText25.text.toString().length==0){
+            binding.editText25.setText("0.0")
+        }else{}
+        if(binding.editText26.text.toString().length==0){
+            binding.editText26.setText("0.0")
+        }else{}
+        if(binding.editText27.text.toString().length==0){
+            binding.editText27.setText("0.0")
+        }else{}
+        if(binding.editText28.text.toString().length==0){
+            binding.editText28.setText("0.0")
+        }else{}
+        if(binding.editText29.text.toString().length==0){
+            binding.editText29.setText("0.0")
+        }else{}
+        if(binding.editText30.text.toString().length==0){
+            binding.editText30.setText("0.0")
+        }else{}
+        if(binding.editText31.text.toString().length==0){
+            binding.editText31.setText("0.0")
+        }else{}
+        if(binding.editText32.text.toString().length==0){
+            binding.editText32.setText("0.0")
+        }else{}
+        if(binding.editText33.text.toString().length==0){
+            binding.editText33.setText("0.0")
+        }else{}
+        if(binding.textView4.text.toString().length==0){
+            binding.textView4.setText("0.0")
+        }else{}
+        if(binding.textView8.text.toString().length==0){
+            binding.textView8.setText("0.0")
+        }else{}
+        if(binding.editText43.text.toString().length==0){
+            binding.editText43.setText("0.0")
+        }else{}
 
+        if(binding.editText44.text.toString().length==0){
+            binding.editText44.setText("0.0")
+        }else{}
+        if(binding.editText45.text.toString().length==0){
+            binding.editText45.setText("0.0")
+        }else{}
+        if(binding.editText58.text.toString().length==0){
+            binding.editText58.setText("0.0")
+        }else
 
-            val ventas1:Double?= parseDouble((it.get("VentasMes1")).toString())
-            val ventas2:Double?= parseDouble((it.get("VentasMes2")).toString())
-            val ventas3:Double?= parseDouble((it.get("VentasMes3")).toString())
-            val r30d1:Double?= parseDouble((it.get("rec30dias1")).toString())
-            val r30d2:Double?= parseDouble((it.get("rec30dias2")).toString())
-            val r30d3:Double?= parseDouble((it.get("rec30dias3")).toString())
-            val r60d1:Double?= parseDouble((it.get("rec60dias1")).toString())
-            val r60d2:Double?= parseDouble((it.get("rec60dias2")).toString())
-            val r60d3:Double?= parseDouble((it.get("rec60dias3")).toString())
-            val totalMes1:Double= ventas1!! + r30d1!! + r60d1!!
-            val totalMes2:Double= ventas2!! + r30d2!! + r60d2!!
-            val totalMes3:Double= ventas3!! + r30d3!! + r60d3!!
-            val total:Double=totalMes1+totalMes2+totalMes3
-            binding.textView.text = r.redondear(totalMes1).toString()
-            binding.textView2.text = r.redondear(totalMes2).toString()
-            binding.textView3.text = r.redondear(totalMes3).toString()
-            binding.totalv4.text = r.redondear(total).toString()
+            if(binding.editText59.text.toString().length==0){
+                binding.editText59.setText("0.0")
+            }else{}
+        if(binding.editText60.text.toString().length==0){
+            binding.editText60.setText("0.0")
+        }else{}
+        if(binding.editText61.text.toString().length==0){
+            binding.editText61.setText("0.0")
+        }else{}
+        if(binding.editText62.text.toString().length==0){
+            binding.editText62.setText("0.0")
+        }else{}
+        if(binding.editText63.text.toString().length==0){
+            binding.editText63.setText("0.0")
+        }else{}
+        if(binding.editText64.text.toString().length==0){
+            binding.editText64.setText("0.0")
+        }else{}
+        if(binding.editText65.text.toString().length==0){
+            binding.editText65.setText("0.0")
+        }else{}
+        if(binding.editText66.text.toString().length==0){
+            binding.editText66.setText("0.0")
+        }else{}
 
-
-
-    }}
-
-    private fun salidas(){
-        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
-
-
-            val ventas1:Double?= parseDouble((it.get("VentasMes1")).toString())
-            val ventas2:Double?= parseDouble((it.get("VentasMes2")).toString())
-            val ventas3:Double?= parseDouble((it.get("VentasMes3")).toString())
-            val r30d1:Double?= parseDouble((it.get("rec30dias1")).toString())
-            val r30d2:Double?= parseDouble((it.get("rec30dias2")).toString())
-            val r30d3:Double?= parseDouble((it.get("rec30dias3")).toString())
-            val r60d1:Double?= parseDouble((it.get("rec60dias1")).toString())
-            val r60d2:Double?= parseDouble((it.get("rec60dias2")).toString())
-            val r60d3:Double?= parseDouble((it.get("rec60dias3")).toString())
-            val totalMes1:Double= ventas1!! + r30d1!! + r60d1!!
-            val totalMes2:Double= ventas2!! + r30d2!! + r60d2!!
-            val totalMes3:Double= ventas3!! + r30d3!! + r60d3!!
-            val total:Double=totalMes1+totalMes2+totalMes3
-            binding.textView.text = r.redondear(totalMes1).toString()
-            binding.textView2.text = r.redondear(totalMes2).toString()
-            binding.textView3.text = r.redondear(totalMes3).toString()
-            binding.totalv4.text = r.redondear(total).toString()
-
-
-
-        }}
-
-
-
+    }
 
     companion object {
 
