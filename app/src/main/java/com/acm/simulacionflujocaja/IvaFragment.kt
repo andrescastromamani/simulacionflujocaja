@@ -47,83 +47,14 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
     }
 
     private fun saveInputsIVA(){
-
-
         binding.btnSaveIva.setOnClickListener {
             validarCampos()
             saveTotalDebFisc()
 
-
-
-       /* db.collection("Users").document(user?.email.toString()).collection("Entradas").document("DatosIva").set(
-            hashMapOf(
-                "VentCon1" to binding.etVentas1.text.toString(),
-                "VentCon2" to binding.etVentas2.text.toString(),
-                "VentCon3" to binding.etVentas3.text.toString(),
-                "InCoDF1" to binding.Inco1.text.toString(),
-                "InCoDF2" to binding.Inco2.text.toString(),
-                "InCoDF3" to binding.Inco3.text.toString(),
-                "VeAcFi1" to binding.vaf1.text.toString(),
-                "VeAcFi2" to binding.vaf2.text.toString(),
-                "VeAcFi3" to binding.vaf3.text.toString(),
-                "Alq1" to binding.alq1.text.toString(),
-                "Alq2" to binding.alq2.text.toString(),
-                "Alq3" to binding.alq3.text.toString(),
-                "otros1" to binding.ot1.text.toString(),
-                "otros2" to binding.ot2.text.toString(),
-                "otros3" to binding.ot3.text.toString(),
-                "tot1" to binding.tot1.text.toString(),
-                "tot2" to binding.tot2.text.toString(),
-                "tot3" to binding.tot3.text.toString(),
-                "Defis1" to binding.defis1.text.toString(),
-                "Defis2" to binding.defis2.text.toString(),
-                "Defis3" to binding.defis3.text.toString(),
-                "CompMerc1" to binding.compMerc1.text.toString(),
-                "CompMerc2" to binding.compMerc2.text.toString(),
-                "CompMerc3" to binding.compMerc3.text.toString(),
-                "InCoCF1" to binding.inCoCF1.text.toString(),
-                "InCoCF2" to binding.inCoCF2.text.toString(),
-                "InCoCF3" to binding.inCoCF3.text.toString(),
-                "CoAF1" to binding.coAF1.text.toString(),
-                "CoAF2" to binding.coAF2.text.toString(),
-                "CoAF3" to binding.coAF3.text.toString(),
-                "Sub1" to binding.sub1.text.toString(),
-                "Sub2" to binding.sub2.text.toString(),
-                "Sub3" to binding.sub3.text.toString(),
-                "Cgo1" to binding.cgo1.text.toString(),
-                "Cgo2" to binding.cgo2.text.toString(),
-                "Cgo3" to binding.cgo3.text.toString(),
-                "OtCF1" to binding.otCF1.text.toString(),
-                "OtCF2" to binding.otCF2.text.toString(),
-                "OtCF3" to binding.otCF3.text.toString(),
-                "TotComp1" to binding.totComp1.text.toString(),
-                "TotComp2" to binding.totComp2.text.toString(),
-                "TotComp3" to binding.totComp3.text.toString(),
-                "TotCF1" to binding.totCF1.text.toString(),
-                "TotCF2" to binding.totCF2.text.toString(),
-                "TotCF3" to binding.totCF3.text.toString(),
-                "SaldFF1" to binding.saldFF1.text.toString(),
-                "SaldFF2" to binding.saldFF2.text.toString(),
-                "SaldFF3" to binding.saldFF3.text.toString(),
-                "SaldMA1" to binding.saldMA1.text.toString(),
-                "SaldMA2" to binding.saldMA2.text.toString(),
-                "SaldMA3" to binding.saldMA3.text.toString(),
-                "Tot1" to binding.totFinal1.text.toString(),
-                "Tot2" to binding.totFinal2.text.toString(),
-                "Tot3" to binding.totFinal3.text.toString(),
-
-
-
-
-            )) */}
-
-
-
+        }
     }
     private fun saveTotalDebFisc(){//calcula y guarda total debito fiscal
         val porcIva:Double=0.13
-
-
         // CALCULO PARA CREDITOS
         val ventasC1:Double= parseDouble(binding.etVentas1.text.toString())
         val ventasC2:Double= parseDouble(binding.etVentas2.text.toString())
@@ -212,11 +143,7 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         binding.totFinal2.setText(saldoFinalFisco2.toString())
         binding.totFinal3.setText(saldoFinalFisco3.toString())
 
-
-
-
-
-
+        //GUARDA EN BD TODAS LA ENTRADAS Y SUS CALCULOS
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("DatosIva").set(
             hashMapOf(
                 "VentCon1" to binding.etVentas1.text.toString(),
@@ -296,21 +223,21 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
        /* binding.etVentas1.setText(it.get("VentCont1") as String?)
         binding.etVentas2.setText(it.get("VentCont2") as String?)
         binding.etVentas3.setText(it.get("VentCont3") as String?)*/
-        binding.Inco1.setText(it.get("InCoDF1") as String?)
-        binding.Inco2.setText(it.get("InCoDF2") as String?)
-        binding.Inco3.setText(it.get("InCoDF3") as String?)
-        binding.vaf1.setText(it.get("VeAcFi1") as String?)
-        binding.vaf2.setText(it.get("VeAcFi2") as String?)
-        binding.vaf3.setText(it.get("VeAcFi3") as String?)
-        binding.alq1.setText(it.get("Alq1") as String?)
-        binding.alq2.setText(it.get("Alq2") as String?)
-        binding.alq3.setText(it.get("Alq3") as String?)
-        binding.ot1.setText(it.get("otros1") as String?)
-        binding.ot2.setText(it.get("otros2") as String?)
-        binding.ot3.setText(it.get("otros3") as String?)
-        binding.tot1.setText(it.get("tot1") as String?)
-           binding.tot2.setText(it.get("tot2") as String?)
-           binding.tot3.setText(it.get("tot3") as String?)
+            binding.Inco1.setText(it.get("InCoDF1") as String?)
+            binding.Inco2.setText(it.get("InCoDF2") as String?)
+            binding.Inco3.setText(it.get("InCoDF3") as String?)
+            binding.vaf1.setText(it.get("VeAcFi1") as String?)
+            binding.vaf2.setText(it.get("VeAcFi2") as String?)
+            binding.vaf3.setText(it.get("VeAcFi3") as String?)
+            binding.alq1.setText(it.get("Alq1") as String?)
+            binding.alq2.setText(it.get("Alq2") as String?)
+            binding.alq3.setText(it.get("Alq3") as String?)
+            binding.ot1.setText(it.get("otros1") as String?)
+            binding.ot2.setText(it.get("otros2") as String?)
+            binding.ot3.setText(it.get("otros3") as String?)
+            binding.tot1.setText(it.get("tot1") as String?)
+            binding.tot2.setText(it.get("tot2") as String?)
+            binding.tot3.setText(it.get("tot3") as String?)
             binding.defis1.setText(it.get("Defis1") as String?)
             binding.defis2.setText(it.get("Defis2") as String?)
             binding.defis3.setText(it.get("Defis3") as String?)

@@ -33,6 +33,8 @@
                     android:orientation="vertical"
                     android:visibility="visible">
 
+
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -121,7 +123,7 @@
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -131,7 +133,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -141,7 +143,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -178,7 +180,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -188,7 +190,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -198,7 +200,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -236,7 +238,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -246,7 +248,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -256,7 +258,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -294,7 +296,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@android:color/holo_orange_dark"
@@ -307,7 +309,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@android:color/holo_orange_dark"
@@ -320,7 +322,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@android:color/holo_orange_dark"
@@ -578,6 +580,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -636,6 +639,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -694,6 +698,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -723,7 +728,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -734,7 +739,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -745,7 +750,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -755,6 +760,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -784,7 +790,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -795,7 +801,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -806,7 +812,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -816,6 +822,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -845,7 +852,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -856,7 +863,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -867,7 +874,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -877,6 +884,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -905,7 +913,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -915,7 +923,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -925,7 +933,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -935,6 +943,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -964,7 +973,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -975,7 +984,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -986,7 +995,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -996,6 +1005,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -1025,7 +1035,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1036,7 +1046,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1047,7 +1057,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1057,6 +1067,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -1086,7 +1097,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1097,7 +1108,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1108,7 +1119,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1118,6 +1129,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -1147,7 +1159,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1158,7 +1170,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1169,7 +1181,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1179,6 +1191,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -1207,7 +1220,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -1217,7 +1230,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -1227,7 +1240,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -1237,6 +1250,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -1265,7 +1279,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -1275,7 +1289,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -1285,7 +1299,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -1295,6 +1309,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -1323,7 +1338,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -1333,7 +1348,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -1343,7 +1358,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:hint="80000"
+                            android:hint="0.0"
                             android:inputType="number"
                             android:textAlignment="center" />
 
@@ -1353,6 +1368,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -1382,7 +1398,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1393,7 +1409,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1404,7 +1420,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:clickable="false"
-                            android:hint="00000"
+                            android:hint="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -1416,7 +1432,28 @@
                             android:layout_weight="1"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:hint="0.0" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="351dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnSavePreCaja"
+                                android:layout_width="147dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:backgroundTint="@color/teal_700"
+                                android:text="Calcular"
+                                app:icon="@android:drawable/stat_notify_sync" />
+                        </LinearLayout>
 
                     </LinearLayout>
 

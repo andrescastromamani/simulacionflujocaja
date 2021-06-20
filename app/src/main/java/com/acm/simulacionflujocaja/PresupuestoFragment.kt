@@ -37,25 +37,6 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
         calculoTotalesEntrada()
 
 
-        /*val presuMes1:Double= parseDouble(arguments?.getString("c1"))
-        val presuMes2:Double= parseDouble(arguments?.getString("c2"))
-        val presuMes3:Double= parseDouble(arguments?.getString("c3"))
-        val r30d1:Double= parseDouble(arguments?.getString("r30d1"))
-        val r30d2:Double= parseDouble(arguments?.getString("r30d2"))
-        val r30d3:Double= parseDouble(arguments?.getString("r30d3"))
-        val r60d1:Double= parseDouble(arguments?.getString("r60d1"))
-        val r60d2:Double= parseDouble(arguments?.getString("r60d2"))
-        val r60d3:Double= parseDouble(arguments?.getString("r60d3"))
-        val totalmes1:Double=r.redondear(presuMes1+r30d1+r60d1)
-        _binding!!.textView.setText(totalmes1.toString())*/
-        //entradasEfectivo()
-
-
-
-
-
-
-
         return view
     }
     private fun recDatosMeses(){
@@ -105,11 +86,6 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
 
 
     }
-
-
-
-
-
 
     private fun calculoTotalesEntrada(){
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Calculo").get().addOnSuccessListener {
