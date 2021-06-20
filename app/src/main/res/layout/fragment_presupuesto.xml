@@ -116,7 +116,7 @@
                             android:textAlignment="gravity"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/ventas1"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -125,7 +125,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/ventas2"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -135,7 +135,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/ventas3"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -152,7 +152,8 @@
                             android:layout_margin="10dp"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@android:color/holo_orange_dark" />
 
                     </LinearLayout>
 
@@ -171,7 +172,7 @@
                             android:textAlignment="gravity"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText4"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -181,7 +182,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText5"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -191,7 +192,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText6"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -209,7 +210,8 @@
                             android:layout_weight="1"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@android:color/holo_orange_dark" />
 
                     </LinearLayout>
 
@@ -228,7 +230,7 @@
                             android:textAlignment="gravity"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText7"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -238,7 +240,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText8"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -248,7 +250,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText9"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -266,7 +268,8 @@
                             android:layout_weight="1"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@android:color/holo_orange_dark" />
 
                     </LinearLayout>
 
@@ -293,7 +296,9 @@
                             android:clickable="false"
                             android:hint="00000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/textView2"
@@ -304,7 +309,9 @@
                             android:clickable="false"
                             android:hint="00000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/textView3"
@@ -315,7 +322,9 @@
                             android:clickable="false"
                             android:hint="00000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/totalv4"
@@ -325,7 +334,8 @@
                             android:layout_weight="1"
                             android:hint="00000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/design_default_color_error" />
 
                     </LinearLayout>
 

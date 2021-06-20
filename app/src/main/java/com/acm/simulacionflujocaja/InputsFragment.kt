@@ -10,11 +10,14 @@ import androidx.fragment.app.Fragment
 import com.acm.simulacionflujocaja.databinding.FragmentInputsBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.fragment_inputs.*
 import java.lang.Double.parseDouble
 import java.lang.Integer.parseInt
 import java.math.RoundingMode
 import java.text.DecimalFormat
 import kotlin.math.round
+import java.math.BigDecimal
+
 
 
 class InputsFragment : Fragment(R.layout.fragment_inputs) {
@@ -22,9 +25,9 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
     private val db = FirebaseFirestore.getInstance()
     private var _binding: FragmentInputsBinding? = null
     private val binding get() = _binding!!
-    //private lateinit var communicator: Communicator
-    val user = FirebaseAuth.getInstance().currentUser
-
+    private lateinit var communicator: Communicator
+    private val user = FirebaseAuth.getInstance().currentUser
+    private val r :RedondeoDecimal= RedondeoDecimal()
     override fun onCreate(savedInstanceState: Bundle?) {
           super.onCreate(savedInstanceState)
 
@@ -42,25 +45,56 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
 
         _binding = FragmentInputsBinding.inflate(inflater, container, false)
         val view = binding.root
-        //communicator=activity as Communicator
+
+
 
 
         GuardarVariables(user?.email.toString())
         recuperarTodo()
+
         return view
 
 
     }
     private fun GuardarVariables(email:String){
+        communicator=activity as Communicator
         binding.btnSave.setOnClickListener {
-            datosMeses()
-            datosVentasYPrecio()
+            saveDatosMeses()//guarda meses
+            datosVentasYPrecio()//guarda ventas y precio unitario
             ingresoBruto()
             otrosDatos()
             ventasContado()
+            //para pasar datos de inputs a presupuesto de caja
+            val ventasMes1= parseDouble(_binding?.etVenCont3?.text.toString())
+            val ventasMes2= parseDouble(_binding?.etVenCont4?.text.toString())
+            val ventasMes3= parseDouble(_binding?.etVenCont5?.text.toString())
+            val rec30dias1=parseDouble(_binding?.etRec30d3?.text.toString())
+            val rec30dias2=parseDouble(_binding?.etRec30d4?.text.toString())
+            val rec30dias3=parseDouble(_binding?.etRec30d5?.text.toString())
+            val rec60dias1=parseDouble(_binding?.etRec60d3?.text.toString())
+            val rec60dias2=parseDouble(_binding?.etRec60d4?.text.toString())
+            val rec60dias3=parseDouble(_binding?.etRec60d5?.text.toString())
+            db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Calculo").set(
+                hashMapOf(
+                    "VentasMes1" to ventasMes1.toString(),
+                    "VentasMes2" to  ventasMes2.toString(),
+                    "VentasMes3" to  ventasMes3.toString(),
+
+                    "rec30dias1" to  rec30dias1.toString(),
+                    "rec30dias2" to  rec30dias2.toString(),
+                    "rec30dias3" to  rec30dias3.toString(),
+
+                    "rec60dias1" to  rec60dias1.toString(),
+                    "rec60dias2" to rec60dias2.toString(),
+                    "rec60dias3" to  rec60dias3.toString()
+
+                    )
+            )
+           // communicator.passDataMeses(ventasMes1,ventasMes2,ventasMes3,rec30dias1,rec30dias2,rec30dias3,rec60dias1,rec60dias2,rec60dias3)
+
 
         }
-        //recuperar variables
+        //recuperar variables con boton
         binding.btnRecuperar.setOnClickListener {
                         db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {
                             binding.ptMesH1.setText(it.get("Mes 1") as String?)
@@ -106,7 +140,9 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
                             binding.etInteresCredito.setText(it.get("Interes Credito") as String?)
 
                         }
-            db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Ventas Contado").get().addOnSuccessListener {
+
+
+            db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Inputs").get().addOnSuccessListener {
 
                 binding.etVenCont1.setText(it.get("Ventas contado mes 1") as String?)
                 binding.etVenCont2.setText(it.get("Ventas contado mes 2") as String?)
@@ -114,41 +150,59 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
                 binding.etVenCont4.setText(it.get("Ventas contado mes 4") as String?)
                 binding.etVenCont5.setText(it.get("Ventas contado mes 5") as String?)
 
-
-            }
-
-            db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Recuperacion 30 dias").get().addOnSuccessListener {
-
                 binding.etRec30d1.setText(it.get("Recuperacion 30 dias mes 1") as String?)
                 binding.etRec30d2.setText(it.get("Recuperacion 30 dias mes 2") as String?)
                 binding.etRec30d3.setText(it.get("Recuperacion 30 dias mes 3") as String?)
                 binding.etRec30d4.setText(it.get("Recuperacion 30 dias mes 4") as String?)
                 binding.etRec30d5.setText(it.get("Recuperacion 30 dias mes 5") as String?)
-            }
-            db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Recuperacion 60 dias").get().addOnSuccessListener {
 
                 binding.etRec60d1.setText(it.get("Recuperacion 60 dias mes 1") as String?)
                 binding.etRec60d2.setText(it.get("Recuperacion 60 dias mes 2") as String?)
                 binding.etRec60d3.setText(it.get("Recuperacion 60 dias mes 3") as String?)
                 binding.etRec60d4.setText(it.get("Recuperacion 60 dias mes 4") as String?)
                 binding.etRec60d5.setText(it.get("Recuperacion 60 dias mes 5") as String?)
-            }
 
+                binding.interes60d1.setText(it.get("Interes 60 mes 1") as String?)
+                binding.interes60d2.setText(it.get("Interes 60 mes 2") as String?)
+                binding.interes60d3.setText(it.get("Interes 60 mes 3") as String?)
+                binding.interes60d4.setText(it.get("Interes 60 mes 4") as String?)
+                binding.interes60d5.setText(it.get("Interes 60 mes 5") as String?)
+
+                binding.incob30d1.setText(it.get("Incobrabilidad 30 mes 1") as String?)
+                binding.incob30d2.setText(it.get("Incobrabilidad 30 mes 2") as String?)
+                binding.incob30d3.setText(it.get("Incobrabilidad 30 mes 3") as String?)
+                binding.incob30d4.setText(it.get("Incobrabilidad 30 mes 4") as String?)
+                binding.incob30d5.setText(it.get("Incobrabilidad 30 mes 5") as String?)
+
+                binding.incob60d1.setText(it.get("Incobrabilidad 60 mes 1") as String?)
+                binding.incob60d2.setText(it.get("Incobrabilidad 60 mes 2") as String?)
+                binding.incob60d3.setText(it.get("Incobrabilidad 60 mes 3") as String?)
+                binding.incob60d4.setText(it.get("Incobrabilidad 60 mes 4") as String?)
+                binding.incob60d5.setText(it.get("Incobrabilidad 60 mes 5") as String?)
+
+            }
 
                     }
 
         //eliminar entradas
         binding.btnEliminarInputs.setOnClickListener {
-                        db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").delete()
-                        db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas").delete()
-                        db.collection("Users").document(email.toString()).collection("Entradas").document("PrecioUd").delete()
-                        db.collection("Users").document(email.toString()).collection("Entradas").document("IngresoBruto").delete()
-                        db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("PrecioUd").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("IngresoBruto").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas Contado").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Recuperacion 30 dias").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Recuperacion 60 dias").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Intereses a cobrar 30d dias").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Intereses a cobrar 60d dias").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Incobrabilidad 30 dias").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Incobrabilidad 60 dias").delete()
                     }
 
                 }
 
-    private fun datosMeses(){
+    private fun saveDatosMeses(){
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Meses").set(
             hashMapOf(
                 "Mes 1" to binding.ptMesH1.text.toString(),
@@ -234,19 +288,40 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
                 "IngresoBrutoMes5" to  binding.tvIngresoM5.text.toString(),
 
                 )) }
-    private fun ventasContado(){
+    private fun ventasContado(){//guarda ventas contado, recuperacion 30d y rec. 60d
 
-        val totPorc:Double= redondearDecimal(100.0)
+        val totPorc:Double= r.redondear(100.0)
         //para porcentaje contado
         val porcjContado=_binding?.etPorcCont?.text.toString()
-        val porcCont= redondearDecimal(parseDouble(porcjContado))
+        val porcCont= r.redondear(parseDouble(porcjContado))
         //para porcentaje credito30dias
         val porcjCr30d=_binding?.etPorc30d?.text.toString()
-        val porc30dias= redondearDecimal(parseDouble(porcjCr30d))
+        val porc30dias= r.redondear(parseDouble(porcjCr30d))
         //para porcentaje credito60dias
         val porcjCr60d=_binding?.etPorc60d?.text.toString()
-        val porc60dias=redondearDecimal(parseDouble(porcjCr60d))
+        val porc60dias=r.redondear(parseDouble(porcjCr60d))
+       //para porcentaje interes credito
+        val interes= _binding?.etInteresCredito?.text.toString()
+        val interesCredito= r.redondear(parseDouble(interes))/100
+        //para porcentaje incobrabilidad
+        val incobrabilidad= _binding?.etPorcIncobrabilidad?.text.toString()
+        val porcIncobrabilidad=r.redondear(parseDouble(incobrabilidad))/100
 
+        if(interesCredito<0||interesCredito>0.075)
+        {
+            _binding?.etInteresCredito?.setError("Error")
+        }
+        else{
+            _binding?.etInteresCredito?.setError(null)
+        }
+
+        if(porcIncobrabilidad<0||porcIncobrabilidad>0.03)
+        {
+            _binding?.etPorcIncobrabilidad?.setError("Error")
+        }
+        else{
+            _binding?.etPorcIncobrabilidad?.setError(null)
+        }
 
        if((porcCont<0||porcCont>100) || (porc30dias<0||porc30dias>100)||(porc60dias<0||porc60dias>100))
 
@@ -306,138 +381,196 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
 
         if(porcCont<=100 && porc30dias<=100 && porc60dias<=100 && porcCont+porc30dias+porc60dias==totPorc)
        {
-           //calculo ventas contado
+           //calculo ventas contado e intereses 30d y 60d
            val ingBruto1:Double=parseDouble(_binding?.tvIngresoM1?.text.toString())
            val ventasContado1:Double= (porcCont/100)*ingBruto1
-           _binding?.etVenCont1?.setText(ventasContado1.toString())
+           _binding?.etVenCont1?.setText(r.redondear(ventasContado1).toString())
 
            val ingBruto2:Double=parseDouble(_binding?.tvIngresoM2?.text.toString())
            val ventasContado2:Double=(porcCont/100)*ingBruto2
-           _binding?.etVenCont2?.setText(ventasContado2.toString())
+           _binding?.etVenCont2?.setText(r.redondear(ventasContado2).toString())
 
            val ingBruto3:Double=parseDouble(_binding?.tvIngresoM3?.text.toString())
            val ventasContado3:Double=(porcCont/100)*ingBruto3
-           _binding?.etVenCont3?.setText(ventasContado3.toString())
+           _binding?.etVenCont3?.setText(r.redondear(ventasContado3).toString())
 
            val ingBruto4:Double=parseDouble(_binding?.tvIngresoM4?.text.toString())
            val ventasContado4:Double=(porcCont/100)*ingBruto4
-           _binding?.etVenCont4?.setText(ventasContado4.toString())
+           _binding?.etVenCont4?.setText(r.redondear(ventasContado4).toString())
 
            val ingBruto5:Double=parseDouble(_binding?.tvIngresoM5?.text.toString())
            val ventasContado5:Double=(porcCont/100)*ingBruto5
-           _binding?.etVenCont5?.setText(ventasContado5.toString())
+           _binding?.etVenCont5?.setText(r.redondear(ventasContado5).toString())
+
            //calculo recuperacion 30 dias
            val rec30dias2:Double=(porc30dias/100)*ingBruto1
            val rec30dias3:Double=(porc30dias/100)*ingBruto2
            val rec30dias4:Double=(porc30dias/100)*ingBruto3
            val rec30dias5:Double=(porc30dias/100)*ingBruto4
-           _binding?.etRec30d1?.setText("0.00")
-           _binding?.etRec30d2?.setText(rec30dias2.toString())
-           _binding?.etRec30d3?.setText(rec30dias3.toString())
-           _binding?.etRec30d4?.setText(rec30dias4.toString())
-           _binding?.etRec30d5?.setText(rec30dias5.toString())
+
+           _binding?.etRec30d1?.setText("0.0")
+           _binding?.etRec30d2?.setText(r.redondear(rec30dias2).toString())
+           _binding?.etRec30d3?.setText(r.redondear(rec30dias3).toString())
+           _binding?.etRec30d4?.setText(r.redondear(rec30dias4).toString())
+           _binding?.etRec30d5?.setText(r.redondear(rec30dias5).toString())
+           //calculo interes para 30 dias
+           val totInteres30d2:Double= rec30dias2*interesCredito
+           val totInteres30d3:Double= rec30dias3*interesCredito
+           val totInteres30d4:Double= rec30dias4*interesCredito
+           val totInteres30d5:Double= rec30dias5*interesCredito
+           _binding?.interes30d1?.setText("0.0")
+           _binding?.interes30d2?.setText(r.redondear(totInteres30d2).toString())
+           _binding?.interes30d3?.setText(r.redondear(totInteres30d3).toString())
+           _binding?.interes30d4?.setText(r.redondear(totInteres30d4).toString())
+           _binding?.interes30d5?.setText(r.redondear(totInteres30d5).toString())
+       //calculo incobrabilidad para 30 dias
+           val totIncob30d2:Double= (rec30dias2+totInteres30d2)*porcIncobrabilidad
+           val totIncob30d3:Double= (rec30dias3+totInteres30d3)*porcIncobrabilidad
+           val totIncob30d4:Double= (rec30dias4+totInteres30d4)*porcIncobrabilidad
+           val totIncob30d5:Double= (rec30dias5+totInteres30d5)*porcIncobrabilidad
+           _binding?.incob30d1?.setText("0.0")
+           _binding?.incob30d2?.setText(r.redondear(totIncob30d2).toString())
+           _binding?.incob30d3?.setText(r.redondear(totIncob30d3).toString())
+           _binding?.incob30d4?.setText(r.redondear(totIncob30d4).toString())
+           _binding?.incob30d5?.setText(r.redondear(totIncob30d5).toString())
       //calculo recuperacion 60 dias
            val rec60dias3:Double=(porc60dias/100)*ingBruto1
            val rec60dias4:Double=(porc60dias/100)*ingBruto2
            val rec60dias5:Double=(porc60dias/100)*ingBruto3
-           _binding?.etRec60d1?.setText("0.00")
-           _binding?.etRec60d2?.setText("0.00")
-           _binding?.etRec60d3?.setText(rec60dias3.toString())
-           _binding?.etRec60d4?.setText(rec60dias4.toString())
-           _binding?.etRec60d5?.setText(rec60dias5.toString())
+
+
+           _binding?.etRec60d1?.setText("0.0")
+           _binding?.etRec60d2?.setText("0.0")
+           _binding?.etRec60d3?.setText(r.redondear(rec60dias3).toString())
+           _binding?.etRec60d4?.setText(r.redondear(rec60dias4).toString())
+           _binding?.etRec60d5?.setText(r.redondear(rec60dias5).toString())
+
+           //calculo intereses para 60 dias
+           val totInteres60d3:Double= r.redondear(rec60dias3*interesCredito)
+           val totInteres60d4:Double= r.redondear(rec60dias4*interesCredito)
+           val totInteres60d5:Double= r.redondear(rec60dias5*interesCredito)
+           _binding?.interes60d1?.setText("0.0")
+           _binding?.interes60d2?.setText("0.0")
+           _binding?.interes60d3?.setText(r.redondear(totInteres60d3).toString())
+           _binding?.interes60d4?.setText(r.redondear(totInteres60d4).toString())
+           _binding?.interes60d5?.setText(r.redondear(totInteres60d5).toString())
+           //calculo incobrabilidad para 60 dias
+           val totIncob60d3:Double= (rec60dias3+totInteres60d3)*porcIncobrabilidad
+           val totIncob60d4:Double= (rec60dias4+totInteres60d4)*porcIncobrabilidad
+           val totIncob60d5:Double= (rec60dias5+totInteres60d5)*porcIncobrabilidad
+           _binding?.incob60d1?.setText("0.0")
+           _binding?.incob60d2?.setText("0.0")
+           _binding?.incob60d3?.setText(r.redondear(totIncob60d3).toString())
+           _binding?.incob60d4?.setText(r.redondear(totIncob60d4).toString())
+           _binding?.incob60d5?.setText(r.redondear(totIncob60d5).toString())
 
            if(porcCont==totPorc && porc30dias ==0.0 && porc60dias==0.0 && porcCont+porc30dias+porc60dias==totPorc)
            {
-               _binding?.etRec30d1?.setText("0.00")
-               _binding?.etRec30d2?.setText("0.00")
-               _binding?.etRec30d3?.setText("0.00")
-               _binding?.etRec30d4?.setText("0.00")
-               _binding?.etRec30d5?.setText("0.00")
+               _binding?.etRec30d1?.setText("0.0")
+               _binding?.etRec30d2?.setText("0.0")
+               _binding?.etRec30d3?.setText("0.0")
+               _binding?.etRec30d4?.setText("0.0")
+               _binding?.etRec30d5?.setText("0.0")
 
-               _binding?.etRec60d1?.setText("0.00")
-               _binding?.etRec60d2?.setText("0.00")
-               _binding?.etRec60d3?.setText("0.00")
-               _binding?.etRec60d4?.setText("0.00")
-               _binding?.etRec60d5?.setText("0.00")
+               _binding?.etRec60d1?.setText("0.0")
+               _binding?.etRec60d2?.setText("0.0")
+               _binding?.etRec60d3?.setText("0.0")
+               _binding?.etRec60d4?.setText("0.0")
+               _binding?.etRec60d5?.setText("0.0")
+
+               _binding?.etInteresCredito?.setText("0.0")
+               _binding?.etPorcIncobrabilidad?.setText("0.0")
+
 
 
            }
            if(porcCont==0.0 && porc30dias ==100.0 && porc60dias==0.0 && porcCont+porc30dias+porc60dias==totPorc)
            {
-               _binding?.etVenCont1?.setText("0.00")
-               _binding?.etVenCont2?.setText("0.00")
-               _binding?.etVenCont3?.setText("0.00")
-               _binding?.etVenCont4?.setText("0.00")
-               _binding?.etVenCont5?.setText("0.00")
-               _binding?.etRec60d1?.setText("0.00")
-               _binding?.etRec60d2?.setText("0.00")
-               _binding?.etRec60d3?.setText("0.00")
-               _binding?.etRec60d4?.setText("0.00")
-               _binding?.etRec60d5?.setText("0.00")
+               _binding?.etVenCont1?.setText("0.0")
+               _binding?.etVenCont2?.setText("0.0")
+               _binding?.etVenCont3?.setText("0.0")
+               _binding?.etVenCont4?.setText("0.0")
+               _binding?.etVenCont5?.setText("0.0")
+               _binding?.etRec60d1?.setText("0.0")
+               _binding?.etRec60d2?.setText("0.0")
+               _binding?.etRec60d3?.setText("0.0")
+               _binding?.etRec60d4?.setText("0.0")
+               _binding?.etRec60d5?.setText("0.0")
 
 
            }
            if(porcCont==0.0 && porc30dias ==0.0 && porc60dias==100.0 && porcCont+porc30dias+porc60dias==totPorc)
            {
-               _binding?.etVenCont1?.setText("0.00")
-               _binding?.etVenCont2?.setText("0.00")
-               _binding?.etVenCont3?.setText("0.00")
-               _binding?.etVenCont4?.setText("0.00")
-               _binding?.etVenCont5?.setText("0.00")
-               _binding?.etRec30d1?.setText("0.00")
-               _binding?.etRec30d2?.setText("0.00")
-               _binding?.etRec30d3?.setText("0.00")
-               _binding?.etRec30d4?.setText("0.00")
-               _binding?.etRec30d5?.setText("0.00")
+               _binding?.etVenCont1?.setText("0.0")
+               _binding?.etVenCont2?.setText("0.0")
+               _binding?.etVenCont3?.setText("0.0")
+               _binding?.etVenCont4?.setText("0.0")
+               _binding?.etVenCont5?.setText("0.0")
+               _binding?.etRec30d1?.setText("0.0")
+               _binding?.etRec30d2?.setText("0.0")
+               _binding?.etRec30d3?.setText("0.0")
+               _binding?.etRec30d4?.setText("0.0")
+               _binding?.etRec30d5?.setText("0.0")
 
 
            }
 
 
+
        }
 
 
-        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Ventas Contado").set(
+        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Inputs").set(
             hashMapOf(
+
                 "Ventas contado mes 1" to  binding.etVenCont1.text.toString(),
                 "Ventas contado mes 2" to  binding.etVenCont2.text.toString(),
                 "Ventas contado mes 3" to  binding.etVenCont3.text.toString(),
                 "Ventas contado mes 4" to  binding.etVenCont4.text.toString(),
-                "Ventas contado mes 5" to  binding.etVenCont5.text.toString()
+                "Ventas contado mes 5" to  binding.etVenCont5.text.toString(),
 
-            ))
-        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Recuperacion 30 dias").set(
-            hashMapOf(
                 "Recuperacion 30 dias mes 1" to  binding.etRec30d1.text.toString(),
                 "Recuperacion 30 dias mes 2" to  binding.etRec30d2.text.toString(),
                 "Recuperacion 30 dias mes 3" to  binding.etRec30d3.text.toString(),
                 "Recuperacion 30 dias mes 4" to  binding.etRec30d4.text.toString(),
-                "Recuperacion 30 dias mes 5" to  binding.etRec30d5.text.toString()
+                "Recuperacion 30 dias mes 5" to  binding.etRec30d5.text.toString(),
 
-            ))
-        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Recuperacion 60 dias").set(
-            hashMapOf(
                 "Recuperacion 60 dias mes 1" to  binding.etRec60d1.text.toString(),
                 "Recuperacion 60 dias mes 2" to  binding.etRec60d2.text.toString(),
                 "Recuperacion 60 dias mes 3" to  binding.etRec60d3.text.toString(),
                 "Recuperacion 60 dias mes 4" to  binding.etRec60d4.text.toString(),
-                "Recuperacion 60 dias mes 5" to  binding.etRec60d5.text.toString()
+                "Recuperacion 60 dias mes 5" to  binding.etRec60d5.text.toString(),
+
+                "Interes 30 mes 1" to  binding.interes30d1.text.toString(),
+                "Interes 30 mes 2" to  binding.interes30d2.text.toString(),
+                "Interes 30 mes 3" to  binding.interes30d3.text.toString(),
+                "Interes 30 mes 4" to  binding.interes30d4.text.toString(),
+                "Interes 30 mes 5" to  binding.interes30d5.text.toString(),
+
+                "Interes 60 mes 1" to  binding.interes60d1.text.toString(),
+                "Interes 60 mes 2" to  binding.interes60d2.text.toString(),
+                "Interes 60 mes 3" to  binding.interes60d3.text.toString(),
+                "Interes 60 mes 4" to  binding.interes60d4.text.toString(),
+                "Interes 60 mes 5" to  binding.interes60d5.text.toString(),
+
+                "Incobrabilidad 30 mes 1" to  binding.interes30d1.text.toString(),
+                "Incobrabilidad 30 mes 2" to  binding.interes30d2.text.toString(),
+                "Incobrabilidad 30 mes 3" to  binding.interes30d3.text.toString(),
+                "Incobrabilidad 30 mes 4" to  binding.interes30d4.text.toString(),
+                "Incobrabilidad 30 mes 5" to  binding.interes30d5.text.toString(),
+
+                "Incobrabilidad 60 mes 1" to  binding.interes60d1.text.toString(),
+                "Incobrabilidad 60 mes 2" to  binding.interes60d2.text.toString(),
+                "Incobrabilidad 60 mes 3" to  binding.interes60d3.text.toString(),
+                "Incobrabilidad 60 mes 4" to  binding.interes60d4.text.toString(),
+                "Incobrabilidad 60 mes 5" to  binding.interes60d5.text.toString()
 
             ))
 
 
     }
-    fun redondearDecimal(number: Double): Double {
-        val df = DecimalFormat("#.##")
-        df.roundingMode = RoundingMode.FLOOR
-        return df.format(number).toDouble()
-    }
-    companion object {
 
-        @JvmStatic
-        fun newInstance() = InputsFragment()//para instanciar con los TAG designados
-    }
-    fun recuperarTodo(){
+    fun recuperarTodo(){//recupera todas las entradas
         val user= FirebaseAuth.getInstance().currentUser
         val email=user?.email
         db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {
@@ -484,33 +617,60 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
             binding.etInteresCredito.setText(it.get("Interes Credito") as String?)
 
         }
-        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Ventas Contado").get().addOnSuccessListener {
 
+        //recupera de base de datos
+        //recuperacion ventascontado, 30d, 60d, intereses generados para 30d,60d, incobrabilidad 30d,60d
+        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Inputs").get().addOnSuccessListener {
             binding.etVenCont1.setText(it.get("Ventas contado mes 1") as String?)
             binding.etVenCont2.setText(it.get("Ventas contado mes 2") as String?)
             binding.etVenCont3.setText(it.get("Ventas contado mes 3") as String?)
             binding.etVenCont4.setText(it.get("Ventas contado mes 4") as String?)
             binding.etVenCont5.setText(it.get("Ventas contado mes 5") as String?)
 
-
-        }
-
-        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Recuperacion 30 dias").get().addOnSuccessListener {
-
             binding.etRec30d1.setText(it.get("Recuperacion 30 dias mes 1") as String?)
             binding.etRec30d2.setText(it.get("Recuperacion 30 dias mes 2") as String?)
             binding.etRec30d3.setText(it.get("Recuperacion 30 dias mes 3") as String?)
             binding.etRec30d4.setText(it.get("Recuperacion 30 dias mes 4") as String?)
             binding.etRec30d5.setText(it.get("Recuperacion 30 dias mes 5") as String?)
-        }
-        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Recuperacion 60 dias").get().addOnSuccessListener {
 
             binding.etRec60d1.setText(it.get("Recuperacion 60 dias mes 1") as String?)
             binding.etRec60d2.setText(it.get("Recuperacion 60 dias mes 2") as String?)
             binding.etRec60d3.setText(it.get("Recuperacion 60 dias mes 3") as String?)
             binding.etRec60d4.setText(it.get("Recuperacion 60 dias mes 4") as String?)
             binding.etRec60d5.setText(it.get("Recuperacion 60 dias mes 5") as String?)
+
+
+            binding.interes30d1.setText(it.get("Interes 30 mes 1") as String?)
+            binding.interes30d2.setText(it.get("Interes 30 mes 2") as String?)
+            binding.interes30d3.setText(it.get("Interes 30 mes 3") as String?)
+            binding.interes30d4.setText(it.get("Interes 30 mes 4") as String?)
+            binding.interes30d5.setText(it.get("Interes 30 mes 5") as String?)
+
+            binding.interes60d1.setText(it.get("Interes 60 mes 1") as String?)
+            binding.interes60d2.setText(it.get("Interes 60 mes 2") as String?)
+            binding.interes60d3.setText(it.get("Interes 60 mes 3") as String?)
+            binding.interes60d4.setText(it.get("Interes 60 mes 4") as String?)
+            binding.interes60d5.setText(it.get("Interes 60 mes 5") as String?)
+
+            binding.incob30d1.setText(it.get("Incobrabilidad 30 mes 1") as String?)
+            binding.incob30d2.setText(it.get("Incobrabilidad 30 mes 2") as String?)
+            binding.incob30d3.setText(it.get("Incobrabilidad 30 mes 3") as String?)
+            binding.incob30d4.setText(it.get("Incobrabilidad 30 mes 4") as String?)
+            binding.incob30d5.setText(it.get("Incobrabilidad 30 mes 5") as String?)
+
+            binding.incob60d1.setText(it.get("Incobrabilidad 60 mes 1") as String?)
+            binding.incob60d2.setText(it.get("Incobrabilidad 60 mes 2") as String?)
+            binding.incob60d3.setText(it.get("Incobrabilidad 60 mes 3") as String?)
+            binding.incob60d4.setText(it.get("Incobrabilidad 60 mes 4") as String?)
+            binding.incob60d5.setText(it.get("Incobrabilidad 60 mes 5") as String?)
         }
+
+    }
+
+    companion object {
+
+        @JvmStatic
+        fun newInstance() = InputsFragment()//para instanciar con los TAG designados
     }
 
 
