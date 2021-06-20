@@ -45,15 +45,8 @@
                         android:id="@+id/etDividendo1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:hint=""
+                        android:hint="0%"
                         android:layout_margin="10dp"/>
-
-                    <EditText
-                        android:id="@+id/etDividendo2"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:hint="0 %" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -67,13 +60,7 @@
                         android:id="@+id/etPrimas1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etPrimas2"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint="0 %"
+                        android:hint="0%"
                         android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
@@ -86,12 +73,6 @@
                         android:layout_margin="10dp"/>
                     <EditText
                         android:id="@+id/etAntesImpuestos1"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etAntesImpuestos2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:hint=""
@@ -111,12 +92,6 @@
                         android:layout_height="match_parent"
                         android:hint=""
                         android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etGastosDeducibles2"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -128,12 +103,6 @@
                         android:layout_margin="10dp"/>
                     <EditText
                         android:id="@+id/etIngresoImponible1"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etIngresoImponible2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:hint=""
@@ -153,12 +122,6 @@
                         android:layout_height="match_parent"
                         android:hint=""
                         android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etUtilidadImpositiva2"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -170,12 +133,6 @@
                         android:layout_margin="10dp"/>
                     <EditText
                         android:id="@+id/etPorPagar1"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etPorPagar2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:hint=""
@@ -195,12 +152,6 @@
                         android:layout_height="match_parent"
                         android:hint=""
                         android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etDespuesImpuestos2"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -212,12 +163,6 @@
                         android:layout_margin="10dp"/>
                     <EditText
                         android:id="@+id/etDividendosPagar1"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etDividendosPagar2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:hint=""
@@ -237,12 +182,6 @@
                         android:layout_height="match_parent"
                         android:hint=""
                         android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etPrimasPagar2"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:hint=""
-                        android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -250,7 +189,7 @@
 
                     <Button
                         android:id="@+id/btnSyncIue"
-                        android:layout_width="395dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="Sync"
@@ -262,7 +201,7 @@
 
                     <Button
                         android:id="@+id/btnSaveIue"
-                        android:layout_width="395dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="Guardar"
