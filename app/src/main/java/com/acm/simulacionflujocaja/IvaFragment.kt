@@ -41,10 +41,6 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         validarCampos()
         saveInputsIVA() //guarda todas las entradas que existen en IVA
 
-
-
-
-
         return view
     }
 
