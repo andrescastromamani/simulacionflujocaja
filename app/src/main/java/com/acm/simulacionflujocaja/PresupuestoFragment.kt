@@ -30,23 +30,26 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
         _binding = FragmentPresupuestoBinding.inflate(inflater, container, false)
 
         val view = binding.root
+        val nr:aleatorioUniforme=aleatorioUniforme()
+        for(num in 1..10){
+            println(nr.getRandom())}
 
-
+        recuperarTodoPresupuesto()
         recDatosMeses()
         calculoTotalEntradas()
-        recDatosIVA()
-        recDatosSueldosInputs()
-        //recupDatosInputYcalculo()
 
+        recDatosSueldosInputs()
+        recDatosIVA()
+        
+
+        binding.btnSavePreCaja.setOnClickListener {
+            //validarCampos()
+            saveTotalesPresupuesto()
+        }
 
         return view
     }
-    private fun saveInputsPresCaja(){
 
-        binding.btnSavePreCaja.setOnClickListener {
-            validarCampos()
-        }
-    }
     private fun recDatosMeses(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {
             binding.mes1.setText(it.get("Mes 3") as String?)
@@ -69,11 +72,11 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
 
     private fun recDatosIVA(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("DatosIva").get().addOnSuccessListener {
-            binding.textView6.setText(it.get("SaldFF1") as String?)
-            binding.textView7.setText(it.get("SaldFF2") as String?)
+            binding.textView6.setText(it.get("Tot1") as String?)
+            binding.textView7.setText(it.get("Tot2") as String?)
 
-            val iva2:Double= r.redondear(parseDouble(it.get("SaldFF1") as String?))
-            val iva3:Double= r.redondear(parseDouble(it.get("SaldFF2") as String?))
+            val iva2:Double= r.redondear(parseDouble(it.get("Tot1") as String?))
+            val iva3:Double= r.redondear(parseDouble(it.get("Tot2") as String?))
 
 
         } }
@@ -147,31 +150,59 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
             binding.totalv4.text = r.redondear(total).toString()
 
         }
-        fun saveTotalesIVA(){//calcula y guarda total debito fiscal
-            val porcIva:Double=0.13
-            // CALCULO TOTAL SALIDAS
-            val totEntrada1:Double= parseDouble(binding.textView.text.toString())
-            val totEntrada2:Double= parseDouble(binding.textView2.text.toString())
-            val totEntrada3:Double= parseDouble(binding.textView3.text.toString())
-
-            val compras1:Double= parseDouble(binding.editText16.text.toString())
-            val compras2:Double= parseDouble(binding.editText17.text.toString())
-            val compras3:Double= parseDouble(binding.editText18.text.toString())
-            val totCompras:Double= parseDouble(binding.totalv6.text.toString())
-
-            /*val veAcFi1:Double= parseDouble(binding.vaf1.text.toString())
-            val veAcFi2:Double= parseDouble(binding.vaf2.text.toString())
-            val veAcFi3:Double= parseDouble(binding.vaf3.text.toString())
-            val Alq1:Double= parseDouble(binding.alq1.text.toString())
-            val Alq2:Double= parseDouble(binding.alq2.text.toString())
-            val Alq3:Double= parseDouble(binding.alq3.text.toString())
-            val otros1:Double= parseDouble(binding.ot1.text.toString())
-            val otros2:Double= parseDouble(binding.ot2.text.toString())
-            val otros3:Double= parseDouble(binding.ot3.text.toString())*/
-        }
-
 
     }
+    fun saveTotalesPresupuesto(){//calcula y guarda todo de presupuesto de caja
+
+        // CALCULO TOTAL SALIDAS
+
+        val totEntrada1:Double= parseDouble(binding.textView.text.toString())
+        val totEntrada2:Double= parseDouble(binding.textView2.text.toString())
+        val totEntrada3:Double= parseDouble(binding.textView3.text.toString())
+
+        val compras1:Double= parseDouble(binding.editText16.text.toString())
+        val compras2:Double= parseDouble(binding.editText17.text.toString())
+        val compras3:Double= parseDouble(binding.editText18.text.toString())
+        val totCompras:Double= compras1+compras2+compras3//total compras
+        val toComprasAux=totCompras
+        binding.totalv6.setText(totCompras.toString())
+        val sueldos1:Double= parseDouble(binding.editText19.text.toString())
+        val sueldos2:Double= parseDouble(binding.editText20.text.toString())
+        val sueldos3:Double= parseDouble(binding.editText21.text.toString())
+        val totalSueldosySal:Double= parseDouble(binding.totalv7.text.toString())//total sueldos y salarios
+
+
+
+
+
+        val totalSalidas1:Double=compras1+sueldos1
+        val totalSalidas2:Double=compras2+sueldos2
+        val totalSalidas3:Double=compras3+sueldos3
+        val totalTotalSalidas:Double=toComprasAux+totalSueldosySal
+        binding.textView15.setText(totalSalidas1.toString())
+        binding.textView16.setText(totalSalidas2.toString())
+        binding.textView42.setText(totalSalidas3.toString())
+        binding.totalv16.setText(totalTotalSalidas.toString())
+
+
+
+        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("DatosPresupuesto").set(
+            hashMapOf(
+                "Compras1" to binding.editText16.text.toString(),
+                "Compras2" to binding.editText17.text.toString(),
+                "Compras3" to binding.editText18.text.toString(),
+                "totalCompra" to binding.totalv6.text.toString(),
+            ))
+
+    }
+    private fun recuperarTodoPresupuesto(){
+        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("DatosPresupuesto").get().addOnSuccessListener {
+
+            binding.editText16.setText(it.get("Compras1") as String?)
+            binding.editText17.setText(it.get("Compras2") as String?)
+            binding.editText18.setText(it.get("Compras3") as String?)
+            binding.totalv6.setText(it.get("totalCompra") as String?)
+        }}
     private fun validarCampos(){
 
         if(binding.editText16.text.toString().length==0){

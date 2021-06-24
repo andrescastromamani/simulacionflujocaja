@@ -463,12 +463,17 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
            _binding?.incob60d3?.setText(r.redondear(totIncob60d3).toString())
            _binding?.incob60d4?.setText(r.redondear(totIncob60d4).toString())
            _binding?.incob60d5?.setText(r.redondear(totIncob60d5).toString())
+
+           //CALCULO SUELDOS PARA ENVIAR A PRESUPUESTO DE CAJA
+           val numeroEmp:Double=parseDouble(binding.etNrEmpl.text.toString())
            val incrementoSal:Double= parseDouble(binding.etIncrementoSalarial.text.toString())/100.0
            val sueldoEmp:Double= parseDouble(binding.etSueldoEmp.text.toString())
            if(incrementoSal==0.0){
-               val sueldo1:Double=sueldoEmp
-               val sueldo2:Double=sueldoEmp
-               val sueldo3:Double=sueldoEmp
+               val sueldo1:Double=sueldoEmp*numeroEmp
+               val sueldo2:Double=sueldoEmp*numeroEmp
+               val sueldo3:Double=sueldoEmp*numeroEmp
+
+               //GUARDANDO SUELDOS EN BD PARA RECUPERAR EN PRSUPUESTO
                db.collection("Users").document(user?.email.toString()).collection("Entradas").document("SueldosMes").set(
                    hashMapOf(
 
@@ -478,9 +483,9 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
                    ))
            }
            else{
-               val sueldo1:Double=sueldoEmp
-               val sueldo2:Double=sueldoEmp
-               val sueldo3:Double=r.redondear(sueldoEmp+(sueldoEmp*incrementoSal))
+               val sueldo1:Double=sueldoEmp*numeroEmp
+               val sueldo2:Double=sueldoEmp*numeroEmp
+               val sueldo3:Double=r.redondear(numeroEmp*sueldoEmp+(numeroEmp*sueldoEmp*incrementoSal))
 
                db.collection("Users").document(user?.email.toString()).collection("Entradas").document("SueldosMes").set(
                    hashMapOf(

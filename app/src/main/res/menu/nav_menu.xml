@@ -22,15 +22,16 @@
         android:title="IUE"
         android:icon="@drawable/iue"/>
 
+    <item
+        android:id="@+id/nav_presupuesto"
+        android:icon="@drawable/presupuesto_caja"
+        android:title="Presupuesto de Caja" />
     <item android:id="@+id/nav_flujo"
         android:title="Flujo de Efectivo"
         android:icon="@drawable/flujo_efectivo"/>
 
-    <item android:id="@+id/nav_presupuesto"
-        android:title="Presupuesto de Caja"
-        android:icon="@drawable/presupuesto_caja"/>
-
-    <item android:id="@+id/nav_simulation"
-        android:title="Simulacion"
-        android:icon="@drawable/presupuesto_caja"/>
+    <item
+        android:id="@+id/nav_simulation"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Simulacion" />
 </menu>
