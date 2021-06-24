@@ -85,7 +85,7 @@ class ItFragment : Fragment(R.layout.fragment_it) {
     }
 
     private fun recuperarTodoIT(){
-        db.collection("Users").document(user?.email.toString()).collection("IT").document("DatosIva").get().addOnSuccessListener {
+        db.collection("Users").document(user?.email.toString()).collection("IT").document("DatosIt").get().addOnSuccessListener {
             binding.Incom1.setText(it.get("InCoDF1") as String?)
             binding.Incom2.setText(it.get("InCoDF2") as String?)
             binding.Incom3.setText(it.get("InCoDF3") as String?)
@@ -101,7 +101,7 @@ class ItFragment : Fragment(R.layout.fragment_it) {
             binding.Tventas1.setText(it.get("tot1") as String?)
             binding.Tventas2.setText(it.get("tot2") as String?)
             binding.Tventas3.setText(it.get("tot3") as String?)
-            binding.Itper1.setText(it.get("Itper1") as String?)
+            binding.Itper1.setText(it.get("Itper4") as String?)
             binding.Itper2.setText(it.get("Defis2") as String?)
             binding.Itper3.setText(it.get("Defis3") as String?)
 
