@@ -95,7 +95,7 @@
                         android:layout_margin="10dp"
                         android:text="Flujo de efectivo por actividades de inversion"/>
                     <EditText
-                        android:id="@+id/etFlujoEfectivoOperacion"
+                        android:id="@+id/etFlujoEfectivoInversion"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"/>
