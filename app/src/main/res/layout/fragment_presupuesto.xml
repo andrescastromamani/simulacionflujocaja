@@ -148,14 +148,15 @@
                             android:textAlignment="center" />
 
                         <TextView
-                            android:id="@+id/totalv"
+                            android:id="@+id/totalven"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
-                            android:text="0000"
+                            android:layout_weight="1"
+                            android:text="TOTAL"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                            android:textColor="@android:color/holo_orange_dark" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textSize="18sp" />
 
                     </LinearLayout>
 

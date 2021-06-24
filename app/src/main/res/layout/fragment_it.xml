@@ -98,7 +98,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle3"
+                        android:id="@+id/itventas1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -106,7 +106,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle5"
+                        android:id="@+id/itventas2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -114,7 +114,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/totalv"
+                        android:id="@+id/itventas3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -135,7 +135,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle6"
+                        android:id="@+id/Incom1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -143,7 +143,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle7"
+                        android:id="@+id/Incom2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -151,7 +151,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle8"
+                        android:id="@+id/Incom3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -173,7 +173,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle9"
+                        android:id="@+id/Vafi1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -181,7 +181,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle10"
+                        android:id="@+id/Vafi2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -189,7 +189,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle11"
+                        android:id="@+id/Vafi3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -209,7 +209,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle12"
+                        android:id="@+id/Alqu1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -217,7 +217,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle13"
+                        android:id="@+id/Alqu2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -225,7 +225,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle14"
+                        android:id="@+id/Alqu3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -246,7 +246,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle15"
+                        android:id="@+id/Otros1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -254,7 +254,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle16"
+                        android:id="@+id/Otros2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -262,7 +262,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle17"
+                        android:id="@+id/Otros3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -283,7 +283,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle18"
+                        android:id="@+id/Tventas1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -291,7 +291,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle19"
+                        android:id="@+id/Tventas2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -299,7 +299,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle20"
+                        android:id="@+id/Tventas3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -320,7 +320,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle21"
+                        android:id="@+id/Itper1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -328,7 +328,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle22"
+                        android:id="@+id/Itper2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -336,7 +336,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle23"
+                        android:id="@+id/Itper3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -394,7 +394,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle27"
+                        android:id="@+id/SaDff1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -402,7 +402,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle28"
+                        android:id="@+id/SaDff2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -410,7 +410,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
-                        android:id="@+id/detalle29"
+                        android:id="@+id/SaDff3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"

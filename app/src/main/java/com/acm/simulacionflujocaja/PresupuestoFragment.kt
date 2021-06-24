@@ -124,7 +124,7 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
             val ventas2:Double?= parseDouble((it.get("Ventas contado mes 4")).toString())
             val ventas3:Double?= parseDouble((it.get("Ventas contado mes 5")).toString())
             val totalVentas:Double= ventas1!! + ventas2!! + ventas3!!
-            binding.totalv.text = r.redondear(totalVentas).toString()
+            binding.totalven.text = r.redondear(totalVentas).toString()
 
             val ventas30d1:Double?= parseDouble((it.get("Recuperacion 30 dias mes 3")).toString())
             val ventas30d2:Double?= parseDouble((it.get("Recuperacion 30 dias mes 4")).toString())
