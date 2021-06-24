@@ -122,12 +122,12 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
 
         //CALCULO PARA SALDO A FAVOR DEL FISCO
 
-        val saldoFavCon1:Double= r.redondear(totDebFiscal1-totalCredFis1)
-        val saldoFavCon2:Double= r.redondear(totDebFiscal2-totalCredFis2)
-        val saldoFavCon3:Double= r.redondear(totDebFiscal3-totalCredFis3)
-        binding.saldFF1.setText(saldoFavCon1.toString())
-        binding.saldFF2.setText(saldoFavCon2.toString())
-        binding.saldFF3.setText(saldoFavCon3.toString())
+        val saldoFav1:Double= r.redondear(totDebFiscal1-totalCredFis1)
+        val saldoFav2:Double= r.redondear(totDebFiscal2-totalCredFis2)
+        val saldoFav3:Double= r.redondear(totDebFiscal3-totalCredFis3)
+        binding.saldFF1.setText(saldoFav1.toString())
+        binding.saldFF2.setText(saldoFav2.toString())
+        binding.saldFF3.setText(saldoFav3.toString())
 
 
         val saldoCFMesAnt1:Double= parseDouble(binding.saldMA1.text.toString())
@@ -135,9 +135,9 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         val saldoCFMesAnt3:Double= parseDouble(binding.saldMA3.text.toString())
 
         //CALCULO SALDO DEFINITIVO A FAVOR DEL FISCO
-        val saldoFinalFisco1:Double=r.redondear(saldoFavCon1+saldoCFMesAnt1)
-        val saldoFinalFisco2:Double=r.redondear(saldoFavCon2+saldoCFMesAnt2)
-        val saldoFinalFisco3:Double=r.redondear(saldoFavCon3+saldoCFMesAnt3)
+        val saldoFinalFisco1:Double=r.redondear(saldoFav1+saldoCFMesAnt1)
+        val saldoFinalFisco2:Double=r.redondear(saldoFav2+saldoCFMesAnt2)
+        val saldoFinalFisco3:Double=r.redondear(saldoFav3+saldoCFMesAnt3)
         binding.totFinal1.setText(saldoFinalFisco1.toString())
         binding.totFinal2.setText(saldoFinalFisco2.toString())
         binding.totFinal3.setText(saldoFinalFisco3.toString())

@@ -410,7 +410,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:text="0000"
+                            android:hint="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
