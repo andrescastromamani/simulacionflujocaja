@@ -527,7 +527,7 @@
                     <TextView
                         android:id="@+id/totComp1"
                         android:layout_width="100dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:hint="0" />
 

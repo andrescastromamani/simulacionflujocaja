@@ -41,10 +41,6 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         validarCampos()
         saveInputsIVA() //guarda todas las entradas que existen en IVA
 
-
-
-
-
         return view
     }
 
@@ -213,14 +209,16 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
             binding.etmes2.setText(it.get("Mes 4") as String?)
             binding.etmes3.setText(it.get("Mes 5") as String?)
 
-        } }
+        }
+    }
      //Recupera de inputs ventas al contado y los intereses si es que los hubiera
     private fun recDataVentCont(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("Inputs").get().addOnSuccessListener {
             binding.etVentas1.setText(it.get("Ventas contado mes 3") as String?)
             binding.etVentas2.setText(it.get("Ventas contado mes 4") as String?)
             binding.etVentas3.setText(it.get("Ventas contado mes 5") as String?)
-        } }
+        }
+    }
     private fun recuperarTodoIVA(){
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("DatosIva").get().addOnSuccessListener {
        /* binding.etVentas1.setText(it.get("VentCont1") as String?)
