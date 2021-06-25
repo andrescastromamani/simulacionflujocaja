@@ -50,7 +50,7 @@ class IueFragment : Fragment(R.layout.fragment_iue) {
         val ingresosNoImponibles:Double= parseDouble(binding.etIngresoImponible1.text.toString())
 
         //Calculo utilidad Ipositiva
-        val utilidadImpositiva:Double=r.redondear(utilidanAntesImpuestos+gastosDeducibles+ingresosNoImponibles)
+        val utilidadImpositiva:Double=r.redondear(utilidanAntesImpuestos+gastosDeducibles-ingresosNoImponibles)
         binding.etUtilidadImpositiva1.setText(utilidadImpositiva.toString())
 
         //Iue por Pagar
