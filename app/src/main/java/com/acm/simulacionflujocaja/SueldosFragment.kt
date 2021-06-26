@@ -33,9 +33,13 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
         val user = FirebaseAuth.getInstance().currentUser
         _binding = FragmentSueldosBinding.inflate(inflater, container, false)
         val view = binding.root
-        recuperarDatos()
         resuperarDatosInput()
+<<<<<<< HEAD
         //validarCampos()
+=======
+        recuperarDatos()
+        validarCampos()
+>>>>>>> c551e8a165cfe97d1b2d4bc880e5b19b5bcd033d
         saveInputsSueldos()
         return view
     }
@@ -103,8 +107,12 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
             val incrementoSalarial:Double= parseDouble(it.get("Incremento Salarial") as String?)
 
             //Calculo Total Ganado Mensual Antes del incremento Salarial
+<<<<<<< HEAD
             val totalGanadoMensualAntes:Double=r.redondear(sueldoEmpleados * numeroEmpleados)
             val totalGanadoMensualAntesAux=totalGanadoMensualAntes
+=======
+            val totalGanadoMensualAntes:Double = r.redondear(sueldoEmpleados * numeroEmpleados)
+>>>>>>> c551e8a165cfe97d1b2d4bc880e5b19b5bcd033d
             binding.etTotalGanadoMensualAntes.setText(totalGanadoMensualAntes.toString())
 
             //calculo Total Ganado Mensual despues del incremento salarial
