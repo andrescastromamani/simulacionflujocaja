@@ -35,13 +35,13 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
         val view = binding.root
         recuperarDatos()
         resuperarDatosInput()
-        validarCampos()
+        //validarCampos()
         saveInputsSueldos()
         return view
     }
     private fun saveInputsSueldos(){
         binding.btnSaveSueldos.setOnClickListener{
-            validarCampos()
+            //validarCampos()
             saveTotalsSueldos()
 
         }
@@ -97,17 +97,18 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
     }
 
     private fun resuperarDatosInput(){
-        db.collection("Users").document(email.toString()).collection("Entradas").document("otrosDatos").get().addOnSuccessListener {
+        db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
             val sueldoEmpleados:Double= parseDouble(it.get("Sueldo Empleados") as String?)
             val numeroEmpleados:Double= parseDouble(it.get("Nro Empleados") as String?)
             val incrementoSalarial:Double= parseDouble(it.get("Incremento Salarial") as String?)
 
             //Calculo Total Ganado Mensual Antes del incremento Salarial
             val totalGanadoMensualAntes:Double=r.redondear(sueldoEmpleados * numeroEmpleados)
+            val totalGanadoMensualAntesAux=totalGanadoMensualAntes
             binding.etTotalGanadoMensualAntes.setText(totalGanadoMensualAntes.toString())
 
             //calculo Total Ganado Mensual despues del incremento salarial
-            val totalGanadoMensualDespues:Double = r.redondear(totalGanadoMensualAntes * (sueldoEmpleados*numeroEmpleados*incrementoSalarial))
+            val totalGanadoMensualDespues:Double = r.redondear(totalGanadoMensualAntesAux * (sueldoEmpleados*numeroEmpleados*incrementoSalarial))
             binding.etTotalGanadoMensualDespues.setText(totalGanadoMensualDespues.toString())
         }
     }

@@ -266,6 +266,7 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
                 "costosyGast2" to binding.editText32.text.toString(),
                 "costosyGast3" to binding.editText33.text.toString(),
                 "totalCostoyGasto" to binding.totalv11.text.toString(),
+                "totalEntradas" to binding.totalv4.text.toString(),  //<---total entradas
                 "iva1" to binding.textView4.text.toString(),
                 "totalIVA" to binding.totalv12.text.toString(),
                 "it1" to binding.textView8.text.toString(),
