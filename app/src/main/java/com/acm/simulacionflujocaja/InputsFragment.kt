@@ -90,7 +90,7 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
 
                     )
             )
-           // communicator.passDataMeses(ventasMes1,ventasMes2,ventasMes3,rec30dias1,rec30dias2,rec30dias3,rec60dias1,rec60dias2,rec60dias3)
+
 
 
         }

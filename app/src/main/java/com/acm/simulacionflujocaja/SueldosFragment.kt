@@ -101,20 +101,14 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
     }
 
     private fun resuperarDatosInput(){
-        db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
-            val sueldoEmpleados:Double= parseDouble(it.get("Sueldo Empleados") as String?)
-            val numeroEmpleados:Double= parseDouble(it.get("Nro Empleados") as String?)
-            val incrementoSalarial:Double= parseDouble(it.get("Incremento Salarial") as String?)
+        db.collection("Users").document(email.toString()).collection("Entradas").document("SueldosMes").get().addOnSuccessListener {
+            val sueldoSinIncSal:Double= parseDouble(it.get("sueldo2") as String?)
+            val sueldoConIncrementoSalarial:Double= parseDouble(it.get("sueldo3") as String?)
+
 
             //Calculo Total Ganado Mensual Antes del incremento Salarial
-
-            val totalGanadoMensualAntes:Double=r.redondear(sueldoEmpleados * numeroEmpleados)
-            val totalGanadoMensualAntesAux=totalGanadoMensualAntes
-
-
-            //calculo Total Ganado Mensual despues del incremento salarial
-            val totalGanadoMensualDespues:Double = r.redondear(totalGanadoMensualAntesAux * (sueldoEmpleados*numeroEmpleados*incrementoSalarial))
-            binding.etTotalGanadoMensualDespues.setText(totalGanadoMensualDespues.toString())
+            binding.etTotalGanadoMensualAntes.setText(sueldoSinIncSal.toString())
+            binding.etTotalGanadoMensualDespues.setText(sueldoConIncrementoSalarial.toString())
         }
     }
     private fun validarCampos() {
@@ -154,7 +148,7 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
         db.collection("Users").document(email.toString()).collection("SueldosSalarios").document("DatosSueldosSalarios").get().addOnSuccessListener{
             binding.etTotalGanadoMensualAntes.setText(it.get("totalGanadoMensualAntes") as String?)
             binding.etAportesPatronalesMensualesAntes.setText(it.get("aportesPatronalesMensualesAntes") as String?)
-            binding.etTotalGanadoMensualDespues.setText(it.get("totalGanadoMensualDespues") as String?)
+            //binding.etTotalGanadoMensualDespues.setText(it.get("totalGanadoMensualDespues") as String?)
             binding.etAportesPatronalesMensualesDespues.setText(it.get("aportesPatronalesMensualesDespues") as String?)
             binding.etRetroactivoSueldosPorMes1.setText(it.get("retroactivoSueldosPorMes1") as String?)
             binding.etNumeroMesesSueldos.setText(it.get("numeroMesesSueldos") as String?)
