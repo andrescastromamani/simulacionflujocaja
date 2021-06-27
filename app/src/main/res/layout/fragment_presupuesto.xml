@@ -520,7 +520,7 @@
                         <TextView
                             android:id="@+id/totalv8"
                             android:layout_width="100dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="39dp"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:text="0000"

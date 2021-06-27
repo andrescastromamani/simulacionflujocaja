@@ -41,6 +41,7 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
         recDatosIVA()
         recDatosIT()
         recDatosIUE()
+        recuperarSueldosYSal()
         
 
         binding.btnSavePreCaja.setOnClickListener {
@@ -173,12 +174,14 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
         val totCompras:Double= compras1+compras2+compras3//total compras
         val toComprasAux=totCompras
         binding.totalv6.setText(totCompras.toString())
+        //sueldos y salarios
         val sueldos1:Double= parseDouble(binding.editText19.text.toString())
         val sueldos2:Double= parseDouble(binding.editText20.text.toString())
         val sueldos3:Double= parseDouble(binding.editText21.text.toString())
         val totalSueldosySal:Double= parseDouble(binding.totalv7.text.toString())//total sueldos y salarios
         val totalSueldosySalAux=totalSueldosySal
-        //sueldos y salarios
+        //aportes patronales
+
 
         //Totals costos y gastos
         val costosyGast1:Double=parseDouble(binding.editText31.text.toString())
@@ -331,6 +334,20 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
             binding.textView50.setText(it.get("saldoFinal2") as String?)
             binding.textView51.setText(it.get("saldoFinal3") as String?)
             binding.totalv19.setText(it.get("saldoTotalFinalSF") as String?)
+        }}
+
+    private fun recuperarSueldosYSal(){
+        db.collection("Users").document(user?.email.toString()).collection("SueldosSalarios").document("DatosSueldosSalarios").get().addOnSuccessListener {
+
+            binding.editText22.setText(it.get("aportePat1") as String?)
+            binding.editText23.setText(it.get("aportePat2") as String?)
+            binding.editText24.setText(it.get("aportePat3") as String?)
+            val aportePat1:Double= parseDouble(it.get("aportePat1") as String?)
+            val aportePat2:Double= parseDouble(it.get("aportePat2") as String?)
+            val aportePat3:Double= parseDouble(it.get("aportePat3") as String?)
+            val totalAportesPatr:Double=r.redondear(aportePat1+aportePat2+aportePat3)
+            binding.totalv8.setText(totalAportesPatr.toString())
+
         }}
     private fun validarCampos(){
 

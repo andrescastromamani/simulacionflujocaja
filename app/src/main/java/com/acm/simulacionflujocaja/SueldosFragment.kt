@@ -70,10 +70,13 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
         //Calculo aporte patronal mensual Antes del Incremento salarial
         val aportePatronalMensualAntes:Double=r.redondear(totalGanadoMensualAntes * aportesPatronales)
         binding.etAportesPatronalesMensualesAntes.setText(aportePatronalMensualAntes.toString())
+        val aportePat1=aportePatronalMensualAntes
+        val aportePat2=aportePatronalMensualAntes
 
         //Calculo aporte patronal mensual Antes del Incremento salarial
         val aportePatronalMensualDespues:Double=r.redondear(totalGanadoMensualDespues * aportesPatronales)
         binding.etAportesPatronalesMensualesDespues.setText(aportePatronalMensualDespues.toString())
+        val aportePat3=aportePatronalMensualDespues
 
         //Calculo retroactivo sueldos por mes
         val retroactivoSueldoPorMesTotal:Double=r.redondear(retroactivoSueldosPorMes * numeroMesesSueldos)
@@ -86,6 +89,9 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
         //GUARDA EN BD TODAS LA ENTRADAS Y SUS CALCULOS
         db.collection("Users").document(user?.email.toString()).collection("SueldosSalarios").document("DatosSueldosSalarios").set(
             hashMapOf(
+                "aportePat1"    to aportePat1.toString(),
+                "aportePat2"          to aportePat2.toString(),
+                "aportePat3"        to aportePat3.toString(),
                 "totalGanadoMensualAntes"    to binding.etTotalGanadoMensualAntes.text.toString(),
                 "aportesPatronalesMensualesAntes"          to binding.etAportesPatronalesMensualesAntes.text.toString(),
                 "totalGanadoMensualDespues"        to binding.etTotalGanadoMensualDespues.text.toString(),
