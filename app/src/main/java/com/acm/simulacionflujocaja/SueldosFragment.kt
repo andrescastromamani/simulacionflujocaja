@@ -46,7 +46,6 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
 
         }
     }
-
     private fun saveTotalsSueldos() {
         val aportesPatronales = 0.1671
         val caja = 0.1
@@ -95,7 +94,6 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
             )
         )
     }
-
     private fun resuperarDatosInput(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
             val sueldoEmpleados:Double= parseDouble(it.get("Sueldo Empleados") as String?)
@@ -143,7 +141,6 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
             binding.etRetroactivoAportesPorMes2.setText("0.0")
         }
     }
-
     private fun recuperarDatos() {
         db.collection("Users").document(email.toString()).collection("SueldosSalarios").document("DatosSueldosSalarios").get().addOnSuccessListener{
             binding.etTotalGanadoMensualAntes.setText(it.get("totalGanadoMensualAntes") as String?)
@@ -158,7 +155,6 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
             binding.etRetroactivoAportesPorMes2.setText(it.get("retroactivoAportesPorMes2") as String?)
         }
     }
-
     companion object {
         @JvmStatic
         fun newInstance() = SueldosFragment()
