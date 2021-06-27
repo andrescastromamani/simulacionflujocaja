@@ -51,7 +51,7 @@
                         android:layout_height="match_parent"
                         android:text="Total Ganado Mensual"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etTotalGanadoMensualAntes"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -65,7 +65,7 @@
                         android:layout_height="match_parent"
                         android:text="Aportes Patronales Mensuales"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etAportesPatronalesMensualesAntes"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -88,7 +88,7 @@
                         android:layout_height="match_parent"
                         android:text="Total Ganado Mensual"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etTotalGanadoMensualDespues"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -102,7 +102,7 @@
                         android:layout_height="match_parent"
                         android:text="Aportes Patronales Mensuales"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etAportesPatronalesMensualesDespues"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -153,7 +153,7 @@
                         android:layout_height="match_parent"
                         android:text="Retroactivo Sueldos Por Mes"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etRetroactivoSueldosPorMes2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -167,7 +167,7 @@
                         android:layout_height="match_parent"
                         android:text="Retroactivo Aportes Por Mes"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etRetroactivoAportesPorMes1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -195,7 +195,7 @@
                         android:layout_height="match_parent"
                         android:text="Retroactivo Aportes Por Mes"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etRetroactivoAportesPorMes2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -203,27 +203,24 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <Button
-                        android:id="@+id/btnSyncSueldos"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:text="Sync"
-                        app:icon="@android:drawable/stat_notify_sync" />
-                </LinearLayout>
+                    android:layout_height="wrap_content"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <Button
                         android:id="@+id/btnSaveSueldos"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="146dp"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Guardar"
-                        app:icon="@android:drawable/stat_notify_sync" />
+                        android:backgroundTint="#039BE5"
+                        android:text="Calcular" />
+
+                    <Space
+                        android:layout_width="37dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1" />
+
                 </LinearLayout>
             </LinearLayout>
         </HorizontalScrollView>
