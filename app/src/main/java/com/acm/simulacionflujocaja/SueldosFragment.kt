@@ -40,6 +40,7 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
         recuperarDatos()
         validarCampos()
 
+
         saveInputsSueldos()
         return view
     }
@@ -50,7 +51,6 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
 
         }
     }
-
     private fun saveTotalsSueldos() {
         val aportesPatronales = 0.1671
         val caja = 0.1
@@ -99,7 +99,6 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
             )
         )
     }
-
     private fun resuperarDatosInput(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
             val sueldoEmpleados:Double= parseDouble(it.get("Sueldo Empleados") as String?)
@@ -109,11 +108,11 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
             //Calculo Total Ganado Mensual Antes del incremento Salarial
 
             val totalGanadoMensualAntes:Double=r.redondear(sueldoEmpleados * numeroEmpleados)
-            val totalGanadoMensualAntesAux=totalGanadoMensualAntes
+            binding.etTotalGanadoMensualAntes.setText(totalGanadoMensualAntes.toString())
 
 
             //calculo Total Ganado Mensual despues del incremento salarial
-            val totalGanadoMensualDespues:Double = r.redondear(totalGanadoMensualAntesAux * (sueldoEmpleados*numeroEmpleados*incrementoSalarial))
+            val totalGanadoMensualDespues:Double = r.redondear(totalGanadoMensualAntes * (sueldoEmpleados*numeroEmpleados*incrementoSalarial))
             binding.etTotalGanadoMensualDespues.setText(totalGanadoMensualDespues.toString())
         }
     }
@@ -149,7 +148,6 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
             binding.etRetroactivoAportesPorMes2.setText("0.0")
         }
     }
-
     private fun recuperarDatos() {
         db.collection("Users").document(email.toString()).collection("SueldosSalarios").document("DatosSueldosSalarios").get().addOnSuccessListener{
             binding.etTotalGanadoMensualAntes.setText(it.get("totalGanadoMensualAntes") as String?)
@@ -164,7 +162,6 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
             binding.etRetroactivoAportesPorMes2.setText(it.get("retroactivoAportesPorMes2") as String?)
         }
     }
-
     companion object {
         @JvmStatic
         fun newInstance() = SueldosFragment()

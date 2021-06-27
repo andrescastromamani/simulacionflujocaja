@@ -26,6 +26,7 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
         (activity as MainActivity?)?.getSupportActionBar()?.setTitle("FLUJO EFECTIVO")
         _binding = FragmentFlujoBinding.inflate(inflater, container, false)
         val view = binding.root
+        recuperarDatosPresupuesto()
         recuperarDatos()
         validarCampos()
         saveInputsFlujo()
@@ -34,8 +35,14 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
 
     }
 
+    private fun recuperarDatosPresupuesto() {
+        db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
+            val totalSalidas:Double= parseDouble(it.get("totalSalidas3") as String?)
+        }
+    }
+
     private fun recuperarDatos() {
-        db.collection("Users").document(email.toString()).collection("FlujoEfectivoProyecto").document("DatosFlujo").get().addOnSuccessListener{
+        db.collection("Users").document(email.toString()).collection("FlujoEfectivoProyectado").document("DatosFlujoEfectivoProyectado").get().addOnSuccessListener{
             hashMapOf(
                 "flujoEfectivoActividadOperacion"    to binding.etFlujoActividadesOperacion.text.toString(),
                 "ingresosOperacion"    to binding.etIngresosOperacion.text.toString(),
@@ -57,7 +64,6 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
         binding.btnSaveIue.setOnClickListener{
             validarCampos()
             saveTotalsFlujo()
-
         }
     }
 
