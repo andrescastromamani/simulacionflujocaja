@@ -38,7 +38,7 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
         //validarCampos()
 
         recuperarDatos()
-        validarCampos()
+
 
 
         saveInputsSueldos()
