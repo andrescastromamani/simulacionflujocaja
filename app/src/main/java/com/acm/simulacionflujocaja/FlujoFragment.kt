@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.acm.simulacionflujocaja.databinding.FragmentFlujoBinding
-import com.acm.simulacionflujocaja.databinding.FragmentSueldosBinding
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.fragment_flujo.*
+
 import java.lang.Double.parseDouble
 
 class FlujoFragment : Fragment(R.layout.fragment_flujo) {
@@ -59,9 +59,8 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
 
         val efectivoInicioPeriodo:Double= parseDouble(binding.etEfectivoInicioPeriodo.text.toString())
 
-        //Calculo flujo efectivo proyectado por actividades de Operacion
-        val flujoProyectadoActividadesOperacion:Double=r.redondear(ingresosOperacion - gastosOperacion)
-        binding.etFlujoActividadesOperacion.setText(flujoProyectadoActividadesOperacion.toString())
+        val flujoProyectadoActividadesOperacion:Double= parseDouble(binding.etFlujoActividadesOperacion.toString())
+
 
         //Calculo Flujo de efectivo por actividades de Operacion
         val flujoActividadesOperacion:Double=r.redondear(ingresoCapital - gastosCapital)
@@ -106,6 +105,8 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
             binding.etIngresosOperacion.setText(totalEntradas.toString())
             binding.etGastosOperacion.setText(totalSalidas.toString())
             binding.etEfectivoInicioPeriodo.setText(saldoAnterior.toString())
+            val flujoProyectadoActividadesOperacion=totalEntradas-totalSalidas
+            binding.etFlujoActividadesOperacion.setText(flujoProyectadoActividadesOperacion.toString())
         }
     }
 
