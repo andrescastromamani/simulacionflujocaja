@@ -41,7 +41,7 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
         recDatosIVA()
         recDatosIT()
         recDatosIUE()
-        recuperarSueldosYSal()
+        //recuperarSueldosYSal()
         
 
         binding.btnSavePreCaja.setOnClickListener {
