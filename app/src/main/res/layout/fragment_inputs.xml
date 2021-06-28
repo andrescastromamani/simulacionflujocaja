@@ -735,7 +735,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="270dp"
+                        android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -750,7 +750,7 @@
 
                         <EditText
                             android:id="@+id/etNrEmpl"
-                            android:layout_width="6dp"
+                            android:layout_width="30dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:layout_weight="1"
@@ -777,7 +777,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="275dp"
+                        android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -792,7 +792,7 @@
 
                         <EditText
                             android:id="@+id/etSueldoEmp"
-                            android:layout_width="15dp"
+                            android:layout_width="30dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:layout_weight="1"
@@ -818,7 +818,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="270dp"
+                        android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -834,7 +834,7 @@
 
                         <EditText
                             android:id="@+id/etIncrementoSalarial"
-                            android:layout_width="15dp"
+                            android:layout_width="30dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:layout_weight="1"
@@ -860,7 +860,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="270dp"
+                        android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -876,7 +876,7 @@
 
                         <EditText
                             android:id="@+id/etPorcCont"
-                            android:layout_width="15dp"
+                            android:layout_width="30dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:layout_weight="1"
@@ -902,7 +902,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="270dp"
+                        android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -918,7 +918,7 @@
 
                         <EditText
                             android:id="@+id/etPorc30d"
-                            android:layout_width="15dp"
+                            android:layout_width="30dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:layout_weight="1"
@@ -944,7 +944,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="270dp"
+                        android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -960,7 +960,7 @@
 
                         <EditText
                             android:id="@+id/etPorc60d"
-                            android:layout_width="15dp"
+                            android:layout_width="30dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:layout_weight="1"
@@ -986,7 +986,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="270dp"
+                        android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -1002,7 +1002,7 @@
 
                         <EditText
                             android:id="@+id/etInteresCredito"
-                            android:layout_width="15dp"
+                            android:layout_width="30dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:layout_weight="1"
@@ -1031,7 +1031,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="270dp"
+                        android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -1047,7 +1047,7 @@
 
                         <EditText
                             android:id="@+id/etPorcIncobrabilidad"
-                            android:layout_width="15dp"
+                            android:layout_width="30dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:layout_weight="1"
@@ -1084,9 +1084,8 @@
                             android:layout_width="147dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:backgroundTint="@color/teal_700"
-                            android:text="Calcular"
-                             />
+                            android:backgroundTint="@android:color/holo_blue_dark"
+                            android:text="Calcular" />
 
                         <Button
                             android:id="@+id/btnRecuperar"
@@ -1094,18 +1093,16 @@
                             android:layout_width="147dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:backgroundTint="@color/teal_700"
-                            android:text="Recuperar"
-                             />
+                            android:backgroundTint="@android:color/holo_blue_dark"
+                            android:text="Recuperar" />
 
                         <Button
                             android:id="@+id/btnEliminarInputs"
                             android:layout_width="147dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:backgroundTint="@color/teal_700"
-                            android:text="Eliminar"
-                             />
+                            android:backgroundTint="@android:color/holo_blue_dark"
+                            android:text="Eliminar" />
 
                     </LinearLayout>
                 </LinearLayout>

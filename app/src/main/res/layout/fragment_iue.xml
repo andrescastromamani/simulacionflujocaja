@@ -185,27 +185,25 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"/>
 
-                    <Button
-                        android:id="@+id/btnSyncIue"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:text="Sync"
-                        app:icon="@android:drawable/stat_notify_sync" />
-                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="84dp">
 
                     <Button
                         android:id="@+id/btnSaveIue"
-                        android:layout_width="match_parent"
+                        android:layout_width="216dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Guardar"
-                        app:icon="@android:drawable/stat_notify_sync" />
+                        android:backgroundTint="#039BE5"
+                        android:text="Calcular" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
                 </LinearLayout>
             </LinearLayout>
         </HorizontalScrollView>
