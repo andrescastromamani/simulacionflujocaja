@@ -35,47 +35,53 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
         val view = binding.root
         recuperarDatosPresupuesto()
         recuperarDatos()
+        binding.btnSaveFlujo.setOnClickListener{
 
-        saveInputsFlujo()
+            saveTotalsFlujo()
+
+        }
+
         return view
     }
 
-    private fun saveInputsFlujo(){
-        binding.btnSaveFlujo.setOnClickListener{
-            validarCampos()
-            saveTotalsFlujo()
-        }
-    }
+
+
 
     private fun saveTotalsFlujo() {
-        val ingresosOperacion:Double= parseDouble(binding.etIngresosOperacion.text.toString())
-        val gastosOperacion:Double= parseDouble(binding.etGastosOperacion.text.toString())
+        //val ingresosOperacion:Double= parseDouble(binding.etIngresosOperacion.text.toString())
+        //val gastosOperacion:Double= parseDouble(binding.etGastosOperacion.text.toString())
+        val flujoProyectadoActividadesOperacion:Double= parseDouble(binding.etFlujoActividadesOperacion.text.toString())
 
         val ingresoCapital:Double= parseDouble(binding.etIngresosCapital.text.toString())
         val gastosCapital:Double= parseDouble(binding.etGastosCapital.text.toString())
+        //Calculo Flujo de efectivo por actividades de Operacion
+        val flujoActividadesOperacion:Double=r.redondear(ingresoCapital - gastosCapital)
+        val flujoActividadesOperacionAux=flujoActividadesOperacion
+        binding.etFlujoEfectivoInversion.setText(flujoActividadesOperacion.toString())
 
         val fuentes:Double= parseDouble(binding.etFuentes.text.toString())
         val usos:Double= parseDouble(binding.etUsos.text.toString())
+        //Calculo Flujo de efectivo por actividades de financiamiento
+        val flujoActividadesFinanciamiento:Double=r.redondear(fuentes - usos)
+        val flujoActividadesFinanciamientoAux=flujoActividadesFinanciamiento
+        binding.etFlujoActividadesFinanciamiento.setText(flujoActividadesFinanciamiento.toString())
+
 
         val efectivoInicioPeriodo:Double= parseDouble(binding.etEfectivoInicioPeriodo.text.toString())
 
-        val flujoProyectadoActividadesOperacion:Double= parseDouble(binding.etFlujoActividadesOperacion.toString())
 
 
-        //Calculo Flujo de efectivo por actividades de Operacion
-        val flujoActividadesOperacion:Double=r.redondear(ingresoCapital - gastosCapital)
-        binding.etFlujoActividadesOperacion.setText(flujoActividadesOperacion.toString())
 
-        //Calculo Flujo de efectivo por actividades de financiamiento
-        val flujoActividadesFinanciamiento:Double=r.redondear(fuentes - usos)
-        binding.etFlujoActividadesOperacion.setText(flujoActividadesFinanciamiento.toString())
+
+
+
 
         //Calculo Incremento Proyectada del efectivo del periodo
-        val incrementoProyectadoEfectivoPeriodo:Double = r.redondear(flujoProyectadoActividadesOperacion + flujoActividadesOperacion + flujoActividadesFinanciamiento)
+        val incrementoProyectadoEfectivoPeriodo:Double = r.redondear(flujoProyectadoActividadesOperacion + flujoActividadesOperacionAux + flujoActividadesFinanciamientoAux)
         binding.etIncrementoEfectivoPeriodo.setText(incrementoProyectadoEfectivoPeriodo.toString())
-
+        val incrementoProyectadoEfectivoPeriodoAux=incrementoProyectadoEfectivoPeriodo
         //Calculo Saldo de efecto final proyectado
-        val saldoFinalProyectado:Double = r.redondear( incrementoProyectadoEfectivoPeriodo)
+       val saldoFinalProyectado:Double = r.redondear( efectivoInicioPeriodo+incrementoProyectadoEfectivoPeriodoAux)
         binding.etSaldoFinalEfectivoProyectado.setText(saldoFinalProyectado.toString())
 
         //GUARDA EN BD TODAS LA ENTRADAS Y SUS CALCULOS
@@ -105,7 +111,7 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
             binding.etIngresosOperacion.setText(totalEntradas.toString())
             binding.etGastosOperacion.setText(totalSalidas.toString())
             binding.etEfectivoInicioPeriodo.setText(saldoAnterior.toString())
-            val flujoProyectadoActividadesOperacion=totalEntradas-totalSalidas
+            val flujoProyectadoActividadesOperacion=r.redondear(totalEntradas-totalSalidas)
             binding.etFlujoActividadesOperacion.setText(flujoProyectadoActividadesOperacion.toString())
         }
     }
@@ -115,13 +121,13 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
            // binding.etFlujoActividadesOperacion.setText(it.get("flujoEfectivoActividadOperacion") as String?)
             binding.etIngresosOperacion.setText(it.get("ingresosOperacion") as String?)
             binding.etGastosOperacion.setText(it.get("gastosOperacion") as String?)
-           // binding.etFlujoEfectivoInversion.setText(it.get("flujoActividadesInversion") as String?)
+            binding.etFlujoEfectivoInversion.setText(it.get("flujoActividadesInversion") as String?)
             binding.etIngresosCapital.setText(it.get("ingresosCapital") as String?)
             binding.etGastosCapital.setText(it.get("gastosCapital") as String?)
-           // binding.etFlujoActividadesFinanciamiento.setText(it.get("flujoActividadesFinanciamiento") as String?)
+            binding.etFlujoActividadesFinanciamiento.setText(it.get("flujoActividadesFinanciamiento") as String?)
             binding.etFuentes.setText(it.get("fuentes") as String?)
             binding.etUsos.setText(it.get("usos") as String?)
-           // binding.etIncrementoEfectivoPeriodo.setText(it.get("incrementoEfectivoPeriodo") as String?)
+            binding.etIncrementoEfectivoPeriodo.setText(it.get("incrementoEfectivoPeriodo") as String?)
             binding.etEfectivoInicioPeriodo.setText(it.get("efectivoInicioPeriodo") as String?)
             binding.etSaldoFinalEfectivoProyectado.setText(it.get("saldoEfectivoFinalProyectado") as String?)
         }

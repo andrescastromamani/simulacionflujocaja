@@ -70,22 +70,39 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
         //Calculo aporte patronal mensual Antes del Incremento salarial
         val aportePatronalMensualAntes:Double=r.redondear(totalGanadoMensualAntes * aportesPatronales)
         binding.etAportesPatronalesMensualesAntes.setText(aportePatronalMensualAntes.toString())
+        val aportePat1=aportePatronalMensualAntes
+        val aportePat2=aportePatronalMensualAntes
 
-        //Calculo aporte patronal mensual Antes del Incremento salarial
+
+        //Calculo aporte patronal mensual Despues del Incremento salarial
         val aportePatronalMensualDespues:Double=r.redondear(totalGanadoMensualDespues * aportesPatronales)
         binding.etAportesPatronalesMensualesDespues.setText(aportePatronalMensualDespues.toString())
-
+        val aportePat3=aportePatronalMensualDespues
         //Calculo retroactivo sueldos por mes
         val retroactivoSueldoPorMesTotal:Double=r.redondear(retroactivoSueldosPorMes * numeroMesesSueldos)
         binding.etRetroactivoSueldosPorMes2.setText(retroactivoSueldoPorMesTotal.toString())
-
+        val retSuelXmes1:Double=0.0
+        val retSuelXmes2:Double=0.0
+        val retSuelXmes3:Double=retroactivoSueldoPorMesTotal
         //Calculo retroactivo aportes por mes
         val retroactivoAportesPorMesTotal:Double=r.redondear(retroactivoAportesPorMes * numeroMesesAportes)
         binding.etRetroactivoAportesPorMes2.setText(retroactivoAportesPorMesTotal.toString())
+        val retApXmes1:Double=0.0
+        val retApXmes2:Double=0.0
+        val retApXmes3:Double=retroactivoAportesPorMesTotal
 
         //GUARDA EN BD TODAS LA ENTRADAS Y SUS CALCULOS
         db.collection("Users").document(user?.email.toString()).collection("SueldosSalarios").document("DatosSueldosSalarios").set(
             hashMapOf(
+                "aportePat1"    to aportePat1.toString(),
+                "aportePat2"          to aportePat2.toString(),
+                "aportePat3"        to aportePat3.toString(),
+                "retSuelXmes1"    to retSuelXmes1.toString(),
+                "retSuelXmes2"          to retSuelXmes2.toString(),
+                "retSuelXmes3"        to retSuelXmes3.toString(),
+                "retApXmes1"    to retApXmes1.toString(),
+                "retApXmes2"          to retApXmes2.toString(),
+                "retApXmes3"        to retApXmes3.toString(),
                 "totalGanadoMensualAntes"    to binding.etTotalGanadoMensualAntes.text.toString(),
                 "aportesPatronalesMensualesAntes"          to binding.etAportesPatronalesMensualesAntes.text.toString(),
                 "totalGanadoMensualDespues"        to binding.etTotalGanadoMensualDespues.text.toString(),
@@ -102,6 +119,7 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
 
     private fun resuperarDatosInput(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("SueldosMes").get().addOnSuccessListener {
+            val sueldoSinIncSal1:Double= parseDouble(it.get("sueldo1") as String?)
             val sueldoSinIncSal:Double= parseDouble(it.get("sueldo2") as String?)
             val sueldoConIncrementoSalarial:Double= parseDouble(it.get("sueldo3") as String?)
 
