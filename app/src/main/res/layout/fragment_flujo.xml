@@ -216,13 +216,11 @@
                     android:layout_height="82dp"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/textView62"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
                         android:layout_margin="10dp"
                         android:layout_weight="0"
                         android:text="Saldo de efectivo final proyectado"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                         android:translationY="-10dp" />
                     <EditText
                         android:id="@+id/etSaldoFinalEfectivoProyectado"
@@ -236,7 +234,7 @@
                     android:layout_height="wrap_content">
 
                     <Button
-                        android:id="@+id/btnSyncIue"
+                        android:id="@+id/btnSyncFlujo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
@@ -248,7 +246,7 @@
                     android:layout_height="wrap_content">
 
                     <Button
-                        android:id="@+id/btnSaveIue"
+                        android:id="@+id/btnSaveFlujo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
