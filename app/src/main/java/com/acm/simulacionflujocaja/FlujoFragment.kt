@@ -23,7 +23,6 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,16 +35,10 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
         recuperarDatosPresupuesto()
         recuperarDatos()
         binding.btnSaveFlujo.setOnClickListener{
-
             saveTotalsFlujo()
-
         }
-
         return view
     }
-
-
-
 
     private fun saveTotalsFlujo() {
         //val ingresosOperacion:Double= parseDouble(binding.etIngresosOperacion.text.toString())
@@ -65,16 +58,7 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
         val flujoActividadesFinanciamiento:Double=r.redondear(fuentes - usos)
         val flujoActividadesFinanciamientoAux=flujoActividadesFinanciamiento
         binding.etFlujoActividadesFinanciamiento.setText(flujoActividadesFinanciamiento.toString())
-
-
         val efectivoInicioPeriodo:Double= parseDouble(binding.etEfectivoInicioPeriodo.text.toString())
-
-
-
-
-
-
-
 
         //Calculo Incremento Proyectada del efectivo del periodo
         val incrementoProyectadoEfectivoPeriodo:Double = r.redondear(flujoProyectadoActividadesOperacion + flujoActividadesOperacionAux + flujoActividadesFinanciamientoAux)

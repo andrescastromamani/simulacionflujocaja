@@ -42,7 +42,7 @@
                         android:text="% Destionado a Dividendos"
                         android:layout_margin="10dp"/>
                     <EditText
-                        android:id="@+id/etDividendo1"
+                        android:id="@+id/etDestinadoDividendos"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:hint="0%"
@@ -57,7 +57,7 @@
                         android:text="% Destionado a Pagos de Primas"
                         android:layout_margin="10dp"/>
                     <EditText
-                        android:id="@+id/etPrimas1"
+                        android:id="@+id/etDestinadoPagosPrimas"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:hint="0%"
@@ -116,7 +116,7 @@
                         android:layout_height="match_parent"
                         android:text="Utilidad Impositiva"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etUtilidadImpositiva1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -131,7 +131,7 @@
                         android:layout_height="match_parent"
                         android:text="IUE por Pagar"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etPorPagar1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -146,7 +146,7 @@
                         android:layout_height="match_parent"
                         android:text="Utlitidad Despues de Impuestos"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etDespuesImpuestos1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -161,7 +161,7 @@
                         android:layout_height="match_parent"
                         android:text="Dividendos Por Pagar"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etDividendosPagar1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -176,7 +176,7 @@
                         android:layout_height="match_parent"
                         android:text="Primas por Pagar"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etPrimasPagar1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -193,7 +193,7 @@
 
                     <Button
                         android:id="@+id/btnSaveIue"
-                        android:layout_width="216dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:backgroundTint="#039BE5"
