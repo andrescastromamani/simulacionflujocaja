@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IueFragment"
-   >
+    tools:context=".IueFragment">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -14,14 +13,10 @@
         android:fillViewport="true"
         android:scrollbarStyle="outsideInset"
         android:scrollbars="horizontal|vertical">
-        <HorizontalScrollView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scrollbars="horizontal|vertical">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -30,6 +25,7 @@
                         android:layout_height="match_parent"
                         android:text="IUE"
                         android:textSize="20dp"
+                        android:textColor="@color/teal_700"
                         android:layout_margin="10dp"
                         android:textAlignment="center"/>
                 </LinearLayout>
@@ -37,160 +33,177 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="200dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:text="% Destionado a Dividendos"
+                        android:textSize="18sp"
+                        android:paddingVertical="10dp"
                         android:layout_margin="10dp"/>
                     <EditText
                         android:id="@+id/etDestinadoDividendos"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:hint="0%"
+                        android:textSize="20sp"
                         android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="200dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:text="% Destionado a Pagos de Primas"
+                        android:textSize="18sp"
+                        android:paddingVertical="10dp"
                         android:layout_margin="10dp"/>
                     <EditText
                         android:id="@+id/etDestinadoPagosPrimas"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:hint="0%"
+                        android:textSize="20sp"
                         android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="200dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:text="Utilidad Antes de Impuestos"
+                        android:textSize="18sp"
+                        android:paddingVertical="10dp"
                         android:layout_margin="10dp"/>
                     <EditText
-                        android:id="@+id/etAntesImpuestos1"
-                        android:layout_width="100dp"
+                        android:id="@+id/etUtilidadAntesImpuestos"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint=""
+                        android:textSize="20sp"
                         android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="200dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:text="Gastos Deducibles"
+                        android:textSize="18sp"
+                        android:paddingVertical="10dp"
                         android:layout_margin="10dp"/>
                     <EditText
-                        android:id="@+id/etGastosDeducibles1"
-                        android:layout_width="100dp"
+                        android:id="@+id/etGastosDeducibles"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint=""
+                        android:textSize="20sp"
                         android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="200dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:text="Ingresos no Imponibles"
+                        android:textSize="18sp"
+                        android:paddingVertical="10dp"
                         android:layout_margin="10dp"/>
                     <EditText
-                        android:id="@+id/etIngresoImponible1"
-                        android:layout_width="100dp"
+                        android:id="@+id/etIngresosNoImponibles"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint=""
+                        android:textSize="20sp"
                         android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="200dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:text="Utilidad Impositiva"
+                        android:textSize="18sp"
+                        android:paddingVertical="10dp"
                         android:layout_margin="10dp"/>
                     <TextView
-                        android:id="@+id/etUtilidadImpositiva1"
-                        android:layout_width="100dp"
+                        android:id="@+id/etUtilidadImpositiva"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint=""
+                        android:textSize="20sp"
                         android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="200dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:text="IUE por Pagar"
+                        android:textSize="18sp"
+                        android:paddingVertical="10dp"
                         android:layout_margin="10dp"/>
                     <TextView
-                        android:id="@+id/etPorPagar1"
-                        android:layout_width="100dp"
+                        android:id="@+id/etIuePorPagar"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint=""
+                        android:textSize="20sp"
                         android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="200dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:text="Utlitidad Despues de Impuestos"
+                        android:textSize="17sp"
+                        android:paddingVertical="10dp"
                         android:layout_margin="10dp"/>
                     <TextView
-                        android:id="@+id/etDespuesImpuestos1"
-                        android:layout_width="100dp"
+                        android:id="@+id/etUtilidadDespuesImpuestos"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint=""
+                        android:textSize="20sp"
                         android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="200dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:text="Dividendos Por Pagar"
+                        android:textSize="18sp"
+                        android:paddingVertical="10dp"
                         android:layout_margin="10dp"/>
                     <TextView
-                        android:id="@+id/etDividendosPagar1"
-                        android:layout_width="100dp"
+                        android:id="@+id/etDividendosPorPagar"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint=""
+                        android:textSize="20sp"
                         android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="200dp"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:text="Primas por Pagar"
+                        android:textSize="18sp"
+                        android:paddingVertical="10dp"
                         android:layout_margin="10dp"/>
                     <TextView
-                        android:id="@+id/etPrimasPagar1"
-                        android:layout_width="100dp"
+                        android:id="@+id/etPrimasPorPagar"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint=""
+                        android:textSize="20sp"
                         android:layout_margin="10dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="84dp">
-
+                    android:layout_height="80dp">
                     <Button
                         android:id="@+id/btnSaveIue"
                         android:layout_width="match_parent"
@@ -198,14 +211,7 @@
                         android:layout_margin="10dp"
                         android:backgroundTint="#039BE5"
                         android:text="Calcular" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
                 </LinearLayout>
-            </LinearLayout>
-        </HorizontalScrollView>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>
