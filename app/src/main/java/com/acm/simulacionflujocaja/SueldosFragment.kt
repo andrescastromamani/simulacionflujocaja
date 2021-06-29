@@ -129,6 +129,17 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
             binding.etTotalGanadoMensualDespues.setText(sueldoConIncrementoSalarial.toString())
         }
     }
+    private fun recuperarDatosInputs(){
+        db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
+            val incrementoSalarial:Double= parseDouble(it.get("Incremento Salarial") as String?)
+            val sueldoEmpleado:Double= parseDouble(it.get("Sueldo Empleados") as String?)
+            val numeroEmpleados:Double= parseDouble(it.get("Nro Empleados") as String?)
+
+            //Calculo Retroactivos Sueldos Por Mes
+            val retroactivoSueldosMes:Double=r.redondear((incrementoSalarial/100) * sueldoEmpleado * numeroEmpleados)
+            binding.etRetroactivoSueldosPorMes1.setText(retroactivoSueldosMes.toString())
+        }
+    }
     private fun validarCampos() {
         if (binding.etTotalGanadoMensualAntes.text.toString().length == 0 ) {
             binding.etTotalGanadoMensualAntes.setText("0.0")
