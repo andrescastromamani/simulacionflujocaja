@@ -46,7 +46,7 @@
                         android:layout_height="match_parent"
                         android:text="Flujo de efectivo proyectado por actividades de operacion"
                         android:layout_margin="10dp"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etFlujoActividadesOperacion"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -62,7 +62,7 @@
                         android:layout_margin="10dp"
                         android:text="Ingresos de operacion" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/etIngresosOperacion"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -79,7 +79,7 @@
                         android:layout_margin="10dp"
                         android:text="Gastos de operacion" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/etGastosOperacion"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -94,7 +94,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="Flujo de efectivo por actividades de inversion"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etFlujoEfectivoInversion"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -142,7 +142,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="Flujo de efectivo por actividades de financiamiento"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etFlujoActividadesFinanciamiento"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -188,7 +188,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="Incremento proyectada del efectivo del periodo"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etIncrementoEfectivoPeriodo"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -204,7 +204,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="Efectivo al inicio del periodo"/>
-                    <EditText
+                    <TextView
                         android:id="@+id/etEfectivoInicioPeriodo"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
@@ -222,7 +222,7 @@
                         android:layout_weight="0"
                         android:text="Saldo de efectivo final proyectado"
                         android:translationY="-10dp" />
-                    <EditText
+                    <TextView
                         android:id="@+id/etSaldoFinalEfectivoProyectado"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"

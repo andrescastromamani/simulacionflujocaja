@@ -41,7 +41,7 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
         recDatosIVA()
         recDatosIT()
         recDatosIUE()
-        //recuperarSueldosYSal()
+        recuperarSueldosYSal()
         
 
         binding.btnSavePreCaja.setOnClickListener {
@@ -181,7 +181,24 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
         val totalSueldosySal:Double= parseDouble(binding.totalv7.text.toString())//total sueldos y salarios
         val totalSueldosySalAux=totalSueldosySal
         //aportes patronales
+        val aporteP1:Double= parseDouble(binding.editText22.text.toString())
+        val aporteP2:Double= parseDouble(binding.editText23.text.toString())
+        val aporteP3:Double= parseDouble(binding.editText24.text.toString())
+        val totalAporteP:Double= parseDouble(binding.totalv8.text.toString())//total sueldos y salarios
+        val totalAportePAux=totalAporteP
+        //Retroactivos sueldos y salarios
+        val retSyS1:Double= parseDouble(binding.editText25.text.toString())
+        val retSyS2:Double= parseDouble(binding.editText26.text.toString())
+        val retSyS3:Double= parseDouble(binding.editText27.text.toString())
+        val totalRetSyS:Double= parseDouble(binding.totalv9.text.toString())//total sueldos y salarios
+        val totalRetSySAux=totalRetSyS
 
+        //retroactivos aportes patronales
+        val retAP1:Double= parseDouble(binding.editText28.text.toString())
+        val retAP2:Double= parseDouble(binding.editText29.text.toString())
+        val retAP3:Double= parseDouble(binding.editText30.text.toString())
+        val totalRetAP:Double= parseDouble(binding.totalv10.text.toString())//total sueldos y salarios
+        val totalRetAPAux=totalRetAP
 
         //Totals costos y gastos
         val costosyGast1:Double=parseDouble(binding.editText31.text.toString())
@@ -220,10 +237,10 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
         binding.totalv15.setText(totalOtrosImp.toString())
 
         //calculo total salidas
-        val totalSalidas1:Double=r.redondear(compras1+sueldos1+costosyGast1+iva1+it1+iue1+otIm1)
-        val totalSalidas2:Double=r.redondear(compras2+sueldos2+costosyGast2+iva2+it2+iue2+otIm2)
-        val totalSalidas3:Double=r.redondear(compras3+sueldos3+costosyGast3+iva3+it3+iue3+otIm3)
-        val totalTotalSalidas:Double=r.redondear(toComprasAux+totalSueldosySalAux+totalCostoyGastoAux+totalIVAAux+totalITAux+totalIUEAux+totalOtrosImpAux)
+        val totalSalidas1:Double=r.redondear(compras1+sueldos1+costosyGast1+iva1+it1+iue1+otIm1+aporteP1+retSyS1+retAP1)
+        val totalSalidas2:Double=r.redondear(compras2+sueldos2+costosyGast2+iva2+it2+iue2+otIm2+aporteP2+retSyS2+retAP2)
+        val totalSalidas3:Double=r.redondear(compras3+sueldos3+costosyGast3+iva3+it3+iue3+otIm3+aporteP3+retSyS3+retAP3)
+        val totalTotalSalidas:Double=r.redondear(toComprasAux+totalSueldosySalAux+totalCostoyGastoAux+totalIVAAux+totalITAux+totalIUEAux+totalOtrosImpAux+totalAportePAux+totalRetSySAux+totalRetAPAux)
         binding.textView15.setText(totalSalidas1.toString())
         binding.textView16.setText(totalSalidas2.toString())
         binding.textView42.setText(totalSalidas3.toString())
@@ -295,6 +312,10 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
                 "saldoFinal2" to binding.textView50.text.toString(),
                 "saldoFinal3" to binding.textView51.text.toString(),
                 "saldoTotalFinalSF" to binding.totalv19.text.toString(),
+                "aporteP1" to binding.textView49.text.toString(),
+                "aporteP2" to binding.textView50.text.toString(),
+                "aporteP3" to binding.textView51.text.toString(),
+
 
 
             ))
@@ -349,6 +370,22 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
             val aportePat3:Double= parseDouble(it.get("aportePat3") as String?)
             val totalAportesPatr:Double=r.redondear(aportePat1+aportePat2+aportePat3)
             binding.totalv8.setText(totalAportesPatr.toString())
+            binding.editText25.setText(it.get("retSuelXmes1") as String?)
+            binding.editText26.setText(it.get("retSuelXmes2") as String?)
+            binding.editText27.setText(it.get("retSuelXmes3") as String?)
+            val retSuelXmes1:Double= parseDouble(it.get("retSuelXmes1") as String?)
+            val retSuelXmes2:Double= parseDouble(it.get("retSuelXmes2") as String?)
+            val retSuelXmes3:Double= parseDouble(it.get("retSuelXmes3") as String?)
+            val totalRetSueldo:Double=r.redondear(retSuelXmes1+retSuelXmes2+retSuelXmes3)
+            binding.totalv9.setText(totalRetSueldo.toString())
+            binding.editText28.setText(it.get("retApXmes1") as String?)
+            binding.editText29.setText(it.get("retApXmes2") as String?)
+            binding.editText30.setText(it.get("retApXmes3") as String?)
+            val retApXmes1:Double= parseDouble(it.get("retApXmes1") as String?)
+            val retApXmes2:Double= parseDouble(it.get("retApXmes2") as String?)
+            val retApXmes3:Double= parseDouble(it.get("retApXmes3") as String?)
+            val totalRetAporte:Double=r.redondear(retApXmes1+retApXmes2+retApXmes3)
+            binding.totalv10.setText(totalRetAporte.toString())
 
         }}
     private fun validarCampos(){
