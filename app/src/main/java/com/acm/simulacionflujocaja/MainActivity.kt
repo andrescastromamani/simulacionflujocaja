@@ -96,9 +96,27 @@ class MainActivity : AppCompatActivity() ,Communicator{
                             commit()
                         }
                     }
-                    R.id.nav_simulation->{
+                    R.id.nav_trimestral->{
                         supportFragmentManager.beginTransaction().apply {
                             replace(R.id.fragmentContainerView,SimulationFragment())
+                            commit()
+                        }
+                    }
+                    R.id.nav_semestral->{
+                        supportFragmentManager.beginTransaction().apply {
+                            replace(R.id.fragmentContainerView,SemestralFragment())
+                            commit()
+                        }
+                    }
+                    R.id.nav_anual->{
+                        supportFragmentManager.beginTransaction().apply {
+                            replace(R.id.fragmentContainerView,AnualFragment())
+                            commit()
+                        }
+                    }
+                    R.id.nav_quinquenal->{
+                        supportFragmentManager.beginTransaction().apply {
+                            replace(R.id.fragmentContainerView,QuinquenalFragment())
                             commit()
                         }
                     }

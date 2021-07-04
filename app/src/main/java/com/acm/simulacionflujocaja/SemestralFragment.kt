@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [SimulationFragment.newInstance] factory method to
+ * Use the [SemestralFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class SimulationFragment : Fragment(R.layout.fragment_simulation) {
+class SemestralFragment : Fragment(R.layout.fragment_semestral) {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,11 +34,26 @@ class SimulationFragment : Fragment(R.layout.fragment_simulation) {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_simulation, container, false)
+        return inflater.inflate(R.layout.fragment_semestral, container, false)
     }
 
     companion object {
+        /**
+         * Use this factory method to create a new instance of
+         * this fragment using the provided parameters.
+         *
+         * @param param1 Parameter 1.
+         * @param param2 Parameter 2.
+         * @return A new instance of fragment SemestralFragment.
+         */
+        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance() = IueFragment()
+        fun newInstance(param1: String, param2: String) =
+            SemestralFragment().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
+                }
+            }
     }
 }
