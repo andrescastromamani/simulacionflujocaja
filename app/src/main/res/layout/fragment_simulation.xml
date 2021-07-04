@@ -38,119 +38,72 @@ app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="135dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:text="Simulacion semestral"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="22dp" />
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="65dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:text="SIMULACION TRIMESTRE"
+                android:text="Distribucion"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/btnTri"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="IR"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textView58"
+                android:id="@+id/mes1"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:text="Media"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView61"
-                android:layout_width="100dp"
+                android:id="@+id/mes2"
+                android:layout_width="110dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                android:text="Desv. Típica"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="61dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/detalle"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:layout_margin="10dp"
-                android:text="SIMULACION SEMESTRE"
+                android:text="Entradas"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-            <Button
-                android:id="@+id/btnSem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="IR"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
             <TextView
+                android:id="@+id/itventas1"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
+                android:text="0000"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <TextView
-                android:id="@+id/totalv"
+                android:id="@+id/itventas2"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="67dp">
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="30dp"
-                android:layout_margin="10dp"
-                android:text="SIMULACION AÑO"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-            <Button
-                android:id="@+id/btnAnual"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="IR"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-            <TextView
-                android:id="@+id/detalle8"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:text="0000"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         </LinearLayout>
@@ -160,34 +113,199 @@ app:layout_constraintTop_toTopOf="parent">
             android:layout_height="wrap_content">
 
             <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:text="Salidas"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Incom1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="0000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Incom2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="0000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+
+            <TextView
                 android:id="@+id/textView5"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:layout_margin="10dp"
-                android:text="SIMULACION 5 AÑOS"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Vafi1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Vafi2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Vafi3"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:text="Meses"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+            <TextView
+                android:id="@+id/Alqu1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Julio"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Alqu2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Agosto"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Alqu3"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Septiembre"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:text="Neto Final esperado"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Otros1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="0000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Otros2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="0000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Otros3"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="0000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:text="Desv. tipica "
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Tventas1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="0000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Tventas2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="0000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/Tventas3"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="0000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <Button
-                android:id="@+id/btn5a"
+                android:id="@+id/btnSaveIT"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:text="Calcular" />
+
+            <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="IR"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:layout_weight="1" />
 
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-            <TextView
-                android:id="@+id/detalle11"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
         </LinearLayout>
 
     </LinearLayout>
