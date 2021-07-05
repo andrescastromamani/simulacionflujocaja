@@ -5,7 +5,6 @@
         android:title="Inputs"
         android:icon="@drawable/inputs"/>
 
-
     <item android:id="@+id/nav_sueldos"
         android:title="Sueldos"
         android:icon="@drawable/sueldos"/>
@@ -26,12 +25,25 @@
         android:id="@+id/nav_presupuesto"
         android:icon="@drawable/presupuesto_caja"
         android:title="Presupuesto de Caja" />
+
     <item android:id="@+id/nav_flujo"
         android:title="Flujo de Efectivo"
         android:icon="@drawable/flujo_efectivo"/>
 
     <item
-        android:id="@+id/nav_simulation"
+        android:id="@+id/nav_trimestral"
         android:icon="@android:drawable/ic_menu_slideshow"
-        android:title="Simulacion" />
+        android:title="Simulacion Trimestral" />
+    <item
+        android:id="@+id/nav_semestral"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Simulacion Semestral" />
+    <item
+        android:id="@+id/nav_anual"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Simulacion Anual" />
+    <item
+        android:id="@+id/nav_quinquenal"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Simulacion Quinquenal" />
 </menu>
