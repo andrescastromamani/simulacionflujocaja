@@ -7,13 +7,8 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
-import androidx.fragment.app.Fragment
-import com.acm.simulacionflujocaja.databinding.FragmentInputsBinding
-import com.acm.simulacionflujocaja.databinding.FragmentPresupuestoBinding
 import kotlinx.android.synthetic.main.activity_main.*
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
-import java.lang.reflect.Array.newInstance
 
 enum class ProviderType{   // enum class declara palabra clave para definir un conjunto de constantes
     BASIC}
@@ -98,7 +93,25 @@ class MainActivity : AppCompatActivity() ,Communicator{
                     }
                     R.id.nav_trimestral->{
                         supportFragmentManager.beginTransaction().apply {
-                            replace(R.id.fragmentContainerView,SimulationFragment())
+                            replace(R.id.fragmentContainerView,TrimestralFragment())
+                            commit()
+                        }
+                    }
+                    R.id.nav_semestral->{
+                        supportFragmentManager.beginTransaction().apply {
+                            replace(R.id.fragmentContainerView,SemestralFragment())
+                            commit()
+                        }
+                    }
+                    R.id.nav_anual->{
+                        supportFragmentManager.beginTransaction().apply {
+                            replace(R.id.fragmentContainerView,AnualFragment())
+                            commit()
+                        }
+                    }
+                    R.id.nav_quinquenal->{
+                        supportFragmentManager.beginTransaction().apply {
+                            replace(R.id.fragmentContainerView,QuinquenalFragment())
                             commit()
                         }
                     }

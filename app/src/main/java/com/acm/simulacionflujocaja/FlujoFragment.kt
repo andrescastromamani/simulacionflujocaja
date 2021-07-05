@@ -32,9 +32,13 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
         val user = FirebaseAuth.getInstance().currentUser
         _binding = FragmentFlujoBinding.inflate(inflater, container, false)
         val view = binding.root
+        validarCampos()
         recuperarDatosPresupuesto()
         recuperarDatos()
+
+
         binding.btnSaveFlujo.setOnClickListener{
+
             saveTotalsFlujo()
         }
         return view
@@ -117,10 +121,10 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
         }
     }
     private fun validarCampos() {
-        if (binding.etFlujoActividadesOperacion.text.toString().length == 0 ) {
+        if (binding.etFlujoActividadesOperacion.text.toString().length==0) {
             binding.etFlujoActividadesOperacion.setText("0.0")
         }
-        if (binding.etIngresosOperacion.text.toString().length == 0) {
+        if (binding.etIngresosOperacion.text.toString().length==0) {
             binding.etIngresosOperacion.setText("0.0")
         }
         if (binding.etGastosOperacion.text.toString().length == 0) {
