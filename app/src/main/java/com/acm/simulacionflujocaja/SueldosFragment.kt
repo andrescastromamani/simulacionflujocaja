@@ -65,12 +65,12 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
         val totalGanadoAntes = binding.etTotalGanadoMensualAntes.text.toString()
         binding.btnGeneratePdf.setOnClickListener{
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M){
-                if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){
+                /*if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){
                     val permission = arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     requestPermissions(permission, STORAGE_CODE)
                 }else{
                     savePdf()
-                }
+                }*/
             }else{
                 savePdf()
             }
@@ -90,9 +90,9 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
             myDoc.addAuthor("ACM")
             myDoc.add(Paragraph(data))
             myDoc.close()
-            Toast.makeText(this, "$myFileName.pdf\n is create to \n$filePath", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "$myFileName.pdf\n is create to \n$filePath", Toast.LENGTH_SHORT).show()
         }catch (e: Exception){
-            Toast.makeText(this, ""+e.toString(), Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, ""+e.toString(), Toast.LENGTH_SHORT).show()
         }
     }
 
