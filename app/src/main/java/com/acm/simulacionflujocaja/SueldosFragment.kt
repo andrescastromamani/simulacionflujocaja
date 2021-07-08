@@ -1,19 +1,38 @@
 package com.acm.simulacionflujocaja
 
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import android.os.Environment
 import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import androidx.core.content.PermissionChecker
+import androidx.core.content.PermissionChecker.checkSelfPermission
 import androidx.fragment.app.Fragment
 import com.acm.simulacionflujocaja.databinding.FragmentInputsBinding
 import com.acm.simulacionflujocaja.databinding.FragmentIvaBinding
 import com.acm.simulacionflujocaja.databinding.FragmentSueldosBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.itextpdf.text.Document
+import com.itextpdf.text.Paragraph
+import com.itextpdf.text.pdf.PdfWriter
+import kotlinx.android.synthetic.main.fragment_sueldos.*
+import java.io.FileOutputStream
 import java.lang.Double.parseDouble
+import java.lang.Exception
+import java.text.SimpleDateFormat
+import java.util.*
 
 class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
+    private lateinit var etTotalGanadoAntes : EditText
+    private lateinit var btnGeneratePdf : EditText
+    private val STORAGE_CODE = 1001
 
     private val db = FirebaseFirestore.getInstance()
     val user = FirebaseAuth.getInstance().currentUser
@@ -24,7 +43,6 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,16 +52,50 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
         val user = FirebaseAuth.getInstance().currentUser
         _binding = FragmentSueldosBinding.inflate(inflater, container, false)
         val view = binding.root
+        generatePdf()
         validarCampos()
         resuperarDatosInput()
-
         recuperarDatos()
-
-
-
         saveInputsSueldos()
         return view
     }
+
+    private fun generatePdf() {
+        val titleSueldosSalarios = binding.titleSueldosSalarios.text.toString()
+        val totalGanadoAntes = binding.etTotalGanadoMensualAntes.text.toString()
+        binding.btnGeneratePdf.setOnClickListener{
+            if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M){
+                if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){
+                    val permission = arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    requestPermissions(permission, STORAGE_CODE)
+                }else{
+                    savePdf()
+                }
+            }else{
+                savePdf()
+            }
+        }
+
+    }
+
+    private fun savePdf() {
+        val myDoc = Document()
+        val myFileName = SimpleDateFormat("yyyMMdd_HHmmss", Locale.getDefault()).format(System.currentTimeMillis())
+        val filePath = Environment.getExternalStorageDirectory().toString() + "/" + myFileName + ".pdf"
+
+        try {
+            PdfWriter.getInstance(myDoc,FileOutputStream(filePath))
+            myDoc.open()
+            val data = titleSueldosSalarios.text.toString().trim()
+            myDoc.addAuthor("ACM")
+            myDoc.add(Paragraph(data))
+            myDoc.close()
+            Toast.makeText(this, "$myFileName.pdf\n is create to \n$filePath", Toast.LENGTH_SHORT).show()
+        }catch (e: Exception){
+            Toast.makeText(this, ""+e.toString(), Toast.LENGTH_SHORT).show()
+        }
+    }
+
     private fun saveInputsSueldos(){
         binding.btnSaveSueldos.setOnClickListener{
             if(binding.etNumeroMesesSueldos.text.isEmpty())
