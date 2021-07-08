@@ -46,4 +46,8 @@
         android:id="@+id/nav_quinquenal"
         android:icon="@android:drawable/ic_menu_slideshow"
         android:title="Simulacion Quinquenal" />
+    <item
+        android:id="@+id/btnLogout"
+        android:icon="@drawable/logout"
+        android:title="Cerrar Sesion"/>
 </menu>
