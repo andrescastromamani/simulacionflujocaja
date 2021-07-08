@@ -177,10 +177,12 @@
                         android:textColor="@android:color/holo_red_dark"
                         android:textSize="14sp"
 
+
+
                         />
 
 
-                    <EditText
+                    <com.cielyang.android.clearableedittext.ClearableEditText
                         android:id="@+id/ptVentasH1"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
@@ -191,7 +193,7 @@
                         android:textSize="14sp" />
 
 
-                    <EditText
+                    <com.cielyang.android.clearableedittext.ClearableEditText
 
                         android:id="@+id/ptPrecioUdh1"
                         android:layout_width="110dp"
@@ -404,7 +406,6 @@
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
                     android:orientation="horizontal">
-
                     <EditText
                         android:id="@+id/ptMesP1"
                         android:layout_width="110dp"

@@ -46,9 +46,9 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
     }
     private fun saveInputsSueldos(){
         binding.btnSaveSueldos.setOnClickListener{
-            if(binding.etNumeroMesesSueldos.text.isEmpty())
+            if(binding.etNumeroMesesSueldos.text!!.isEmpty())
             {binding.etNumeroMesesSueldos.setText("0.0")}
-            if(binding.etNumeroMesesAportes.text.isEmpty()){
+            if(binding.etNumeroMesesAportes.text!!.isEmpty()){
                 binding.etNumeroMesesAportes.setText("0.0")
             }
             saveTotalsSueldos()

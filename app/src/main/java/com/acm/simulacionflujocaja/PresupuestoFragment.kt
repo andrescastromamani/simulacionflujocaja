@@ -275,6 +275,8 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
         val saldoTotalFinalSF=r.redondear(totalFlujoNeto+totSaldoMesAnterior)
         binding.totalv19.setText(saldoTotalFinalSF.toString())
 
+        val totalSueldoefectivoFinalProy:Double=totTotalEntradas-totalTotalSalidas+saldoAnt1
+
 
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("DatosPresupuesto").set(
             hashMapOf(
@@ -287,6 +289,9 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
                 "costosyGast3" to binding.editText33.text.toString(),
                 "totalCostoyGasto" to binding.totalv11.text.toString(),
                 "SueldoConIncSal" to  binding.editText21.text.toString(),
+                "totalEntradas1" to binding.textView.text.toString(),
+                "totalEntradas2" to binding.textView2.text.toString(),
+                "totalEntradas3" to binding.textView3.text.toString(),
                 "totalEntradas" to binding.totalv4.text.toString(),  //<---total entradas
                 "iva1" to binding.textView4.text.toString(),
                 "totalIVA" to binding.totalv12.text.toString(),
@@ -315,7 +320,7 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
                 "aporteP1" to binding.textView49.text.toString(),
                 "aporteP2" to binding.textView50.text.toString(),
                 "aporteP3" to binding.textView51.text.toString(),
-
+                "totalSueldoefectivoFinalProy" to totalSueldoefectivoFinalProy.toString()
 
 
             ))
