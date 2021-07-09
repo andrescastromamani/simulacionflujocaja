@@ -63,7 +63,7 @@ class TrimestralFragment : Fragment(R.layout.fragment_trimestral) {
             var sumaSal=0.0
             var varianzaEnt=0.0
             var varianzaSal=0.0
-            var nroCorridas=200
+
 
             val listaSalidas= mutableListOf<Double>(salida1,salida2,salida3)
             val tamSalida:Double= listaSalidas.size.toDouble()
@@ -90,109 +90,130 @@ class TrimestralFragment : Fragment(R.layout.fragment_trimestral) {
             }
             var desvTipicaSal=r.redondear(sqrt(varianzaSal))
             binding.etDesvTipSal.setText(desvTipicaSal.toString())
-            /*val mediaEntradas:Double=r.redondear((entrada1+entrada2+entrada3)/3)
-            val mediaSalidas:Double=r.redondear((salida1+salida2+salida3)/3)*/
+
             binding.etMediaEnt.setText(mediaEntradas.toString())
             binding.etMediaSal.setText(mediaSalidas.toString())
 
 
-            //val nr:aleatorioUniforme=aleatorioUniforme()
-            val ListaVADistNormalEntM1=mutableListOf<Double>()
-            val ListaVADistNormalSalM1=mutableListOf<Double>()
-            val ListaVADistNormalEntM2=mutableListOf<Double>()
-            val ListaVADistNormalSalM2=mutableListOf<Double>()
-            val ListaVADistNormalEntM3=mutableListOf<Double>()
-            val ListaVADistNormalSalM3=mutableListOf<Double>()
-
-            //Realizando 200 corridas para las entradas mes1
-            for (num in 1..200)
-            {
-
-                ListaVADistNormalEntM1.add(NormalDistribution(mediaEntradas,desvTipicaEnt))
-                //println(ListaVADistNormalEntM1)
-            }
-            //Realizando 200 corridas para las salidas mes1
-            for (num in 1..200)
-            {
-                ListaVADistNormalSalM1.add(NormalDistribution(mediaSalidas,desvTipicaSal))
-                //println(ListaVADistNormalSalM1)
-            }
-            var neto:Double=0.0
-            var cont=0
-            val listaNeto= mutableListOf<Double>()
-            do{
-                listaNeto.add(ListaVADistNormalEntM1[cont]+totalSueldoefectivoFinalProy-ListaVADistNormalSalM1[cont])
-                        cont++
-
-            }
-            while(cont<nroCorridas)
-            var sumaNeto=0.0
-            listaNeto.forEach {
-                sumaNeto=sumaNeto+it
-            }
-            val mediaNeto=r.redondear(sumaNeto/nroCorridas)
-            binding.etPromNetoM1.setText(mediaNeto.toString())
-            var varianzaNetoM1=0.0
-            listaNeto.forEach {
-                varianzaNetoM1=((mediaNeto-it).pow(2.0)/nroCorridas) +varianzaNetoM1
-            }
-
-            var desvTipicaNetoM1=r.redondear(sqrt(varianzaNetoM1))
+            val listaNetoMes1 =listaNeto(mediaEntradas,desvTipicaEnt,mediaSalidas,desvTipicaSal,totalSueldoefectivoFinalProy)
+            val varianzaNetoMes1=calculoVarianzaNetoMes(listaNetoMes1)
+            var desvTipicaNetoM1=r.redondear(sqrt(varianzaNetoMes1))
+            binding.etDesvTipNetoM1.setText(desvTipicaNetoM1.toString())
+            val promedioNetoMes1=promedioNetoMes(listaNetoMes1)
+            binding.etPromNetoM1.setText(promedioNetoMes1.toString())
+            var valoresIntervaloConfianzaM1=calculoIntervaloConfianza95porc(listaNetoMes1)
+            binding.etMinM1.setText(valoresIntervaloConfianzaM1[0].toString())
+            binding.etMaxM1.setText(valoresIntervaloConfianzaM1[1].toString())
             binding.etDesvTipNetoM1.setText(desvTipicaNetoM1.toString())
 
-            var valoresIntervaloConfianza=calculateLowerUpperConfidenceBoundary95Percent(listaNeto)
-            binding.etMinM1.setText(valoresIntervaloConfianza[0].toString())
-            binding.etMaxM1.setText(valoresIntervaloConfianza[1].toString())
 
+            val listaNetoMes2 =listaNeto(mediaEntradas,desvTipicaEnt,mediaSalidas,desvTipicaSal,promedioNetoMes1)
+            val varianzaNetoMes2=calculoVarianzaNetoMes(listaNetoMes2)
+            var desvTipicaNetoM2=r.redondear(sqrt(varianzaNetoMes2))
+            binding.etDesvTipNetoM2.setText(desvTipicaNetoM2.toString())
+            val promedioNetoMes2=promedioNetoMes(listaNetoMes2)
+            binding.etPromNetoM2.setText(promedioNetoMes2.toString())
+            var valoresIntervaloConfianzaM2=calculoIntervaloConfianza95porc(listaNetoMes2)
+            binding.etMinM2.setText(valoresIntervaloConfianzaM2[0].toString())
+            binding.etMaxM2.setText(valoresIntervaloConfianzaM2[1].toString())
+            binding.etDesvTipNetoM2.setText(desvTipicaNetoM1.toString())
 
-
-            //Realizando 200 corridas para las entradas mes2
-          /*  for (num in 1..200)
-            {
-                ListaVADistNormalEntM2.add(NormalDistribution(mediaEntradas,mediaEntradas))
-                println(ListaVADistNormalEntM2)
-            }
-
-            //Realizando 200 corridas para las salidas mes2
-            for (num in 1..200)
-            {
-
-                ListaVADistNormalSalM2.add(NormalDistribution(mediaSalidas,mediaSalidas))
-                println(ListaVADistNormalSalM2)
-            }
-*/
+            val listaNetoMes3 =listaNeto(mediaEntradas,desvTipicaEnt,mediaSalidas,desvTipicaSal,promedioNetoMes1)
+            val varianzaNetoMes3=calculoVarianzaNetoMes(listaNetoMes3)
+            var desvTipicaNetoM3=r.redondear(sqrt(varianzaNetoMes3))
+            binding.etDesvTipNetoM3.setText(desvTipicaNetoM3.toString())
+            val promedioNetoMes3=promedioNetoMes(listaNetoMes3)
+            binding.etPromNetoM3.setText(promedioNetoMes3.toString())
+            var valoresIntervaloConfianzaM3=calculoIntervaloConfianza95porc(listaNetoMes3)
+            binding.etMinM3.setText(valoresIntervaloConfianzaM3[0].toString())
+            binding.etMaxM3.setText(valoresIntervaloConfianzaM3[1].toString())
+            binding.etDesvTipNetoM3.setText(desvTipicaNetoM3.toString())
 
 
         }
 
     }
-    private fun calculateLowerUpperConfidenceBoundary95Percent(givenNumbers: MutableList<Double>): MutableList<Double> {
 
+//devuelve una lista de los calculos de las 200 corridas(suma de entradas + saldo final mes anterior-salidas)
+    private fun listaNeto(mediaEnt:Double,desvTipEnt:Double, mediaSal:Double,desvTipSal:Double,totalSueldoEfFinal:Double): MutableList<Double> {
+    val ListaVADistNormalEnt=mutableListOf<Double>()
+    val ListaVADistNormalSal=mutableListOf<Double>()
+    val dN=DistribucionNormal()
+        var nroCorridas=200
+        for (num in 1..nroCorridas)
+        {
+
+            ListaVADistNormalEnt.add(dN.NormalDistribution(mediaEnt,desvTipEnt))
+            //println(ListaVADistNormalEntM1)
+        }
+        //Realizando 200 corridas para las salidas mes1
+        for (num in 1..200)
+        {
+            ListaVADistNormalSal.add(dN.NormalDistribution(mediaSal,desvTipSal))
+            //println(ListaVADistNormalSalM1)
+        }
+
+        var cont=0
+        val listaNeto= mutableListOf<Double>()
+        do {
+            listaNeto.add(ListaVADistNormalEnt[cont] + totalSueldoEfFinal - ListaVADistNormalSal[cont])
+            cont++
+        }while(cont<nroCorridas)
+        return listaNeto
+    }
+
+    private fun calculoVarianzaNetoMes(listaNeto: MutableList<Double>): Double {
+
+        var nroCorridas=200
+
+        var sumaNeto=0.0
+        listaNeto.forEach {
+            sumaNeto=sumaNeto+it
+        }
+        val mediaNeto=r.redondear(sumaNeto/nroCorridas)
+
+        var varianzaNetoMes=0.0
+        listaNeto.forEach {
+            varianzaNetoMes=((mediaNeto-it).pow(2.0)/nroCorridas) +varianzaNetoMes
+        }
+
+            return varianzaNetoMes
+    }
+    private fun promedioNetoMes(listaNeto: MutableList<Double>): Double {
+
+        var nroCorridas=200
+        var sumaNeto=0.0
+        listaNeto.forEach {
+            sumaNeto=sumaNeto+it
+        }
+        val mediaNeto=r.redondear(sumaNeto/nroCorridas)
+    return mediaNeto
+    }
+    private fun calculoIntervaloConfianza95porc(listaNeto: MutableList<Double>): MutableList<Double> {
+
+        val r:RedondeoDecimal = RedondeoDecimal()
         // calculate the mean value (= average)
         var sum = 0.0
-        for (num in givenNumbers) {
+        for (num in listaNeto) {
             sum += num.toDouble()
         }
-        val mean = sum / givenNumbers.size
+        val mean = sum / listaNeto.size
 
         // calculate standard deviation
         var squaredDifferenceSum = 0.0
-        for (num in givenNumbers) {
+        for (num in listaNeto) {
             squaredDifferenceSum += (num - mean) * (num - mean)
         }
-        val variance = squaredDifferenceSum / givenNumbers.size
+        val variance = squaredDifferenceSum / listaNeto.size
         val standardDeviation = Math.sqrt(variance)
 
         // value for 95% confidence interval, source: https://en.wikipedia.org/wiki/Confidence_interval#Basic_Steps
         val confidenceLevel = 1.96
-        val temp = confidenceLevel * standardDeviation / Math.sqrt(givenNumbers.size.toDouble())
+        val temp = confidenceLevel * standardDeviation / Math.sqrt(listaNeto.size.toDouble())
         return mutableListOf<Double>(r.redondear(mean - temp), r.redondear(mean + temp))
     }
 
-    fun NormalDistribution(media: Double, DesvTip: Double): Double {
-        val random = Random()
-        return DesvTip * random.nextGaussian() + media
-    }
+
 
 
 

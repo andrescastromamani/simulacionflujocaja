@@ -1,6 +1,6 @@
 package com.acm.simulacionflujocaja
 import java.util.Random
-class aleatorioUniforme {
+class DistribucionNormal{
 
 
 
@@ -16,6 +16,10 @@ class aleatorioUniforme {
     }
    fun getRandom(): Double {
       return this.random.nextDouble()
+    }
+    fun NormalDistribution(media: Double, DesvTip: Double): Double {
+        val random = Random()
+        return DesvTip * random.nextGaussian() + media
     }
 
 }

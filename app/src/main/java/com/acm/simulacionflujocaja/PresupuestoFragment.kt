@@ -30,9 +30,7 @@ class PresupuestoFragment : Fragment(R.layout.fragment_presupuesto) {
         _binding = FragmentPresupuestoBinding.inflate(inflater, container, false)
 
         val view = binding.root
-        val nr:aleatorioUniforme=aleatorioUniforme()
-        for(num in 1..10){
-            println(nr.getRandom())}
+
 
         recuperarTodoPresupuesto()
         recDatosMeses()
