@@ -1,13 +1,14 @@
 package com.acm.simulacionflujocaja
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.acm.simulacionflujocaja.databinding.FragmentAnualBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.*
 import kotlin.math.pow
 import kotlin.math.sqrt
 
@@ -30,8 +31,10 @@ class AnualFragment : Fragment(R.layout.fragment_anual) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (activity as MainActivity?)?.getSupportActionBar()?.setTitle("SIMULACION ANUAL")
         val user = FirebaseAuth.getInstance().currentUser
         _binding = FragmentAnualBinding.inflate(inflater, container, false)
+
         val view = binding.root
         CalculoCorridasSimulacion()
         binding.btnSimularAnual.setOnClickListener{
@@ -65,15 +68,20 @@ class AnualFragment : Fragment(R.layout.fragment_anual) {
                     java.lang.Double.parseDouble((it.get("totalSalidas2") as String?))
                 val salida3: Double =
                     java.lang.Double.parseDouble((it.get("totalSalidas3") as String?))
-                val listaEntradas = mutableListOf<Double>(entrada1, entrada2, entrada3)
+                val max:Int=500000
+                val min:Int=400000
+                val random = Random()
+
+                val listaEntradas = mutableListOf<Double>(entrada1, entrada2, entrada3,
+                    (random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble())
                 val tamEnt: Double = listaEntradas.size.toDouble()
                 var sumaEnt = 0.0
                 var sumaSal = 0.0
                 var varianzaEnt = 0.0
                 var varianzaSal = 0.0
 
-
-                val listaSalidas = mutableListOf<Double>(salida1, salida2, salida3)
+                val listaSalidas = mutableListOf<Double>(salida1, salida2, salida3,
+                    (random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble(),(random.nextInt(max + min) + min).toDouble())
                 val tamSalida: Double = listaSalidas.size.toDouble()
 
                 listaEntradas.forEach {

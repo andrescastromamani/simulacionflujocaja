@@ -14,6 +14,7 @@ import kotlin.math.sqrt
 
 
 class SemestralFragment : Fragment(R.layout.fragment_semestral) {
+
     private val db = FirebaseFirestore.getInstance()
     val user = FirebaseAuth.getInstance().currentUser
     val email=user?.email
@@ -31,6 +32,7 @@ class SemestralFragment : Fragment(R.layout.fragment_semestral) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (activity as MainActivity?)?.getSupportActionBar()?.setTitle("SIMULACION SEMESTRAL")
         val user = FirebaseAuth.getInstance().currentUser
         _binding = FragmentSemestralBinding.inflate(inflater, container, false)
         val view = binding.root

@@ -15,12 +15,12 @@ import java.lang.Double.parseDouble
 
 class InputsFragment : Fragment(R.layout.fragment_inputs) {
 
-    private val db = FirebaseFirestore.getInstance()
-    private var _binding: FragmentInputsBinding? = null
-    private val binding get() = _binding!!
-    private lateinit var communicator: Communicator
-    private val user = FirebaseAuth.getInstance().currentUser
-    private val r :RedondeoDecimal= RedondeoDecimal()
+    val db = FirebaseFirestore.getInstance()
+    var _binding: FragmentInputsBinding? = null
+    val binding get() = _binding!!
+    val user = FirebaseAuth.getInstance().currentUser
+    val email=user?.email
+    val r :RedondeoDecimal= RedondeoDecimal()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,27 +28,25 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
     ): View? {
         (activity as MainActivity?)?.getSupportActionBar()?.setTitle("ENTRADAS")
 
-        val user = FirebaseAuth.getInstance().currentUser
+
 
         _binding = FragmentInputsBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        GuardarVariables(user?.email.toString())
-        recuperarTodo()
-
+        calculoVariables()
+        recuperarDatosInputs()
+        elimnarDatos()
+        recuperarDatos()
         return view
 
 
     }
-    private fun GuardarVariables(email:String){
-        communicator=activity as Communicator
+    private fun calculoVariables(){
+
         binding.btnSave.setOnClickListener {
             validarCamposVacios()
-            saveDatosMeses()//guarda meses
-            datosVentasYPrecio()//guarda ventas y precio unitario
-            ingresoBruto()
-            otrosDatos()
             ventasContado()
+            saveEntradas()
             //para pasar datos de inputs a presupuesto de caja
             val ventasMes1= parseDouble(_binding?.etVenCont3?.text.toString())
             val ventasMes2= parseDouble(_binding?.etVenCont4?.text.toString())
@@ -80,51 +78,74 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
 
         }
         //recuperar variables con boton
+
+
+        //eliminar entradas
+
+
+                }
+    private fun elimnarDatos(){
+        binding.btnEliminarInputs.setOnClickListener {
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("PrecioUd").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("IngresoBruto").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas Contado").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Recuperacion 30 dias").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Recuperacion 60 dias").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Intereses a cobrar 30d dias").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Intereses a cobrar 60d dias").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Incobrabilidad 30 dias").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Incobrabilidad 60 dias").delete()
+        }
+    }
+    private fun recuperarDatos(){
         binding.btnRecuperar.setOnClickListener {
-                        db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {
-                            binding.ptMesH1.setText(it.get("Mes 1") as String?)
-                            binding.ptMesH2.setText(it.get("Mes 2") as String?)
-                            binding.ptMesP1.setText(it.get("Mes 3") as String?)
-                            binding.ptMesP2.setText(it.get("Mes 4") as String?)
-                            binding.ptMesP3.setText(it.get("Mes 5") as String?)
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {
+                binding.ptMesH1.setText(it.get("Mes 1") as String?)
+                binding.ptMesH2.setText(it.get("Mes 2") as String?)
+                binding.ptMesP1.setText(it.get("Mes 3") as String?)
+                binding.ptMesP2.setText(it.get("Mes 4") as String?)
+                binding.ptMesP3.setText(it.get("Mes 5") as String?)
 
-                        }
-                        db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas").get().addOnSuccessListener {
-                            binding.ptVentasH1.setText(it.get("VentasMes1") as String?)
-                            binding.ptVentasH2.setText(it.get("VentasMes2") as String?)
-                            binding.ptVentasP1.setText(it.get("VentasMes3") as String?)
-                            binding.ptVentasP2.setText(it.get("VentasMes4") as String?)
-                            binding.ptVentasP3.setText(it.get("VentasMes5") as String?)
+            }
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas").get().addOnSuccessListener {
+                binding.ptVentasH1.setText(it.get("VentasMes1") as String?)
+                binding.ptVentasH2.setText(it.get("VentasMes2") as String?)
+                binding.ptVentasP1.setText(it.get("VentasMes3") as String?)
+                binding.ptVentasP2.setText(it.get("VentasMes4") as String?)
+                binding.ptVentasP3.setText(it.get("VentasMes5") as String?)
 
-                        }
-                        db.collection("Users").document(email.toString()).collection("Entradas").document("PrecioUd").get().addOnSuccessListener {
-                            binding.ptPrecioUdh1.setText(it.get("PrecioMes1") as String?)
-                            binding.ptPrecioUdh2.setText(it.get("PrecioMes2") as String?)
-                            binding.ptPrecioUdp1.setText(it.get("PrecioMes3") as String?)
-                            binding.ptPrecioUdp2.setText(it.get("PrecioMes4") as String?)
-                            binding.ptPrecioUdp3.setText(it.get("PrecioMes5") as String?)
+            }
+            db.collection("Users").document(email.toString()).collection("Entradas").document("PrecioUd").get().addOnSuccessListener {
+                binding.ptPrecioUdh1.setText(it.get("PrecioMes1") as String?)
+                binding.ptPrecioUdh2.setText(it.get("PrecioMes2") as String?)
+                binding.ptPrecioUdp1.setText(it.get("PrecioMes3") as String?)
+                binding.ptPrecioUdp2.setText(it.get("PrecioMes4") as String?)
+                binding.ptPrecioUdp3.setText(it.get("PrecioMes5") as String?)
 
-                        }
-                         db.collection("Users").document(email.toString()).collection("Entradas").document("IngresoBruto").get().addOnSuccessListener {
-                             binding.tvIngresoM1.setText(it.get("IngresoBrutoMes1") as String?)
-                             binding.tvIngresoM2.setText(it.get("IngresoBrutoMes2") as String?)
-                             binding.tvIngresoM3.setText(it.get("IngresoBrutoMes3") as String?)
-                             binding.tvIngresoM4.setText(it.get("IngresoBrutoMes4") as String?)
-                             binding.tvIngresoM5.setText(it.get("IngresoBrutoMes5") as String?)
+            }
+            db.collection("Users").document(email.toString()).collection("Entradas").document("IngresoBruto").get().addOnSuccessListener {
+                binding.tvIngresoM1.setText(it.get("IngresoBrutoMes1") as String?)
+                binding.tvIngresoM2.setText(it.get("IngresoBrutoMes2") as String?)
+                binding.tvIngresoM3.setText(it.get("IngresoBrutoMes3") as String?)
+                binding.tvIngresoM4.setText(it.get("IngresoBrutoMes4") as String?)
+                binding.tvIngresoM5.setText(it.get("IngresoBrutoMes5") as String?)
 
-                         }
+            }
 
-                        db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
-                            binding.etNrEmpl.setText(it.get("Nro Empleados") as String?)
-                            binding.etSueldoEmp.setText(it.get("Sueldo Empleados") as String?)
-                            binding.etIncrementoSalarial.setText(it.get("Incremento Salarial") as String?)
-                            binding.etPorcCont.setText(it.get("Porcentaje Contado") as String?)
-                            binding.etPorc30d.setText(it.get("Porcenta credito a 30 dias") as String?)
-                            binding.etPorc60d.setText(it.get("Porcentaje credito a 60 dias") as String?)
-                            binding.etPorcIncobrabilidad.setText(it.get("Porcentaje Incobrabilidad") as String?)
-                            binding.etInteresCredito.setText(it.get("Interes Credito") as String?)
+            db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
+                binding.etNrEmpl.setText(it.get("Nro Empleados") as String?)
+                binding.etSueldoEmp.setText(it.get("Sueldo Empleados") as String?)
+                binding.etIncrementoSalarial.setText(it.get("Incremento Salarial") as String?)
+                binding.etPorcCont.setText(it.get("Porcentaje Contado") as String?)
+                binding.etPorc30d.setText(it.get("Porcenta credito a 30 dias") as String?)
+                binding.etPorc60d.setText(it.get("Porcentaje credito a 60 dias") as String?)
+                binding.etPorcIncobrabilidad.setText(it.get("Porcentaje Incobrabilidad") as String?)
+                binding.etInteresCredito.setText(it.get("Interes Credito") as String?)
 
-                        }
+            }
 
 
             db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Inputs").get().addOnSuccessListener {
@@ -167,27 +188,12 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
 
             }
 
-                    }
+        }
+    }
 
-        //eliminar entradas
-        binding.btnEliminarInputs.setOnClickListener {
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("PrecioUd").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("IngresoBruto").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas Contado").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Recuperacion 30 dias").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Recuperacion 60 dias").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Intereses a cobrar 30d dias").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Intereses a cobrar 60d dias").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Incobrabilidad 30 dias").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Incobrabilidad 60 dias").delete()
-                    }
 
-                }
+    private fun saveEntradas(){
 
-    private fun saveDatosMeses(){
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Meses").set(
             hashMapOf(
                 "Mes 1" to binding.ptMesH1.text.toString(),
@@ -195,8 +201,7 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
                 "Mes 3" to binding.ptMesP1.text.toString(),
                 "Mes 4" to binding.ptMesP2.text.toString(),
                 "Mes 5" to binding.ptMesP3.text.toString(),
-                )) }
-    private fun datosVentasYPrecio(){
+            ))
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Ventas").set(
             hashMapOf(
                 "VentasMes1" to binding.ptVentasH1.text.toString(),
@@ -246,8 +251,6 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
         _binding!!.tvIngresoM4.setText(ingresoBruto4)
         _binding!!.tvIngresoM5.setText(ingresoBruto5)
 
-    }
-    private fun otrosDatos(){
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("OtrosDatos").set(
             hashMapOf(
                 "Nro Empleados" to  binding.etNrEmpl.text.toString(),
@@ -259,11 +262,8 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
                 "Porcentaje Incobrabilidad" to  binding.etPorcIncobrabilidad.text.toString(),
                 "Interes Credito" to  binding.etInteresCredito.text.toString()
 
-                )
+            )
         )
-
-    }
-    private fun ingresoBruto(){
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("IngresoBruto").set(
             hashMapOf(
                 "IngresoBrutoMes1" to  binding.tvIngresoM1.text.toString(),
@@ -272,7 +272,13 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
                 "IngresoBrutoMes4" to  binding.tvIngresoM4.text.toString(),
                 "IngresoBrutoMes5" to  binding.tvIngresoM5.text.toString(),
 
-                )) }
+                ))
+    }
+
+
+
+
+
     private fun ventasContado(){//guarda ventas contado, recuperacion 30d y rec. 60d
 
         val totPorc:Double= r.redondear(100.0)
@@ -588,9 +594,8 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
 
     }
 
-    fun recuperarTodo(){//recupera todas las entradas
-        val user= FirebaseAuth.getInstance().currentUser
-        val email=user?.email
+    fun recuperarDatosInputs(){
+
         db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {
             binding.ptMesH1.setText(it.get("Mes 1") as String?)
             binding.ptMesH2.setText(it.get("Mes 2") as String?)
@@ -599,45 +604,8 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
             binding.ptMesP3.setText(it.get("Mes 5") as String?)
 
         }
-        db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas").get().addOnSuccessListener {
-            binding.ptVentasH1.setText(it.get("VentasMes1") as String?)
-            binding.ptVentasH2.setText(it.get("VentasMes2") as String?)
-            binding.ptVentasP1.setText(it.get("VentasMes3") as String?)
-            binding.ptVentasP2.setText(it.get("VentasMes4") as String?)
-            binding.ptVentasP3.setText(it.get("VentasMes5") as String?)
-
-        }
-        db.collection("Users").document(email.toString()).collection("Entradas").document("PrecioUd").get().addOnSuccessListener {
-            binding.ptPrecioUdh1.setText(it.get("PrecioMes1") as String?)
-            binding.ptPrecioUdh2.setText(it.get("PrecioMes2") as String?)
-            binding.ptPrecioUdp1.setText(it.get("PrecioMes3") as String?)
-            binding.ptPrecioUdp2.setText(it.get("PrecioMes4") as String?)
-            binding.ptPrecioUdp3.setText(it.get("PrecioMes5") as String?)
-
-        }
-        db.collection("Users").document(email.toString()).collection("Entradas").document("IngresoBruto").get().addOnSuccessListener {
-            binding.tvIngresoM1.setText(it.get("IngresoBrutoMes1") as String?)
-            binding.tvIngresoM2.setText(it.get("IngresoBrutoMes2") as String?)
-            binding.tvIngresoM3.setText(it.get("IngresoBrutoMes3") as String?)
-            binding.tvIngresoM4.setText(it.get("IngresoBrutoMes4") as String?)
-            binding.tvIngresoM5.setText(it.get("IngresoBrutoMes5") as String?)
-
-        }
-
-        db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
-            binding.etNrEmpl.setText(it.get("Nro Empleados") as String?)
-            binding.etSueldoEmp.setText(it.get("Sueldo Empleados") as String?)
-            binding.etIncrementoSalarial.setText(it.get("Incremento Salarial") as String?)
-            binding.etPorcCont.setText(it.get("Porcentaje Contado") as String?)
-            binding.etPorc30d.setText(it.get("Porcenta credito a 30 dias") as String?)
-            binding.etPorc60d.setText(it.get("Porcentaje credito a 60 dias") as String?)
-            binding.etPorcIncobrabilidad.setText(it.get("Porcentaje Incobrabilidad") as String?)
-            binding.etInteresCredito.setText(it.get("Interes Credito") as String?)
-
-        }
-
-        //recupera de base de datos
-        //recuperacion ventascontado, 30d, 60d, intereses generados para 30d,60d, incobrabilidad 30d,60d
+        //recupera todas las entradas
+//recuperacion ventascontado, 30d, 60d, intereses generados para 30d,60d, incobrabilidad 30d,60d
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Inputs").get().addOnSuccessListener {
             binding.etVenCont1.setText(it.get("Ventas contado mes 1") as String?)
             binding.etVenCont2.setText(it.get("Ventas contado mes 2") as String?)
@@ -683,6 +651,46 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
             binding.incob60d5.setText(it.get("Incobrabilidad 60 mes 5") as String?)
         }
 
+        db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas").get().addOnSuccessListener {
+            binding.ptVentasH1.setText(it.get("VentasMes1") as String?)
+            binding.ptVentasH2.setText(it.get("VentasMes2") as String?)
+            binding.ptVentasP1.setText(it.get("VentasMes3") as String?)
+            binding.ptVentasP2.setText(it.get("VentasMes4") as String?)
+            binding.ptVentasP3.setText(it.get("VentasMes5") as String?)
+
+        }
+        db.collection("Users").document(email.toString()).collection("Entradas").document("PrecioUd").get().addOnSuccessListener {
+            binding.ptPrecioUdh1.setText(it.get("PrecioMes1") as String?)
+            binding.ptPrecioUdh2.setText(it.get("PrecioMes2") as String?)
+            binding.ptPrecioUdp1.setText(it.get("PrecioMes3") as String?)
+            binding.ptPrecioUdp2.setText(it.get("PrecioMes4") as String?)
+            binding.ptPrecioUdp3.setText(it.get("PrecioMes5") as String?)
+
+        }
+        db.collection("Users").document(email.toString()).collection("Entradas").document("IngresoBruto").get().addOnSuccessListener {
+            binding.tvIngresoM1.setText(it.get("IngresoBrutoMes1") as String?)
+            binding.tvIngresoM2.setText(it.get("IngresoBrutoMes2") as String?)
+            binding.tvIngresoM3.setText(it.get("IngresoBrutoMes3") as String?)
+            binding.tvIngresoM4.setText(it.get("IngresoBrutoMes4") as String?)
+            binding.tvIngresoM5.setText(it.get("IngresoBrutoMes5") as String?)
+
+        }
+
+        db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").get().addOnSuccessListener {
+            binding.etNrEmpl.setText(it.get("Nro Empleados") as String?)
+            binding.etSueldoEmp.setText(it.get("Sueldo Empleados") as String?)
+            binding.etIncrementoSalarial.setText(it.get("Incremento Salarial") as String?)
+            binding.etPorcCont.setText(it.get("Porcentaje Contado") as String?)
+            binding.etPorc30d.setText(it.get("Porcenta credito a 30 dias") as String?)
+            binding.etPorc60d.setText(it.get("Porcentaje credito a 60 dias") as String?)
+            binding.etPorcIncobrabilidad.setText(it.get("Porcentaje Incobrabilidad") as String?)
+            binding.etInteresCredito.setText(it.get("Interes Credito") as String?)
+
+        }
+
+        //recupera de base de datos
+
+
     }
     private fun validarCamposVacios(){
         if(binding.ptVentasH1.text!!.isEmpty()){
@@ -700,6 +708,48 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
         if(binding.ptVentasP3.text!!.isEmpty()){
             binding.ptVentasP3.setText("0.0")
         }
+        if(binding.ptPrecioUdh1.text!!.isEmpty()){
+            binding.ptPrecioUdh1.setText("0.0")
+        }
+        if(binding.ptPrecioUdh2.text!!.isEmpty()){
+            binding.ptPrecioUdh2.setText("0.0")
+        }
+        if(binding.ptPrecioUdp1.text!!.isEmpty()){
+            binding.ptPrecioUdp1.setText("0.0")
+        }
+        if(binding.ptPrecioUdp2.text!!.isEmpty()){
+            binding.ptPrecioUdp2.setText("0.0")
+        }
+        if(binding.ptPrecioUdp3.text!!.isEmpty()){
+            binding.ptPrecioUdp3.setText("0.0")
+        }
+
+        if(binding.etNrEmpl.text!!.isEmpty()){
+            binding.etNrEmpl.setText("0.0")
+        }
+        if(binding.etSueldoEmp.text!!.isEmpty()){
+            binding.etSueldoEmp.setText("0.0")
+        }
+        if(binding.etIncrementoSalarial.text!!.isEmpty()){
+            binding.etIncrementoSalarial.setText("0.0")
+        }
+        if(binding.etPorcCont.text!!.isEmpty()){
+            binding.etPorcCont.setText("100.0")
+        }
+        if(binding.etPorc30d.text!!.isEmpty()){
+            binding.etPorc30d.setText("0.0")
+        }
+
+        if(binding.etPorc60d.text!!.isEmpty()){
+            binding.etPorc60d.setText("0.0")
+        }
+        if(binding.etInteresCredito.text!!.isEmpty()){
+            binding.etInteresCredito.setText("0.0")
+        }
+        if(binding.etPorcIncobrabilidad.text!!.isEmpty()){
+            binding.etPorcIncobrabilidad.setText("0.0")
+        }
+
     }
 
     companion object {

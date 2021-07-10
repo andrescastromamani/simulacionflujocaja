@@ -31,6 +31,7 @@ class TrimestralFragment : Fragment(R.layout.fragment_trimestral) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (activity as MainActivity?)?.getSupportActionBar()?.setTitle("SIMULACION TRIMESTRAL")
         val user = FirebaseAuth.getInstance().currentUser
         _binding = FragmentTrimestralBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -187,13 +188,13 @@ binding.btnSimularTri.setOnClickListener{
                     varianzaEnt = ((mediaEntradas - it).pow(2.0) / tamEnt) + varianzaEnt
                 }
                 //calculo de las desv tipicas
-                var desvTipicaEnt = r.redondear(sqrt(varianzaEnt))
+                val desvTipicaEnt:Double = r.redondear(sqrt(varianzaEnt))
                 binding.etDesvTipEnt.setText(desvTipicaEnt.toString())
 
                 listaSalidas.forEach {
                     varianzaSal = ((mediaSalidas - it).pow(2.0) / tamSalida) + varianzaSal
                 }
-                var desvTipicaSal = r.redondear(sqrt(varianzaSal))
+                val desvTipicaSal:Double = r.redondear(sqrt(varianzaSal))
                 binding.etDesvTipSal.setText(desvTipicaSal.toString())
 
                 binding.etMediaEnt.setText(mediaEntradas.toString())

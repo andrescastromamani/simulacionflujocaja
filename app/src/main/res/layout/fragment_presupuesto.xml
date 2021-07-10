@@ -153,10 +153,11 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
-                            android:text="TOTAL"
+                            android:text="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -214,7 +215,8 @@
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                            android:textColor="@android:color/holo_orange_dark" />
+                            android:textColor="@android:color/holo_orange_dark"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -272,7 +274,8 @@
                             android:text="0000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                            android:textColor="@android:color/holo_orange_dark" />
+                            android:textColor="@android:color/holo_orange_dark"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -338,7 +341,8 @@
                             android:hint="00000"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                            android:textColor="@color/design_default_color_error" />
+                            android:textColor="@color/design_default_color_error"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -412,7 +416,8 @@
                             android:layout_weight="1"
                             android:hint="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -439,7 +444,9 @@
                             android:layout_weight="1"
                             android:hint="80000"
                             android:inputType="number"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            tools:text="0.0" />
+
                         <TextView
                             android:id="@+id/editText20"
                             android:layout_width="100dp"
@@ -448,7 +455,8 @@
                             android:layout_weight="1"
                             android:hint="80000"
                             android:inputType="number"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            tools:text="0.0" />
 
                         <TextView
                             android:id="@+id/editText21"
@@ -458,7 +466,8 @@
                             android:layout_weight="1"
                             android:hint="80000"
                             android:inputType="number"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            tools:text="0.0" />
 
                         <TextView
                             android:id="@+id/totalv7"
@@ -468,7 +477,8 @@
                             android:layout_weight="1"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -525,7 +535,8 @@
                             android:layout_weight="1"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -583,7 +594,8 @@
                             android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -642,7 +654,8 @@
                             android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -701,7 +714,8 @@
                             android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -763,7 +777,8 @@
                             android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -825,7 +840,8 @@
                             android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -889,7 +905,8 @@
                             android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -948,7 +965,8 @@
                             android:hint="0.0"
                             android:text="0000"
                             android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            tools:text="0.0" />
 
                     </LinearLayout>
 
@@ -1011,7 +1029,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:hint="0.0"
-                            android:text="0000"
+                            android:text="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                             android:textColor="#FB8C00" />
@@ -1077,7 +1095,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:hint="0.0"
-                            android:text="0000"
+                            android:text="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                             android:textColor="#F4511E" />
@@ -1140,7 +1158,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:hint="0.0"
-                            android:text="0000"
+                            android:text="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -1205,7 +1223,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:hint="0.0"
-                            android:text="0000"
+                            android:text="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                             android:textColor="#E53935" />
@@ -1265,7 +1283,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:hint="0.0"
-                            android:text="0000"
+                            android:text="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -1324,7 +1342,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:hint="0.0"
-                            android:text="0000"
+                            android:text="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -1383,7 +1401,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:hint="0.0"
-                            android:text="0000"
+                            android:text="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -1448,7 +1466,7 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:hint="0.0"
-                            android:text="0000"
+                            android:text="0.0"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                             android:textColor="#E53935" />

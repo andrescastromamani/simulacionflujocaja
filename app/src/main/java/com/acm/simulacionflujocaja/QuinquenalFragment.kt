@@ -14,6 +14,7 @@ import kotlin.math.sqrt
 
 
 class QuinquenalFragment : Fragment(R.layout.fragment_quinquenal) {
+
     private val db = FirebaseFirestore.getInstance()
     val user = FirebaseAuth.getInstance().currentUser
     val email=user?.email
@@ -31,6 +32,7 @@ class QuinquenalFragment : Fragment(R.layout.fragment_quinquenal) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (activity as MainActivity?)?.getSupportActionBar()?.setTitle("SIMULACION QUINQUENAL")
         val user = FirebaseAuth.getInstance().currentUser
         _binding = FragmentQuinquenalBinding.inflate(inflater, container, false)
         val view = binding.root
