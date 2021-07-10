@@ -24,6 +24,13 @@
         android:fitsSystemWindows="true"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu"/>
+        app:menu="@menu/nav_menu">
+        <Button
+            android:id="@+id/btnPdfGenerate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pdf Generate"
+            android:layout_marginTop="80dp"/>
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -1,5 +1,6 @@
 package com.acm.simulacionflujocaja
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -7,8 +8,8 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
-import kotlinx.android.synthetic.main.activity_main.*
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_main.*
 
 enum class ProviderType{   // enum class declara palabra clave para definir un conjunto de constantes
     BASIC}
@@ -30,7 +31,10 @@ class MainActivity : AppCompatActivity() ,Communicator{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        btnPdfGenerate.setOnClickListener{
+            val intent = Intent(this, GeneratePdfActivity::class.java)
+            startActivity(intent)
+        }
 
          val headerView: View = nav_view.getHeaderView(0)
         val navUserEmail: TextView = headerView.findViewById(R.id.textView_email)

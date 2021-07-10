@@ -1,21 +1,15 @@
 package com.acm.simulacionflujocaja
 
-import android.content.pm.PackageManager
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
-import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
-import androidx.core.content.PermissionChecker
-import androidx.core.content.PermissionChecker.checkSelfPermission
 import androidx.fragment.app.Fragment
-import com.acm.simulacionflujocaja.databinding.FragmentInputsBinding
-import com.acm.simulacionflujocaja.databinding.FragmentIvaBinding
+import com.acm.simulacionflujocaja.databinding.ActivityGeneratePdfBinding
 import com.acm.simulacionflujocaja.databinding.FragmentSueldosBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -25,7 +19,6 @@ import com.itextpdf.text.pdf.PdfWriter
 import kotlinx.android.synthetic.main.fragment_sueldos.*
 import java.io.FileOutputStream
 import java.lang.Double.parseDouble
-import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -52,7 +45,11 @@ class SueldosFragment : Fragment(R.layout.fragment_sueldos) {
         val user = FirebaseAuth.getInstance().currentUser
         _binding = FragmentSueldosBinding.inflate(inflater, container, false)
         val view = binding.root
-        generatePdf()
+        btnGeneratePdf.setOnClickListener{
+            val intent = Intent(activity, GeneratePdfActivity::class.java);
+            startActivity(intent)
+        }
+        //generatePdf()
         validarCampos()
         resuperarDatosInput()
         recuperarDatos()
