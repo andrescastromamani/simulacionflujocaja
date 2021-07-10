@@ -4,19 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-
 import androidx.fragment.app.Fragment
 import com.acm.simulacionflujocaja.databinding.FragmentInputsBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.fragment_inputs.*
 import java.lang.Double.parseDouble
-import java.lang.Integer.parseInt
-import java.math.RoundingMode
-import java.text.DecimalFormat
-import kotlin.math.round
-import java.math.BigDecimal
+
 
 
 
@@ -28,13 +21,7 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
     private lateinit var communicator: Communicator
     private val user = FirebaseAuth.getInstance().currentUser
     private val r :RedondeoDecimal= RedondeoDecimal()
-    override fun onCreate(savedInstanceState: Bundle?) {
-          super.onCreate(savedInstanceState)
 
-
-
-
-    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,9 +33,6 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
         _binding = FragmentInputsBinding.inflate(inflater, container, false)
         val view = binding.root
 
-
-
-
         GuardarVariables(user?.email.toString())
         recuperarTodo()
 
@@ -59,6 +43,7 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
     private fun GuardarVariables(email:String){
         communicator=activity as Communicator
         binding.btnSave.setOnClickListener {
+            validarCamposVacios()
             saveDatosMeses()//guarda meses
             datosVentasYPrecio()//guarda ventas y precio unitario
             ingresoBruto()
@@ -698,6 +683,23 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
             binding.incob60d5.setText(it.get("Incobrabilidad 60 mes 5") as String?)
         }
 
+    }
+    private fun validarCamposVacios(){
+        if(binding.ptVentasH1.text!!.isEmpty()){
+            binding.ptVentasH1.setText("0.0")
+        }
+        if(binding.ptVentasH2.text!!.isEmpty()){
+            binding.ptVentasH2.setText("0.0")
+        }
+        if(binding.ptVentasP1.text!!.isEmpty()){
+            binding.ptVentasP1.setText("0.0")
+        }
+        if(binding.ptVentasP2.text!!.isEmpty()){
+            binding.ptVentasP2.setText("0.0")
+        }
+        if(binding.ptVentasP3.text!!.isEmpty()){
+            binding.ptVentasP3.setText("0.0")
+        }
     }
 
     companion object {

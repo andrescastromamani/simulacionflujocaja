@@ -171,6 +171,21 @@
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btnSimularTri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/holo_blue_dark"
+                        android:text="Simular"
+                        android:visibility="visible" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -179,7 +194,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="61dp">
+                    android:layout_height="73dp">
 
                     <TextView
                         android:layout_width="120dp"
@@ -233,7 +248,7 @@
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
-                        android:text="Mes sigte. 1"
+                        android:text="Mes sgte. 1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
@@ -283,7 +298,7 @@
                         android:layout_width="120dp"
                         android:layout_height="35dp"
                         android:layout_margin="10dp"
-                        android:text="Mes sigte. 2"
+                        android:text="Mes sgte. 2"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
@@ -335,7 +350,7 @@
                         android:layout_height="35dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Mes sigte. 3"
+                        android:text="Mes sgte. 3"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                     <TextView
@@ -391,16 +406,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
-
-                    <Button
-                        android:id="@+id/btnSaveIT"
-                        android:layout_width="1dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@android:color/holo_blue_dark"
-                        android:text="Calcular"
-                        android:visibility="invisible" />
 
                     <Space
                         android:layout_width="wrap_content"

@@ -182,7 +182,7 @@
                         />
 
 
-                    <com.cielyang.android.clearableedittext.ClearableEditText
+                    <EditText
                         android:id="@+id/ptVentasH1"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
@@ -193,7 +193,7 @@
                         android:textSize="14sp" />
 
 
-                    <com.cielyang.android.clearableedittext.ClearableEditText
+                    <EditText
 
                         android:id="@+id/ptPrecioUdh1"
                         android:layout_width="110dp"
