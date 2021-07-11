@@ -21,18 +21,13 @@ import java.io.IOException
 
 class GeneratePdfActivity : AppCompatActivity() {
 
-    val informationArray = arrayOf("Flujo de efectivo proyectado por arctividades de Operacion",
-        "Ingresos de operacion",
-        "Gastos de operacion",
-        "Flujo de efectivo por actividades de Operacion",
-        "Ingresos de capital",
-        "Gastos de capital",
-        "Flujo de efectivo por actividades de financiamiento",
-        "Fuentes",
-        "Usos",
-        "Incremento Proyectada del efectivo del periodo",
-        "Efectivo al inicio del periodo",
-        "Saldo de efecto final proyectado")
+    val flujoEfectivo = arrayOf("Flujo de efectivo proyectado por arctividades de Operacion", "Ingresos de operacion", "Gastos de operacion", "Flujo de efectivo por actividades de Operacion",
+        "Ingresos de capital", "Gastos de capital", "Flujo de efectivo por actividades de financiamiento", "Fuentes", "Usos", "Incremento Proyectada del efectivo del periodo",
+        "Efectivo al inicio del periodo", "Saldo de efecto final proyectado")
+    val presupuestoCaja = arrayOf("ENTRADAS","ventas al contado","Recuperacion cuentas por cobrar 30 días","Recuperacion cuentas por cobrar 60 días","Total Entradas de efectivo",
+        "SALIDAS DE EFECTIVO","Compras","Sueldos y Salarios","Aportes Patronales","Retroactivos Sueldos y salarios" ,"Retroactivos Aportes Patronales","Costos y Gastos","IVA","IT","IUE",
+        "Otros impuestos","TOTAL SALIDAS","FLUJO NETO PROYECTADO SIN FINANCIAMIENTO","SALDO FINAL MES ANTERIOR","SALDO FINAL DE EFECTIVO PROYECTADO SIN FINANCIAMIENTO",
+        "FINANCIAMIENTO A CORTO PLAZO","AMORTIZACION FINANCIAMIENTO A CORTO PLAZO","INTERESES FINANCIAMIENTO A CORTO PLAZO","SALDO FINAL DE EFECTIVO PROYECTADO CON FINANCIAMIENTO")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +57,7 @@ class GeneratePdfActivity : AppCompatActivity() {
 
         paint.textAlign = Paint.Align.CENTER
         paint.textSize = 12.0f
-        canvas.drawText("SIMULACION", (pageInfo.pageWidth/2).toFloat(), 30F, paint)
+        canvas.drawText("REPORTE", (pageInfo.pageWidth/2).toFloat(), 30F, paint)
 
         paint.textSize = 6.0f
         paint.color = Color.rgb(122,119,119)
@@ -80,7 +75,7 @@ class GeneratePdfActivity : AppCompatActivity() {
         val endXPosition = pageInfo.pageWidth-10
         var startYPosition = 100
         for(i in 0..11) {
-            canvas.drawText(informationArray[i], startXPosition.toFloat(), startYPosition.toFloat(),paint)
+            canvas.drawText(flujoEfectivo[i], startXPosition.toFloat(), startYPosition.toFloat(),paint)
             canvas.drawLine(startXPosition.toFloat(), startYPosition.toFloat() + 3, endXPosition.toFloat(), startYPosition.toFloat()+3, paint)
             startYPosition += 20
         }
@@ -92,7 +87,25 @@ class GeneratePdfActivity : AppCompatActivity() {
         val pageInfo1 = PageInfo.Builder(250, 400, 1).create()
         val page1: PdfDocument.Page = document.startPage(pageInfo1)
         val canvas1: Canvas = page1.canvas
-        canvas1.drawText("Presupuesto de Caja", 40F, 50F, paint)
+
+        paint.textAlign = Paint.Align.LEFT
+        paint.textSize = 8.0f
+        paint.color = Color.BLACK
+        canvas1.drawText("Presupuesto de Caja", 10F, 30F,paint)
+
+        paint.textAlign = Paint.Align.LEFT
+        paint.textSize = 5f
+        paint.color = Color.BLUE
+        val startXPosition1 = 10
+        val endXPosition1 = pageInfo.pageWidth-10
+        var startYPosition1 = 45
+        for(i in 0..23) {
+            canvas1.drawText(presupuestoCaja[i], startXPosition1.toFloat(), startYPosition1.toFloat(),paint)
+            canvas1.drawLine(startXPosition1.toFloat(), startYPosition1.toFloat() + 3, endXPosition1.toFloat(), startYPosition1.toFloat() + 3, paint)
+            startYPosition1 += 15
+        }
+        canvas1.drawLine(155F, 40F, 155F, 400F, paint)
+
         document.finishPage(page1)
 
 
