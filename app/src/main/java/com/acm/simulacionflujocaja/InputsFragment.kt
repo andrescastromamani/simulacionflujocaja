@@ -153,7 +153,7 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
     }
     private fun calculoVentasContado(){//guarda ventas contado, recuperacion 30d y rec. 60d
 
-        val totPorc:Double= r.redondear(100.0)
+        val totPorc:Double= 100.0
         //para porcentaje contado
         val porcjContado=_binding?.etPorcCont?.text.toString()
         val porcCont= r.redondear(parseDouble(porcjContado))
@@ -271,6 +271,7 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
             val rec30dias4:Double=(porc30dias/100)*ingBruto3
             val rec30dias5:Double=(porc30dias/100)*ingBruto4
 
+
             _binding?.etRec30d1?.setText("0.0")
             _binding?.etRec30d2?.setText(r.redondear(rec30dias2).toString())
             _binding?.etRec30d3?.setText(r.redondear(rec30dias3).toString())
@@ -324,15 +325,76 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
             _binding?.incob60d3?.setText(r.redondear(totIncob60d3).toString())
             _binding?.incob60d4?.setText(r.redondear(totIncob60d4).toString())
             _binding?.incob60d5?.setText(r.redondear(totIncob60d5).toString())
+            //calculo de total recuperacion 30 y 60 dias mas sus intereses solo de los meses proyectados
+            val total30diasM1:Double=r.redondear(totInteres30d3+rec30dias3)
+            val total30diasM2:Double=r.redondear(totInteres30d4+rec30dias4)
+            val total30diasM3:Double=r.redondear(totInteres30d5+rec30dias5)
+            val totala60diasM1:Double=r.redondear(totInteres60d3+rec60dias3)
+            val totala60diasM2:Double=r.redondear(totInteres60d4+rec60dias4)
+            val totala60diasM3:Double=r.redondear(totInteres60d5+rec60dias5)
+            db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Inputs").set(
+                hashMapOf(
 
+                    "total30diasM1" to  total30diasM1.toString(),
+                    "total30diasM2" to  total30diasM2.toString(),
+                    "total30diasM3" to total30diasM3.toString(),
+                    "totala60diasM1" to  totala60diasM1.toString(),
+                    "totala60diasM2" to  totala60diasM2.toString(),
+                    "totala60diasM3" to  totala60diasM3.toString(),
+
+                    "Ventas contado mes 1" to  binding.etVenCont1.text.toString(),
+                    "Ventas contado mes 2" to  binding.etVenCont2.text.toString(),
+                    "Ventas contado mes 3" to  binding.etVenCont3.text.toString(),
+                    "Ventas contado mes 4" to  binding.etVenCont4.text.toString(),
+                    "Ventas contado mes 5" to  binding.etVenCont5.text.toString(),
+
+                    "Recuperacion 30 dias mes 1" to  binding.etRec30d1.text.toString(),
+                    "Recuperacion 30 dias mes 2" to  binding.etRec30d2.text.toString(),
+                    "Recuperacion 30 dias mes 3" to  binding.etRec30d3.text.toString(),
+                    "Recuperacion 30 dias mes 4" to  binding.etRec30d4.text.toString(),
+                    "Recuperacion 30 dias mes 5" to  binding.etRec30d5.text.toString(),
+
+                    "Recuperacion 60 dias mes 1" to  binding.etRec60d1.text.toString(),
+                    "Recuperacion 60 dias mes 2" to  binding.etRec60d2.text.toString(),
+                    "Recuperacion 60 dias mes 3" to  binding.etRec60d3.text.toString(),
+                    "Recuperacion 60 dias mes 4" to  binding.etRec60d4.text.toString(),
+                    "Recuperacion 60 dias mes 5" to  binding.etRec60d5.text.toString(),
+
+                    "Interes 30 mes 1" to  binding.interes30d1.text.toString(),
+                    "Interes 30 mes 2" to  binding.interes30d2.text.toString(),
+                    "Interes 30 mes 3" to  binding.interes30d3.text.toString(),
+                    "Interes 30 mes 4" to  binding.interes30d4.text.toString(),
+                    "Interes 30 mes 5" to  binding.interes30d5.text.toString(),
+
+                    "Interes 60 mes 1" to  binding.interes60d1.text.toString(),
+                    "Interes 60 mes 2" to  binding.interes60d2.text.toString(),
+                    "Interes 60 mes 3" to  binding.interes60d3.text.toString(),
+                    "Interes 60 mes 4" to  binding.interes60d4.text.toString(),
+                    "Interes 60 mes 5" to  binding.interes60d5.text.toString(),
+
+                    "Incobrabilidad 30 mes 1" to  binding.interes30d1.text.toString(),
+                    "Incobrabilidad 30 mes 2" to  binding.interes30d2.text.toString(),
+                    "Incobrabilidad 30 mes 3" to  binding.interes30d3.text.toString(),
+                    "Incobrabilidad 30 mes 4" to  binding.interes30d4.text.toString(),
+                    "Incobrabilidad 30 mes 5" to  binding.interes30d5.text.toString(),
+
+                    "Incobrabilidad 60 mes 1" to  binding.interes60d1.text.toString(),
+                    "Incobrabilidad 60 mes 2" to  binding.interes60d2.text.toString(),
+                    "Incobrabilidad 60 mes 3" to  binding.interes60d3.text.toString(),
+                    "Incobrabilidad 60 mes 4" to  binding.interes60d4.text.toString(),
+                    "Incobrabilidad 60 mes 5" to  binding.interes60d5.text.toString(),
+
+                    ))
             //CALCULO SUELDOS PARA ENVIAR A PRESUPUESTO DE CAJA
             val numeroEmp:Double=parseDouble(binding.etNrEmpl.text.toString())
             val incrementoSal:Double= parseDouble(binding.etIncrementoSalarial.text.toString())/100.0
             val sueldoEmp:Double= parseDouble(binding.etSueldoEmp.text.toString())
+
+
             if(incrementoSal==0.0){
-                val sueldo1:Double=sueldoEmp*numeroEmp
-                val sueldo2:Double=sueldoEmp*numeroEmp
-                val sueldo3:Double=sueldoEmp*numeroEmp
+                val sueldo1:Double=r.redondear(sueldoEmp*numeroEmp)
+                val sueldo2:Double=r.redondear(sueldoEmp*numeroEmp)
+                val sueldo3:Double=r.redondear(sueldoEmp*numeroEmp)
 
                 //GUARDANDO SUELDOS EN BD PARA RECUPERAR EN PRSUPUESTO
                 db.collection("Users").document(user?.email.toString()).collection("Entradas").document("SueldosMes").set(
@@ -344,8 +406,8 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
                     ))
             }
             else{
-                val sueldo1:Double=sueldoEmp*numeroEmp
-                val sueldo2:Double=sueldoEmp*numeroEmp
+                val sueldo1:Double=r.redondear(sueldoEmp*numeroEmp)
+                val sueldo2:Double=r.redondear(sueldoEmp*numeroEmp)
                 val sueldo3:Double=r.redondear(numeroEmp*sueldoEmp+(numeroEmp*sueldoEmp*incrementoSal))
 
                 db.collection("Users").document(user?.email.toString()).collection("Entradas").document("SueldosMes").set(
@@ -353,7 +415,8 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
 
                         "sueldo1" to  sueldo1.toString(),
                         "sueldo2" to  sueldo2.toString(),
-                        "sueldo3" to  sueldo3.toString()
+                        "sueldo3" to  sueldo3.toString(),
+
                     ))
             }
 
@@ -402,50 +465,8 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
             } }
 
 
-        db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Inputs").set(
-            hashMapOf(
 
-                "Ventas contado mes 1" to  binding.etVenCont1.text.toString(),
-                "Ventas contado mes 2" to  binding.etVenCont2.text.toString(),
-                "Ventas contado mes 3" to  binding.etVenCont3.text.toString(),
-                "Ventas contado mes 4" to  binding.etVenCont4.text.toString(),
-                "Ventas contado mes 5" to  binding.etVenCont5.text.toString(),
 
-                "Recuperacion 30 dias mes 1" to  binding.etRec30d1.text.toString(),
-                "Recuperacion 30 dias mes 2" to  binding.etRec30d2.text.toString(),
-                "Recuperacion 30 dias mes 3" to  binding.etRec30d3.text.toString(),
-                "Recuperacion 30 dias mes 4" to  binding.etRec30d4.text.toString(),
-                "Recuperacion 30 dias mes 5" to  binding.etRec30d5.text.toString(),
-
-                "Recuperacion 60 dias mes 1" to  binding.etRec60d1.text.toString(),
-                "Recuperacion 60 dias mes 2" to  binding.etRec60d2.text.toString(),
-                "Recuperacion 60 dias mes 3" to  binding.etRec60d3.text.toString(),
-                "Recuperacion 60 dias mes 4" to  binding.etRec60d4.text.toString(),
-                "Recuperacion 60 dias mes 5" to  binding.etRec60d5.text.toString(),
-
-                "Interes 30 mes 1" to  binding.interes30d1.text.toString(),
-                "Interes 30 mes 2" to  binding.interes30d2.text.toString(),
-                "Interes 30 mes 3" to  binding.interes30d3.text.toString(),
-                "Interes 30 mes 4" to  binding.interes30d4.text.toString(),
-                "Interes 30 mes 5" to  binding.interes30d5.text.toString(),
-
-                "Interes 60 mes 1" to  binding.interes60d1.text.toString(),
-                "Interes 60 mes 2" to  binding.interes60d2.text.toString(),
-                "Interes 60 mes 3" to  binding.interes60d3.text.toString(),
-                "Interes 60 mes 4" to  binding.interes60d4.text.toString(),
-                "Interes 60 mes 5" to  binding.interes60d5.text.toString(),
-
-                "Incobrabilidad 30 mes 1" to  binding.interes30d1.text.toString(),
-                "Incobrabilidad 30 mes 2" to  binding.interes30d2.text.toString(),
-                "Incobrabilidad 30 mes 3" to  binding.interes30d3.text.toString(),
-                "Incobrabilidad 30 mes 4" to  binding.interes30d4.text.toString(),
-                "Incobrabilidad 30 mes 5" to  binding.interes30d5.text.toString(),
-
-                "Incobrabilidad 60 mes 1" to  binding.interes60d1.text.toString(),
-                "Incobrabilidad 60 mes 2" to  binding.interes60d2.text.toString(),
-                "Incobrabilidad 60 mes 3" to  binding.interes60d3.text.toString(),
-                "Incobrabilidad 60 mes 4" to  binding.interes60d4.text.toString(),
-                "Incobrabilidad 60 mes 5" to  binding.interes60d5.text.toString()))
     }
 
     private fun recuperarDatos(){

@@ -497,7 +497,7 @@
                             android:textAlignment="gravity"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText22"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -507,7 +507,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText23"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -517,7 +517,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText24"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -555,7 +555,7 @@
                             android:textAlignment="gravity"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText25"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -565,7 +565,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText26"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -575,7 +575,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText27"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -615,7 +615,7 @@
                             android:textAlignment="gravity"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText28"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -625,7 +625,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText29"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"
@@ -635,7 +635,7 @@
                             android:inputType="number"
                             android:textAlignment="center" />
 
-                        <EditText
+                        <TextView
                             android:id="@+id/editText30"
                             android:layout_width="100dp"
                             android:layout_height="match_parent"

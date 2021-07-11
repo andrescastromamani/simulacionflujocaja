@@ -7,14 +7,16 @@
     tools:context=".IueFragment">
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="493dp"
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:scrollbarStyle="outsideInset"
         android:scrollbars="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:backgroundTint="#040404"
             android:orientation="vertical">
 
             <LinearLayout
@@ -52,8 +54,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#000000"
-                android:backgroundTint="@color/black">
+                android:background="#050505"
+                android:backgroundTint="@color/browser_actions_text_color">
 
                 <TextView
                     android:layout_width="250dp"
@@ -61,7 +63,8 @@
                     android:layout_margin="10dp"
                     android:paddingVertical="10dp"
                     android:text="Total Ganado Mensual"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/purple_200"
+                    android:textColorHighlight="@color/browser_actions_title_color"
                     android:textSize="18sp" />
 
                 <TextView
@@ -71,14 +74,15 @@
                     android:layout_margin="10dp"
                     android:paddingVertical="10dp"
                     android:textColor="#FFFFFF"
+                    android:textColorHint="@android:color/tertiary_text_dark"
                     android:textSize="12sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#000000"
-                android:backgroundTint="@color/black">
+                android:background="#050505"
+                android:backgroundTint="@color/browser_actions_text_color">
 
                 <TextView
                     android:layout_width="250dp"
@@ -86,7 +90,8 @@
                     android:layout_margin="10dp"
                     android:paddingVertical="10dp"
                     android:text="Aportes Patronales Mensuales"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/purple_200"
+                    android:textColorHighlight="@color/browser_actions_title_color"
                     android:textSize="18sp" />
 
                 <TextView
@@ -95,6 +100,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:textColor="#FFFFFF"
+                    android:textColorHint="@android:color/tertiary_text_dark"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -110,6 +116,7 @@
                     android:layout_margin="10dp"
                     android:text="DESPUES DE INCREMENTO SALARIAL"
                     android:textColor="#FFFFFF"
+                    android:textColorHighlight="#454545"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -117,7 +124,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#000000"
-                android:backgroundTint="@color/black">
+                android:backgroundTint="@color/browser_actions_text_color">
 
                 <TextView
                     android:layout_width="250dp"
@@ -125,7 +132,8 @@
                     android:layout_margin="10dp"
                     android:paddingVertical="10dp"
                     android:text="Total Ganado Mensual"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/purple_200"
+                    android:textColorHighlight="@color/browser_actions_title_color"
                     android:textSize="18sp" />
 
                 <TextView
@@ -133,7 +141,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
+                    android:backgroundTint="#039BE5"
                     android:textColor="#FFFFFF"
+                    android:textColorHint="@android:color/tertiary_text_dark"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -141,7 +151,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#000000"
-                android:backgroundTint="@color/black">
+                android:backgroundTint="@color/browser_actions_text_color">
 
                 <TextView
                     android:layout_width="250dp"
@@ -149,7 +159,8 @@
                     android:layout_margin="10dp"
                     android:paddingVertical="10dp"
                     android:text="Aportes Patronales Mensuales"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/purple_200"
+                    android:textColorHighlight="@color/browser_actions_title_color"
                     android:textSize="18sp" />
 
                 <TextView
@@ -158,6 +169,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:textColor="#FFFFFF"
+                    android:textColorHint="@android:color/tertiary_text_dark"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -173,6 +185,7 @@
                     android:layout_margin="10dp"
                     android:text="RETROACTIVO"
                     android:textColor="#FFFFFF"
+                    android:textColorHighlight="#454545"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -188,7 +201,8 @@
                     android:layout_margin="10dp"
                     android:paddingVertical="10dp"
                     android:text="Retroactivo Sueldos Por Mes"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/purple_200"
+                    android:textColorHighlight="@color/browser_actions_title_color"
                     android:textSize="18sp" />
 
                 <TextView
@@ -197,6 +211,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:textColor="#FFFFFF"
+                    android:textColorHint="@android:color/tertiary_text_dark"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -212,7 +227,8 @@
                     android:layout_margin="10dp"
                     android:paddingVertical="10dp"
                     android:text="Numero de Meses"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/purple_200"
+                    android:textColorHighlight="@color/browser_actions_title_color"
                     android:textSize="18sp" />
 
                 <EditText
@@ -220,7 +236,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
+                    android:backgroundTint="#039BE5"
                     android:textColor="#FFFFFF"
+                    android:textColorHint="@android:color/tertiary_text_dark"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -236,7 +254,8 @@
                     android:layout_margin="10dp"
                     android:paddingVertical="10dp"
                     android:text="Retroactivo Sueldos Por Mes"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/purple_200"
+                    android:textColorHighlight="@color/browser_actions_title_color"
                     android:textSize="18sp" />
 
                 <TextView
@@ -245,14 +264,15 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:textColor="#FFFFFF"
+                    android:textColorHint="@android:color/tertiary_text_dark"
                     android:textSize="12sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#000000"
-                android:backgroundTint="@color/black">
+                android:background="#050505"
+                android:backgroundTint="@color/browser_actions_text_color">
 
                 <TextView
                     android:layout_width="250dp"
@@ -260,7 +280,8 @@
                     android:layout_margin="10dp"
                     android:paddingVertical="10dp"
                     android:text="Retroactivo Aportes Por Mes"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/purple_200"
+                    android:textColorHighlight="@color/browser_actions_title_color"
                     android:textSize="18sp" />
 
                 <TextView
@@ -269,6 +290,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:textColor="#FFFFFF"
+                    android:textColorHint="@android:color/tertiary_text_dark"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -284,7 +306,8 @@
                     android:layout_margin="10dp"
                     android:paddingVertical="10dp"
                     android:text="Numero de Meses"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/purple_200"
+                    android:textColorHighlight="@color/browser_actions_title_color"
                     android:textSize="18sp" />
 
                 <EditText
@@ -292,15 +315,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
+                    android:backgroundTint="#039BE5"
                     android:textColor="#FFFFFF"
+                    android:textColorHint="@android:color/tertiary_text_dark"
                     android:textSize="12sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#000000"
-                android:backgroundTint="@color/black">
+                android:background="#050505"
+                android:backgroundTint="@color/browser_actions_text_color">
 
                 <TextView
                     android:layout_width="250dp"
@@ -308,7 +333,8 @@
                     android:layout_margin="10dp"
                     android:paddingVertical="10dp"
                     android:text="Retroactivo Aportes Por Mes"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/purple_200"
+                    android:textColorHighlight="@color/browser_actions_title_color"
                     android:textSize="18sp" />
 
                 <TextView
@@ -317,13 +343,14 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:textColor="#FFFFFF"
+                    android:textColorHint="@android:color/tertiary_text_dark"
                     android:textSize="12sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#000000"
+                android:background="#0C0C0C"
                 android:backgroundTint="#000000">
 
                 <Button

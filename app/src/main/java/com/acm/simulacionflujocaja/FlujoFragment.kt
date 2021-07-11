@@ -32,13 +32,13 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
         val user = FirebaseAuth.getInstance().currentUser
         _binding = FragmentFlujoBinding.inflate(inflater, container, false)
         val view = binding.root
-        validarCampos()
+
         recuperarDatosPresupuesto()
         recuperarDatos()
 
 
         binding.btnSaveFlujo.setOnClickListener{
-
+            validarCampos()
             saveTotalsFlujo()
         }
         return view
@@ -92,6 +92,18 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
     }
     private fun recuperarDatosPresupuesto() {
         db.collection("Users").document(email.toString()).collection("Entradas").document("DatosPresupuesto").get().addOnSuccessListener {
+            if(it.get("totalEntradas") as String?==null){
+                val totalEntradas:Double= 0.0
+                val totalSalidas:Double=0.0
+                val saldoAnterior:Double=0.0
+
+                binding.etIngresosOperacion.setText(totalEntradas.toString())
+                binding.etGastosOperacion.setText(totalSalidas.toString())
+                binding.etEfectivoInicioPeriodo.setText(saldoAnterior.toString())
+                val flujoProyectadoActividadesOperacion=r.redondear(totalEntradas-totalSalidas)
+                binding.etFlujoActividadesOperacion.setText(flujoProyectadoActividadesOperacion.toString())
+            }
+            else{
             val totalEntradas:Double= parseDouble(it.get("totalEntradas") as String?)
             val totalSalidas:Double= parseDouble(it.get("totalTotalSalidas") as String?)
             val saldoAnterior:Double= parseDouble(it.get("saldoAnt1") as String?)
@@ -101,7 +113,7 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
             binding.etEfectivoInicioPeriodo.setText(saldoAnterior.toString())
             val flujoProyectadoActividadesOperacion=r.redondear(totalEntradas-totalSalidas)
             binding.etFlujoActividadesOperacion.setText(flujoProyectadoActividadesOperacion.toString())
-        }
+        }}
     }
 
     private fun recuperarDatos() {
