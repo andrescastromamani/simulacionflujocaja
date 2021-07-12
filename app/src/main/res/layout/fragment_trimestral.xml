@@ -6,6 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000"
     tools:context=".TrimestralFragment">
 
     <ScrollView
@@ -40,16 +42,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Simulación trimestral"
+                        android:text="Simulación Trimestral"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#656565"
                         android:textSize="24sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="65dp">
 
                     <TextView
                         android:layout_width="120dp"
@@ -57,6 +60,7 @@
                         android:layout_margin="10dp"
                         android:text="Distribución"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565"
                         android:textSize="18sp" />
 
                     <TextView
@@ -66,6 +70,7 @@
                         android:text="Media"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565"
                         android:textSize="20sp" />
 
                     <TextView
@@ -75,9 +80,27 @@
                         android:text="Desv. Típica"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565"
+                        android:textSize="20sp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="152dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Saldo Inicial:"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565"
                         android:textSize="20sp" />
 
                 </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -88,23 +111,44 @@
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Entradas"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
+                        android:id="@+id/etMediaEnt"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
+                        android:id="@+id/etDesvTipEnt"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
+
+                    <Space
+                        android:layout_width="32dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/etSaldoInicial"
+                        android:layout_width="166dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="0dp"
+                        android:text="0000"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
+
 
                 </LinearLayout>
 
@@ -117,23 +161,43 @@
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Salidas"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
+                        android:id="@+id/etMediaSal"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
+                        android:id="@+id/etDesvTipSal"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btnSimularTri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/holo_blue_dark"
+                        android:text="Simular"
+                        android:visibility="visible" />
 
                 </LinearLayout>
 
@@ -143,14 +207,15 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="61dp">
+                    android:layout_height="73dp">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Meses"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:layout_width="100dp"
@@ -158,7 +223,8 @@
                         android:layout_margin="10dp"
                         android:text="Neto final esperado"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:layout_width="100dp"
@@ -166,15 +232,17 @@
                         android:layout_margin="10dp"
                         android:text="Desv. típica"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="IC 95% - Max"
+                        android:text="IC 95% - Min"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565"
                         android:textSize="16sp" />
 
                     <TextView
@@ -182,108 +250,133 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="IC 95% - Min"
+                        android:text="IC 95% - Max"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565"
                         android:textSize="16sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
-                        android:text="Mes sigte. 1"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:text="Mes sgte. 1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
+                        android:id="@+id/etPromNetoM1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
+                        android:id="@+id/etDesvTipNetoM1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
+                        android:id="@+id/etMinM1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
+                        android:id="@+id/etMaxM1"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="35dp"
                         android:layout_margin="10dp"
-                        android:text="Mes sigte. 2"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:text="Mes sgte. 2"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
+                        android:id="@+id/etPromNetoM2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
+                        android:id="@+id/etDesvTipNetoM2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
+                        android:id="@+id/etMinM2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
+                        android:id="@+id/etMaxM2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="57dp"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212"
                     android:orientation="horizontal">
 
                     <TextView
@@ -291,45 +384,53 @@
                         android:layout_height="35dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="Mes sigte. 3"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:text="Mes sgte. 3"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
+                        android:id="@+id/etPromNetoM3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
+                        android:id="@+id/etDesvTipNetoM3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
+                        android:id="@+id/etMinM3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
-                        android:id="@+id/textView60"
+                        android:id="@+id/etMaxM3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
 
@@ -345,20 +446,11 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
-                    <Button
-                        android:id="@+id/btnSaveIT"
-                        android:layout_width="1dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@android:color/holo_blue_dark"
-                        android:text="Calcular"
-                        android:visibility="invisible" />
-
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
+
                 </LinearLayout>
 
             </LinearLayout>

@@ -38,7 +38,7 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
 
         recDatosMeses()//recupera los meses que esta en bd y establece como texto en los textView
         recDataVentCont()//recupera de la bd y manda la informacion a las ventas contado
-        validarCampos()
+
         saveInputsIVA() //guarda todas las entradas que existen en IVA
 
         return view
@@ -145,6 +145,9 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
         //GUARDA EN BD TODAS LA ENTRADAS Y SUS CALCULOS
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("DatosIva").set(
             hashMapOf(
+                "mes1" to binding.etmes1.text.toString(),
+                "mes2" to binding.etmes3.text.toString(),
+                "mes3" to binding.etmes3.text.toString(),
                 "VentCon1" to binding.etVentas1.text.toString(),
                 "VentCon2" to binding.etVentas2.text.toString(),
                 "VentCon3" to binding.etVentas3.text.toString(),
@@ -205,18 +208,37 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
 
     private fun recDatosMeses(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {
+            if(it.get("Mes 3") as String?==null){
+                binding.etmes1.setText("Mes 1")
+                binding.etmes2.setText("Mes 2")
+                binding.etmes3.setText("Mes 3")
+            }
+
+            else{
             binding.etmes1.setText(it.get("Mes 3") as String?)
             binding.etmes2.setText(it.get("Mes 4") as String?)
-            binding.etmes3.setText(it.get("Mes 5") as String?)
+            binding.etmes3.setText(it.get("Mes 5") as String?)}
 
         }
     }
      //Recupera de inputs ventas al contado y los intereses si es que los hubiera
     private fun recDataVentCont(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("Inputs").get().addOnSuccessListener {
+
+            if(it.get("Ventas contado mes 3") as String?==null){
+                binding.etmes1.setText("0.0")
+                binding.etmes2.setText("0.0")
+                binding.etmes3.setText("0.0")
+                binding.Inco1.setText("0.0")
+                binding.Inco2.setText("0.0")
+                binding.Inco3.setText("0.0")
+            }else{
             binding.etVentas1.setText(it.get("Ventas contado mes 3") as String?)
             binding.etVentas2.setText(it.get("Ventas contado mes 4") as String?)
             binding.etVentas3.setText(it.get("Ventas contado mes 5") as String?)
+                binding.Inco1.setText(it.get("total30diasM1") as String?)
+                binding.Inco2.setText(it.get("total30diasM2") as String?)
+                binding.Inco3.setText(it.get("total30diasM3") as String?)}
         }
     }
     private fun recuperarTodoIVA(){
@@ -283,160 +305,114 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
 
         }
     }
+
     //metodo para evitar errores si se deja campo vacio
     private fun validarCampos(){
 
-        if(binding.etVentas1.text.toString().length==0){
-            binding.etVentas1.setText("0.0")
-        }else{}
-        if(binding.etVentas2.text.toString().length==0){
-            binding.etVentas2.setText("0.0")
-        }else{}
-        if(binding.etVentas3.text.toString().length==0){
-            binding.etVentas3.setText("0.0")
-        }else{}
-        if(binding.Inco1.text.toString().length==0){
+
+        if(binding.Inco1.text.toString().length==0) {
             binding.Inco1.setText("0.0")
-        }else{}
+        }
         if(binding.Inco2.text.toString().length==0){
             binding.Inco2.setText("0.0")
-        }else{}
+        }
         if(binding.Inco3.text.toString().length==0){
             binding.Inco3.setText("0.0")
-        }else{}
+        }
         if(binding.vaf1.text.toString().length==0){
             binding.vaf1.setText("0.0")
-        }else{}
+        }
         if(binding.vaf2.text.toString().length==0){
             binding.vaf2.setText("0.0")
-        }else{}
+        }
         if(binding.vaf3.text.toString().length==0){
             binding.vaf3.setText("0.0")
-        }else{}
+        }
         if(binding.alq1.text.toString().length==0){
             binding.alq1.setText("0.0")
-        }else{}
+        }
         if(binding.alq2.text.toString().length==0){
             binding.alq2.setText("0.0")
-        }else{}
+        }
         if(binding.alq3.text.toString().length==0){
             binding.alq3.setText("0.0")
-        }else{}
+        }
         if(binding.ot1.text.toString().length==0){
             binding.ot1.setText("0.0")
-        }else{}
+        }
         if(binding.ot2.text.toString().length==0){
             binding.ot2.setText("0.0")
-        }else{}
+        }
         if(binding.ot3.text.toString().length==0){
             binding.ot3.setText("0.0")
-        }else{}
+        }
         if(binding.compMerc1.text.toString().length==0){
             binding.compMerc1.setText("0.0")
-        }else{}
+        }
         if(binding.compMerc2.text.toString().length==0){
             binding.compMerc2.setText("0.0")
-        }else{}
+        }
         if(binding.compMerc3.text.toString().length==0){
             binding.compMerc3.setText("0.0")
-        }else{}
+        }
         if(binding.inCoCF1.text.toString().length==0){
             binding.inCoCF1.setText("0.0")
-        }else{}
+        }
         if(binding.inCoCF2.text.toString().length==0){
             binding.inCoCF2.setText("0.0")
-        }else{}
+        }
         if(binding.inCoCF3.text.toString().length==0){
             binding.inCoCF3.setText("0.0")
-        }else{}
+        }
 
         if(binding.coAF1.text.toString().length==0){
             binding.coAF1.setText("0.0")
-        }else{}
+        }
         if(binding.coAF2.text.toString().length==0){
             binding.coAF2.setText("0.0")
-        }else{}
+        }
         if(binding.coAF3.text.toString().length==0){
             binding.coAF3.setText("0.0")
-        }else
+        }
 
         if(binding.sub1.text.toString().length==0){
                 binding.sub1.setText("0.0")
-        }else{}
+        }
         if(binding.sub2.text.toString().length==0){
             binding.sub2.setText("0.0")
-        }else{}
+        }
         if(binding.sub3.text.toString().length==0){
             binding.sub3.setText("0.0")
-        }else{}
+        }
         if(binding.cgo1.text.toString().length==0){
             binding.cgo1.setText("0.0")
-        }else{}
+        }
         if(binding.cgo2.text.toString().length==0){
             binding.cgo2.setText("0.0")
-        }else{}
+        }
         if(binding.cgo3.text.toString().length==0){
             binding.cgo3.setText("0.0")
-        }else{}
+        }
         if(binding.otCF1.text.toString().length==0){
             binding.otCF1.setText("0.0")
-        }else{}
+        }
         if(binding.otCF2.text.toString().length==0){
             binding.otCF2.setText("0.0")
-        }else{}
+        }
         if(binding.otCF3.text.toString().length==0){
             binding.otCF3.setText("0.0")
-        }else{}
-        if(binding.totComp1.text.toString().length==0){
-            binding.totComp1.setText("0.0")
-        }else{}
-        if(binding.totComp2.text.toString().length==0){
-            binding.totComp2.setText("0.0")
-        }else{}
-        if(binding.totComp3.text.toString().length==0){
-            binding.totComp3.setText("0.0")
-        }else{}
-        if(binding.totCF1.text.toString().length==0){
-            binding.totCF1.setText("0.0")
-        }else{}
-        if(binding.totCF2.text.toString().length==0){
-            binding.totCF2.setText("0.0")
-        }else{}
-        if(binding.totCF3.text.toString().length==0){
-            binding.totCF3.setText("0.0")
-        }else{}
-        if(binding.saldFF1.text.toString().length==0){
-            binding.saldFF1.setText("0.0")
-        }else{}
-        if(binding.saldFF2.text.toString().length==0){
-            binding.saldFF2.setText("0.0")
-        }else{}
-        if(binding.saldFF3.text.toString().length==0){
-            binding.saldFF3.setText("0.0")
-        }else{}
+        }
+
         if(binding.saldMA1.text.toString().length==0){
             binding.saldMA1.setText("0.0")
-        }else{}
+        }
         if(binding.saldMA2.text.toString().length==0){
             binding.saldMA2.setText("0.0")
-        }else{}
+        }
         if(binding.saldMA3.text.toString().length==0){
             binding.saldMA3.setText("0.0")
-        }else{}
-        if(binding.totFinal1.text.toString().length==0){
-            binding.totFinal1.setText("0.0")
-        }else{}
-        if(binding.totFinal2.text.toString().length==0){
-            binding.totFinal2.setText("0.0")
-        }else{}
-        if(binding.totFinal3.text.toString().length==0){
-            binding.totFinal3.setText("0.0")
-        }else{}
-    }
-    companion object {
+        }
 
-        @JvmStatic
-        fun newInstance() = IvaFragment()
     }
 
     }

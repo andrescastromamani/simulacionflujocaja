@@ -43,11 +43,7 @@ class ItFragment : Fragment(R.layout.fragment_it) {
         binding.btnSaveIT.setOnClickListener {
             saveTotalesIT()
         }
-
-
-       //recupera los meses que esta en bd y establece como texto en los textView
-        recDataVentCont()//recupera de la bd y manda la informacion a las ventas contado
-
+        //recDataVentCont()
         return view
     }
 
@@ -89,37 +85,80 @@ class ItFragment : Fragment(R.layout.fragment_it) {
     }
     private fun recDatosMeses(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {
+
+            if(it.get("Mes 3") as String?==null){
+                binding.mes1.setText("Mes 1")
+                binding.mes2.setText("Mes 2")
+                binding.mes3.setText("Mes 3")
+            }
+
             binding.mes1.setText(it.get("Mes 3") as String?)
             binding.mes2.setText(it.get("Mes 4") as String?)
             binding.mes3.setText(it.get("Mes 5") as String?)
         }
     }
-    //Recupera de inputs ventas al contado y los intereses si es que los hubiera
-    private fun recDataVentCont(){
-        db.collection("Users").document(email.toString()).collection("Entradas").document("Inputs").get().addOnSuccessListener {
-            binding.itventas1.setText(it.get("Ventas contado mes 3") as String?)
-            binding.itventas2.setText(it.get("Ventas contado mes 4") as String?)
-            binding.itventas3.setText(it.get("Ventas contado mes 5") as String?)
-        }
-    }
 
     private fun recuperarDatosIVA(){
         db.collection("Users").document(user?.email.toString()).collection("Entradas").document("DatosIva").get().addOnSuccessListener {
-            binding.Incom1.setText(it.get("InCoDF1") as String?)
-            binding.Incom2.setText(it.get("InCoDF2") as String?)
-            binding.Incom3.setText(it.get("InCoDF3") as String?)
-            binding.Vafi1.setText(it.get("VeAcFi1") as String?)
-            binding.Vafi2.setText(it.get("VeAcFi2") as String?)
-            binding.Vafi3.setText(it.get("VeAcFi3") as String?)
-            binding.Alqu1.setText(it.get("Alq1") as String?)
-            binding.Alqu2.setText(it.get("Alq2") as String?)
-            binding.Alqu3.setText(it.get("Alq3") as String?)
-            binding.Otros1.setText(it.get("otros1") as String?)
-            binding.Otros2.setText(it.get("otros2") as String?)
-            binding.Otros3.setText(it.get("otros3") as String?)
-            binding.Tventas1.setText(it.get("tot1") as String?)
-            binding.Tventas2.setText(it.get("tot2") as String?)
-            binding.Tventas3.setText(it.get("tot3") as String?)
+            if(it.get("tot1") as String?==null){
+
+                binding.mes1.setText("Mes1")
+                binding.mes2.setText("Mes2")
+                binding.mes3.setText("Mes3")
+                binding.itventas1.setText("0.0")
+                binding.itventas2.setText("0.0")
+                binding.itventas3.setText("0.0")
+                binding.Incom1.setText("0.0")
+                binding.Incom2.setText("0.0")
+                binding.Incom3.setText("0.0")
+                binding.Vafi1.setText("0.0")
+                binding.Vafi2.setText("0.0")
+                binding.Vafi3.setText("0.0")
+                binding.Alqu1.setText("0.0")
+                binding.Alqu2.setText("0.0")
+                binding.Alqu3.setText("0.0")
+                binding.Otros1.setText("0.0")
+                binding.Otros2.setText("0.0")
+                binding.Otros3.setText("0.0")
+                binding.Tventas1.setText("0.0")
+                binding.Tventas2.setText("0.0")
+                binding.Tventas3.setText("0.0")
+
+                val porcIT:Double=0.03
+                val totVentasBYS1:Double=0.0
+                val totVentasBYS2:Double=0.0
+                val totVentasBYS3:Double=0.0
+
+                val TotItPer1:Double=r.redondear(porcIT*totVentasBYS1)
+                val TotItPer2:Double=r.redondear(porcIT*totVentasBYS2)
+                val TotItPer3:Double=r.redondear(porcIT*totVentasBYS3)
+
+                binding.Itper1.setText(TotItPer1.toString())
+                binding.Itper2.setText(TotItPer2.toString())
+                binding.Itper3.setText(TotItPer3.toString())
+            }
+            else{
+                binding.mes1.setText(it.get("mes1") as String?)
+                binding.mes1.setText(it.get("mes2") as String?)
+                binding.mes1.setText(it.get("mes3") as String?)
+                binding.itventas1.setText(it.get("VentCon1") as String?)
+                binding.itventas2.setText(it.get("VentCon2") as String?)
+                binding.itventas3.setText(it.get("VentCon3") as String?)
+                binding.Incom1.setText(it.get("InCoDF1") as String?)
+                binding.Incom2.setText(it.get("InCoDF2") as String?)
+                binding.Incom3.setText(it.get("InCoDF3") as String?)
+                binding.Vafi1.setText(it.get("VeAcFi1") as String?)
+                binding.Vafi2.setText(it.get("VeAcFi2") as String?)
+                binding.Vafi3.setText(it.get("VeAcFi3") as String?)
+                binding.Alqu1.setText(it.get("Alq1") as String?)
+                binding.Alqu2.setText(it.get("Alq2") as String?)
+                binding.Alqu3.setText(it.get("Alq3") as String?)
+                binding.Otros1.setText(it.get("otros1") as String?)
+                binding.Otros2.setText(it.get("otros2") as String?)
+                binding.Otros3.setText(it.get("otros3") as String?)
+                binding.Tventas1.setText(it.get("tot1") as String?)
+                binding.Tventas2.setText(it.get("tot2") as String?)
+                binding.Tventas3.setText(it.get("tot3") as String?)
 
 
             val porcIT:Double=0.03
@@ -133,28 +172,32 @@ class ItFragment : Fragment(R.layout.fragment_it) {
 
             binding.Itper1.setText(TotItPer1.toString())
             binding.Itper2.setText(TotItPer2.toString())
-            binding.Itper3.setText(TotItPer3.toString())
+            binding.Itper3.setText(TotItPer3.toString())}
         }
     }
     private fun recuperarDatosIUE(){
         db.collection("Users").document(user?.email.toString()).collection("Iue").document("DatosIUE").get().addOnSuccessListener {
-            binding.detalle25.setText(it.get("iuePorPagar") as String?)
-            binding.detalle24.setText("0.0")
+            if(it.get("iuePorPagar") as String?==null){
+                binding.detalle25.setText("0.0")
+                binding.detalle24.setText("0.0")
+
+            }else {
+                binding.detalle24.setText("0.0")
+                binding.detalle25.setText(it.get("iuePorPagar") as String?)
+
+            }
         }
 
     }
     private fun recuperarIT(){
         db.collection("Users").document(user?.email.toString()).collection("IT").document("DatosIt").get().addOnSuccessListener {
+
             binding.detalle26.setText(it.get("iue3") as String?)
             binding.SaDff1.setText(it.get("totFavFoC1") as String?)
             binding.SaDff2.setText(it.get("totFavFoC2") as String?)
-            binding.SaDff3.setText(it.get("totFavFoC3") as String?)
+            binding.SaDff3.setText(it.get("totFavFoC3") as String?)}
 
-    }}
-    companion object {
-
-        @JvmStatic
-        fun newInstance() = ItFragment()
     }
+
 
 }

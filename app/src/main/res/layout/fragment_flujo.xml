@@ -5,6 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="#000000"
+    android:backgroundTint="#000000"
     tools:context=".IueFragment"
     >
 
@@ -36,197 +39,247 @@
                         android:text="Flujo de efectivo proyectado"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565"
                         android:textSize="20dp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
+                        android:layout_margin="10dp"
                         android:text="Flujo de efectivo proyectado por actividades de operacion"
-                        android:layout_margin="10dp"/>
+                        android:textColor="#656565" />
+
                     <TextView
                         android:id="@+id/etFlujoActividadesOperacion"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Ingresos de operacion" />
+                        android:text="Ingresos de operacion"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etIngresosOperacion"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Gastos de operacion" />
+                        android:text="Gastos de operacion"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etGastosOperacion"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Flujo de efectivo por actividades de inversion"/>
+                        android:text="Flujo de efectivo por actividades de inversion"
+                        android:textColor="#656565" />
+
                     <TextView
                         android:id="@+id/etFlujoEfectivoInversion"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Ingresos de capital" />
+                        android:text="Ingresos de capital"
+                        android:textColor="#656565" />
 
                     <EditText
                         android:id="@+id/etIngresosCapital"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:backgroundTint="#039BE5"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Gastos de capital" />
+                        android:text="Gastos de capital"
+                        android:textColor="#656565" />
+
                     <EditText
                         android:id="@+id/etGastosCapital"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:backgroundTint="#039BE5"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Flujo de efectivo por actividades de financiamiento"/>
+                        android:text="Flujo de efectivo por actividades de financiamiento"
+                        android:textColor="#656565" />
+
                     <TextView
                         android:id="@+id/etFlujoActividadesFinanciamiento"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Fuentes" />
+                        android:text="Fuentes"
+                        android:textColor="#656565" />
+
                     <EditText
                         android:id="@+id/etFuentes"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:backgroundTint="#039BE5"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Usos" />
+                        android:text="Usos"
+                        android:textColor="#656565" />
+
                     <EditText
                         android:id="@+id/etUsos"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:backgroundTint="#039BE5"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Incremento proyectada del efectivo del periodo"/>
+                        android:text="Incremento proyectada del efectivo del periodo"
+                        android:textColor="#656565" />
+
                     <TextView
                         android:id="@+id/etIncrementoEfectivoPeriodo"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="79dp"
                     android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="199dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:text="Efectivo al inicio del periodo"/>
+                        android:text="Efectivo al inicio del periodo"
+                        android:textColor="#656565" />
+
                     <TextView
                         android:id="@+id/etEfectivoInicioPeriodo"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="82dp"
                     android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
                         android:layout_margin="10dp"
                         android:layout_weight="0"
                         android:text="Saldo de efectivo final proyectado"
+                        android:textColor="#656565"
                         android:translationY="-10dp" />
+
                     <TextView
                         android:id="@+id/etSaldoFinalEfectivoProyectado"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
                 <LinearLayout
