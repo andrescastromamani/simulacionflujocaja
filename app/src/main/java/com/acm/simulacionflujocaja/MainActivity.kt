@@ -10,8 +10,7 @@ import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
-import com.acm.simulacionflujocaja.databinding.ActivityMainBinding
-import com.acm.simulacionflujocaja.databinding.NavHeaderBinding
+
 import kotlinx.android.synthetic.main.activity_main.*
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
@@ -29,15 +28,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btnPdfGenerate.setOnClickListener{
-            val intent = Intent(this, GeneratePdfActivity::class.java).apply {
-            startActivity(intent)
+            val intent = Intent(this, GeneratePdfActivity::class.java).apply{
             }
+            startActivity(intent)
         }
 
-val  binding= ActivityMainBinding.inflate(layoutInflater)
-setContentView(binding.root)
-
-         val headerView: View = nav_view.getHeaderView(0)
+        val headerView: View = nav_view.getHeaderView(0)
         val navUserEmail: TextView = headerView.findViewById(R.id.textView_email)
         nav_view.getMenu().findItem(R.id.btnLogout).setOnMenuItemClickListener { menuItem ->
             FirebaseAuth.getInstance().signOut()
@@ -139,7 +135,4 @@ setContentView(binding.root)
             }
             return super.onOptionsItemSelected(item)
         }
-
-
-
 }
