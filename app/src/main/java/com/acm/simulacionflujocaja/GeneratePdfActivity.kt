@@ -125,9 +125,17 @@ class GeneratePdfActivity : AppCompatActivity() {
                 startYPosition += 20
             }
             canvas.drawLine(170F, 92F, 170F, 330F, paint)
+
+            paint.textSize = 6.0f
+            paint.color = Color.BLUE
+            canvas.drawText("Saldo de Efectivo Final Proyectado :    " + saldoEfectivoFinalProyectado,
+                10F, 350F,
+                paint
+            )
             document.finishPage(page)
 
             //Page 2
+            /*
             val pageInfo1 = PageInfo.Builder(250, 400, 1).create()
             val page1: PdfDocument.Page = document.startPage(pageInfo1)
             val canvas1: Canvas = page1.canvas
@@ -163,10 +171,9 @@ class GeneratePdfActivity : AppCompatActivity() {
             canvas1.drawLine(175F, 40F, 175F, 395F, paint)
             canvas1.drawLine(210F, 40F, 210F, 395F, paint)
 
-            document.finishPage(page1)
+            document.finishPage(page1)*/
 
-
-            val file = File(Environment.getExternalStorageDirectory(), "/simulacion.pdf")
+            val file = File(Environment.getExternalStorageDirectory(), "/reporteFlujoCaja.pdf")
 
             try {
                 document.writeTo(FileOutputStream(file))

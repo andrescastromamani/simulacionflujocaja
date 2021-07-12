@@ -50,4 +50,7 @@
         android:id="@+id/btnLogout"
         android:icon="@drawable/logout"
         android:title="Cerrar Sesion"/>
+    <item
+        android:icon="@drawable/logout"
+        android:title="TODO" />
 </menu>
