@@ -5,6 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000"
     tools:context=".ItFragment"
    >
 
@@ -43,6 +45,7 @@
                         android:text="IT"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#656565"
                         android:textSize="22dp" />
                 </LinearLayout>
 
@@ -56,6 +59,7 @@
                         android:layout_margin="10dp"
                         android:text="DETALLE"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="#656565"
                         android:textSize="18sp" />
 
                     <TextView
@@ -65,6 +69,7 @@
                         android:layout_margin="10dp"
                         android:text="Mes1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="#656565"
                         android:textSize="20sp" />
 
                     <TextView
@@ -74,6 +79,7 @@
                         android:layout_margin="10dp"
                         android:text="Mes2"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="#656565"
                         android:textSize="20sp" />
 
                     <TextView
@@ -83,6 +89,7 @@
                         android:layout_margin="10dp"
                         android:text="Mes3"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="#656565"
                         android:textSize="20sp" />
                 </LinearLayout>
 
@@ -96,7 +103,8 @@
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Ventas"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/itventas1"
@@ -104,7 +112,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/itventas2"
@@ -112,7 +121,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/itventas3"
@@ -120,7 +130,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
@@ -133,7 +144,8 @@
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Intereses Comerciales"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/Incom1"
@@ -141,7 +153,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Incom2"
@@ -149,7 +162,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Incom3"
@@ -157,7 +171,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
@@ -171,7 +186,8 @@
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Venta de activos fijos"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/Vafi1"
@@ -179,7 +195,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Vafi2"
@@ -187,7 +204,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Vafi3"
@@ -195,7 +213,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -207,7 +226,8 @@
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Alquileres"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/Alqu1"
@@ -215,7 +235,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Alqu2"
@@ -223,7 +244,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Alqu3"
@@ -231,7 +253,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
@@ -244,7 +267,8 @@
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Otros"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/Otros1"
@@ -252,7 +276,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Otros2"
@@ -260,7 +285,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Otros3"
@@ -268,7 +294,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
@@ -281,7 +308,8 @@
                         android:layout_height="35dp"
                         android:layout_margin="10dp"
                         android:text="TOTAL VENTAS DE BIENES Y SERVICIOS FACTURADAS"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/Tventas1"
@@ -289,7 +317,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Tventas2"
@@ -297,7 +326,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Tventas3"
@@ -305,7 +335,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
@@ -318,7 +349,8 @@
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="IT DEL PERIODO"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/Itper1"
@@ -326,7 +358,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Itper2"
@@ -334,7 +367,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Itper3"
@@ -342,7 +376,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
@@ -355,7 +390,8 @@
                         android:layout_height="40dp"
                         android:layout_margin="10dp"
                         android:text="Saldo IUE por compensar del mes anterior"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/detalle24"
@@ -363,7 +399,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/detalle25"
@@ -371,7 +408,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/detalle26"
@@ -379,7 +417,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
@@ -392,7 +431,8 @@
                         android:layout_height="40dp"
                         android:layout_margin="10dp"
                         android:text="SALDO DEFINITIVO A FAVOR DEL FISCO (CONTRIBUYENTE)"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/SaDff1"
@@ -400,7 +440,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/SaDff2"
@@ -408,7 +449,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/SaDff3"
@@ -416,7 +458,8 @@
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
                         android:hint="0.0"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 

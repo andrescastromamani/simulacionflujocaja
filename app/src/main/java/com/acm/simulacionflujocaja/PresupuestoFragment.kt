@@ -207,13 +207,13 @@ if(it.get("Ventas contado mes 3") as String?==null){
             binding.ventas3.setText(it.get("Ventas contado mes 5") as String?)
 
 
-            binding.editText4.setText(it.get("total30diasM1") as String?)
-            binding.editText5.setText(it.get("total30diasM2") as String?)
-            binding.editText6.setText(it.get("total30diasM3") as String?)
+            binding.editText4.setText(it.get("Recuperacion 30 dias mes 3") as String?)
+            binding.editText5.setText(it.get("Recuperacion 30 dias mes 4") as String?)
+            binding.editText6.setText(it.get("Recuperacion 30 dias mes 5") as String?)
 
-            binding.editText7.setText(it.get("totala60diasM1") as String?)
-            binding.editText8.setText(it.get("totala60diasM2") as String?)
-            binding.editText9.setText(it.get("totala60diasM3") as String?)
+            binding.editText7.setText(it.get( "Recuperacion 60 dias mes 3") as String?)
+            binding.editText8.setText(it.get( "Recuperacion 60 dias mes 4") as String?)
+            binding.editText9.setText(it.get( "Recuperacion 60 dias mes 5") as String?)
 
             val ventas1:Double= parseDouble((it.get("Ventas contado mes 3")).toString())
             val ventas2:Double= parseDouble((it.get("Ventas contado mes 4")).toString())
@@ -221,14 +221,14 @@ if(it.get("Ventas contado mes 3") as String?==null){
             val totalVentas:Double= r.redondear(ventas1 + ventas2 + ventas3)
             binding.totalven.setText(totalVentas.toString())
 
-            val ventas30d1:Double= parseDouble((it.get("total30diasM1")).toString())
-            val ventas30d2:Double= parseDouble((it.get("total30diasM2")).toString())
-            val ventas30d3:Double= parseDouble((it.get("total30diasM3")).toString())
+            val ventas30d1:Double= parseDouble((it.get("Recuperacion 30 dias mes 3")).toString())
+            val ventas30d2:Double= parseDouble((it.get("Recuperacion 30 dias mes 4")).toString())
+            val ventas30d3:Double= parseDouble((it.get("Recuperacion 30 dias mes 5")).toString())
             val totalRec30d:Double= r.redondear(ventas30d1 + ventas30d2+ ventas30d3)
             binding.totalv2.setText(totalRec30d.toString())
-            val ventas60d1:Double= parseDouble((it.get("totala60diasM1")).toString())
-            val ventas60d2:Double= parseDouble((it.get("totala60diasM2")).toString())
-            val ventas60d3:Double= parseDouble((it.get("totala60diasM3")).toString())
+            val ventas60d1:Double= parseDouble((it.get("Recuperacion 30 dias mes 3")).toString())
+            val ventas60d2:Double= parseDouble((it.get("Recuperacion 30 dias mes 4")).toString())
+            val ventas60d3:Double= parseDouble((it.get("Recuperacion 30 dias mes 5")).toString())
             val totalRec60d:Double= r.redondear(ventas60d1 + ventas60d2 + ventas60d3)
             binding.totalv3.setText(totalRec60d.toString())
 

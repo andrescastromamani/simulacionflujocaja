@@ -5,213 +5,280 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000"
     tools:context=".IueFragment">
 
     <ScrollView
-        android:layout_width="fill_parent"
+        android:layout_width="744dp"
         android:layout_height="wrap_content"
         android:fillViewport="true"
         android:scrollbarStyle="outsideInset"
         android:scrollbars="horizontal|vertical">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical">
-                <LinearLayout
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="395dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:text="IUE"
+                    android:textAlignment="center"
+                    android:textColor="#656565"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:paddingVertical="10dp"
+                    android:text="% Destionado a Dividendos"
+                    android:textColor="#656565"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etDestinadoDividendos"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="395dp"
-                        android:layout_height="match_parent"
-                        android:text="IUE"
-                        android:textSize="20dp"
-                        android:textColor="@color/teal_700"
-                        android:layout_margin="10dp"
-                        android:textAlignment="center"/>
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#039BE5"
+                    android:hint="0%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="92dp">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:paddingVertical="10dp"
+                    android:text="% Destionado a Pagos de Primas"
+                    android:textColor="#656565"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etDestinadoPagosPrimas"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="250dp"
-                        android:layout_height="match_parent"
-                        android:text="% Destionado a Dividendos"
-                        android:textSize="18sp"
-                        android:paddingVertical="10dp"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etDestinadoDividendos"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="0%"
-                        android:textSize="20sp"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#039BE5"
+                    android:hint="0%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:paddingVertical="10dp"
+                    android:text="Utilidad Antes de Impuestos"
+                    android:textColor="#656565"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etUtilidadAntesImpuestos"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="250dp"
-                        android:layout_height="match_parent"
-                        android:text="% Destionado a Pagos de Primas"
-                        android:textSize="18sp"
-                        android:paddingVertical="10dp"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etDestinadoPagosPrimas"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="0%"
-                        android:textSize="20sp"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#039BE5"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:paddingVertical="10dp"
+                    android:text="Gastos Deducibles"
+                    android:textColor="#656565"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etGastosDeducibles"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="250dp"
-                        android:layout_height="match_parent"
-                        android:text="Utilidad Antes de Impuestos"
-                        android:textSize="18sp"
-                        android:paddingVertical="10dp"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etUtilidadAntesImpuestos"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textSize="20sp"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#039BE5"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:paddingVertical="10dp"
+                    android:text="Ingresos no Imponibles"
+                    android:textColor="#656565"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/etIngresosNoImponibles"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="250dp"
-                        android:layout_height="match_parent"
-                        android:text="Gastos Deducibles"
-                        android:textSize="18sp"
-                        android:paddingVertical="10dp"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etGastosDeducibles"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textSize="20sp"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:backgroundTint="#039BE5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:paddingVertical="10dp"
+                    android:text="Utilidad Impositiva"
+                    android:textColor="#656565"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/etUtilidadImpositiva"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="250dp"
-                        android:layout_height="match_parent"
-                        android:text="Ingresos no Imponibles"
-                        android:textSize="18sp"
-                        android:paddingVertical="10dp"
-                        android:layout_margin="10dp"/>
-                    <EditText
-                        android:id="@+id/etIngresosNoImponibles"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textSize="20sp"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:paddingVertical="10dp"
+                    android:text="IUE por Pagar"
+                    android:textColor="#656565"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/etIuePorPagar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="250dp"
-                        android:layout_height="match_parent"
-                        android:text="Utilidad Impositiva"
-                        android:textSize="18sp"
-                        android:paddingVertical="10dp"
-                        android:layout_margin="10dp"/>
-                    <TextView
-                        android:id="@+id/etUtilidadImpositiva"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textSize="20sp"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:paddingVertical="10dp"
+                    android:text="Utlitidad Despues de Impuestos"
+                    android:textColor="#656565"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/etUtilidadDespuesImpuestos"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="250dp"
-                        android:layout_height="match_parent"
-                        android:text="IUE por Pagar"
-                        android:textSize="18sp"
-                        android:paddingVertical="10dp"
-                        android:layout_margin="10dp"/>
-                    <TextView
-                        android:id="@+id/etIuePorPagar"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textSize="20sp"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:paddingVertical="10dp"
+                    android:text="Dividendos Por Pagar"
+                    android:textColor="#656565"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/etDividendosPorPagar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="250dp"
-                        android:layout_height="match_parent"
-                        android:text="Utlitidad Despues de Impuestos"
-                        android:textSize="17sp"
-                        android:paddingVertical="10dp"
-                        android:layout_margin="10dp"/>
-                    <TextView
-                        android:id="@+id/etUtilidadDespuesImpuestos"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textSize="20sp"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:paddingVertical="10dp"
+                    android:text="Primas por Pagar"
+                    android:textColor="#656565"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/etPrimasPorPagar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="250dp"
-                        android:layout_height="match_parent"
-                        android:text="Dividendos Por Pagar"
-                        android:textSize="18sp"
-                        android:paddingVertical="10dp"
-                        android:layout_margin="10dp"/>
-                    <TextView
-                        android:id="@+id/etDividendosPorPagar"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textSize="20sp"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="250dp"
-                        android:layout_height="match_parent"
-                        android:text="Primas por Pagar"
-                        android:textSize="18sp"
-                        android:paddingVertical="10dp"
-                        android:layout_margin="10dp"/>
-                    <TextView
-                        android:id="@+id/etPrimasPorPagar"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textSize="20sp"
-                        android:layout_margin="10dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp">
-                    <Button
-                        android:id="@+id/btnSaveIue"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:backgroundTint="#039BE5"
-                        android:text="Calcular" />
-                </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="405dp"
+                android:layout_height="79dp">
+
+                <Button
+                    android:id="@+id/btnSaveIue"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#039BE5"
+                    android:text="Calcular" />
+
+                <Space
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

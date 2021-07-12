@@ -119,8 +119,8 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
     private fun recuperarDatos() {
         db.collection("Users").document(email.toString()).collection("FlujoEfectivoProyectado").document("DatosFlujoProyectado").get().addOnSuccessListener{
            // binding.etFlujoActividadesOperacion.setText(it.get("flujoEfectivoActividadOperacion") as String?)
-            binding.etIngresosOperacion.setText(it.get("ingresosOperacion") as String?)
-            binding.etGastosOperacion.setText(it.get("gastosOperacion") as String?)
+           // binding.etIngresosOperacion.setText(it.get("ingresosOperacion") as String?)
+            //binding.etGastosOperacion.setText(it.get("gastosOperacion") as String?)
             binding.etFlujoEfectivoInversion.setText(it.get("flujoActividadesInversion") as String?)
             binding.etIngresosCapital.setText(it.get("ingresosCapital") as String?)
             binding.etGastosCapital.setText(it.get("gastosCapital") as String?)
@@ -128,7 +128,7 @@ class FlujoFragment : Fragment(R.layout.fragment_flujo) {
             binding.etFuentes.setText(it.get("fuentes") as String?)
             binding.etUsos.setText(it.get("usos") as String?)
             binding.etIncrementoEfectivoPeriodo.setText(it.get("incrementoEfectivoPeriodo") as String?)
-            binding.etEfectivoInicioPeriodo.setText(it.get("efectivoInicioPeriodo") as String?)
+            //binding.etEfectivoInicioPeriodo.setText(it.get("efectivoInicioPeriodo") as String?)
             binding.etSaldoFinalEfectivoProyectado.setText(it.get("saldoEfectivoFinalProyectado") as String?)
         }
     }

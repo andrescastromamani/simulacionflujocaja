@@ -326,21 +326,17 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
             _binding?.incob60d4?.setText(r.redondear(totIncob60d4).toString())
             _binding?.incob60d5?.setText(r.redondear(totIncob60d5).toString())
             //calculo de total recuperacion 30 y 60 dias mas sus intereses solo de los meses proyectados
-            val total30diasM1:Double=r.redondear(totInteres30d3+rec30dias3)
-            val total30diasM2:Double=r.redondear(totInteres30d4+rec30dias4)
-            val total30diasM3:Double=r.redondear(totInteres30d5+rec30dias5)
-            val totala60diasM1:Double=r.redondear(totInteres60d3+rec60dias3)
-            val totala60diasM2:Double=r.redondear(totInteres60d4+rec60dias4)
-            val totala60diasM3:Double=r.redondear(totInteres60d5+rec60dias5)
+            val totalInteresM1:Double=r.redondear(totInteres30d3+totInteres60d3)
+            val totalInteresM2:Double=r.redondear(totInteres30d4+totInteres60d4)
+            val totalInteresM3:Double=r.redondear(totInteres30d5+totInteres60d5)
+
             db.collection("Users").document(user?.email.toString()).collection("Entradas").document("Inputs").set(
                 hashMapOf(
 
-                    "total30diasM1" to  total30diasM1.toString(),
-                    "total30diasM2" to  total30diasM2.toString(),
-                    "total30diasM3" to total30diasM3.toString(),
-                    "totala60diasM1" to  totala60diasM1.toString(),
-                    "totala60diasM2" to  totala60diasM2.toString(),
-                    "totala60diasM3" to  totala60diasM3.toString(),
+                    "total30diasM1" to  totalInteresM1.toString(),
+                    "total30diasM2" to  totalInteresM2.toString(),
+                    "total30diasM3" to totalInteresM3.toString(),
+
 
                     "Ventas contado mes 1" to  binding.etVenCont1.text.toString(),
                     "Ventas contado mes 2" to  binding.etVenCont2.text.toString(),
@@ -553,18 +549,24 @@ class InputsFragment : Fragment(R.layout.fragment_inputs) {
 
     private fun elimnarDatos(){
         binding.btnEliminarInputs.setOnClickListener {
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("PrecioUd").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("IngresoBruto").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Calculo").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("DatosIva").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Prestamo").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("DatosPresupuesto").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("Inputs").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("SueldosMes").delete()
             db.collection("Users").document(email.toString()).collection("Entradas").document("OtrosDatos").delete()
             db.collection("Users").document(email.toString()).collection("Entradas").document("Ventas Contado").delete()
             db.collection("Users").document(email.toString()).collection("Entradas").document("Recuperacion 30 dias").delete()
-            db.collection("Users").document(email.toString()).collection("Entradas").document("Recuperacion 60 dias").delete()
+            db.collection("Users").document(email.toString()).collection("Entradas").document("ecuperacion 60 dias").delete()
             db.collection("Users").document(email.toString()).collection("Entradas").document("Intereses a cobrar 30d dias").delete()
             db.collection("Users").document(email.toString()).collection("Entradas").document("Intereses a cobrar 60d dias").delete()
             db.collection("Users").document(email.toString()).collection("Entradas").document("Incobrabilidad 30 dias").delete()
             db.collection("Users").document(email.toString()).collection("Entradas").document("Incobrabilidad 60 dias").delete()
+            db.collection("Users").document(email.toString()).collection("FlujoEfectivoProyectado").document("DatosFlujoProyectado").delete()
+            db.collection("Users").document(email.toString()).collection("IT").document("DatosIt").delete()
+            db.collection("Users").document(email.toString()).collection("Iue").document("DatosIUE").delete()
+            db.collection("Users").document(email.toString()).collection("SueldosSalarios").document("DatosSueldosSalarios").delete()
         } }
     fun recuperarDatosInputs(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("Meses").get().addOnSuccessListener {

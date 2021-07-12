@@ -229,10 +229,16 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
                 binding.etmes1.setText("0.0")
                 binding.etmes2.setText("0.0")
                 binding.etmes3.setText("0.0")
+                binding.Inco1.setText("0.0")
+                binding.Inco2.setText("0.0")
+                binding.Inco3.setText("0.0")
             }else{
             binding.etVentas1.setText(it.get("Ventas contado mes 3") as String?)
             binding.etVentas2.setText(it.get("Ventas contado mes 4") as String?)
-            binding.etVentas3.setText(it.get("Ventas contado mes 5") as String?)}
+            binding.etVentas3.setText(it.get("Ventas contado mes 5") as String?)
+                binding.Inco1.setText(it.get("total30diasM1") as String?)
+                binding.Inco2.setText(it.get("total30diasM2") as String?)
+                binding.Inco3.setText(it.get("total30diasM3") as String?)}
         }
     }
     private fun recuperarTodoIVA(){
@@ -299,6 +305,7 @@ class IvaFragment : Fragment(R.layout.fragment_iva) {
 
         }
     }
+
     //metodo para evitar errores si se deja campo vacio
     private fun validarCampos(){
 
