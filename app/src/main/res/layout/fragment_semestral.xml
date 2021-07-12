@@ -40,7 +40,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:text="Simulación semestral"
+                            android:text="Simulación Semestral"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                             android:textSize="24sp" />

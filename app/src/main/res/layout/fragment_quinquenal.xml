@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible"
+    android:background="#000000"
+    android:backgroundTint="#000000"
     tools:context=".QuinquenalFragment">
     <ScrollView
         android:id="@+id/scrollView6"
@@ -38,7 +39,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Simulación semestral"
+                        android:text="Simulación Quinquenal"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                         android:textSize="24sp" />
@@ -55,6 +56,7 @@
                         android:layout_margin="10dp"
                         android:text="Distribución"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565"
                         android:textSize="18sp" />
 
                     <TextView
@@ -64,6 +66,7 @@
                         android:text="Media"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565"
                         android:textSize="20sp" />
 
                     <TextView
@@ -73,6 +76,7 @@
                         android:text="Desv. Típica"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565"
                         android:textSize="20sp" />
 
                     <Space
@@ -87,7 +91,7 @@
                         android:text="Saldo Inicial:"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="#808080"
+                        android:textColor="#656565"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -103,7 +107,8 @@
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Entradas"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etMediaEnt"
@@ -112,7 +117,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipEnt"
@@ -121,7 +127,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <Space
                         android:layout_width="32dp"
@@ -135,7 +142,8 @@
                         android:layout_margin="0dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
 
                 </LinearLayout>
@@ -149,7 +157,8 @@
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Salidas"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etMediaSal"
@@ -158,7 +167,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipSal"
@@ -167,7 +177,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -198,7 +209,8 @@
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Meses"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:layout_width="100dp"
@@ -206,7 +218,8 @@
                         android:layout_margin="10dp"
                         android:text="Neto final esperado"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:layout_width="100dp"
@@ -214,7 +227,8 @@
                         android:layout_margin="10dp"
                         android:text="Desv. típica"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:layout_width="100dp"
@@ -223,6 +237,7 @@
                         android:text="IC 95% - Min"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#656565"
                         android:textSize="16sp" />
 
                     <TextView
@@ -233,20 +248,24 @@
                         android:text="IC 95% - Max"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:textColor="#656565" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sgte. 1"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM1"
@@ -255,7 +274,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM1"
@@ -264,7 +284,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM1"
@@ -273,7 +294,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM1"
@@ -283,20 +305,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="35dp"
                         android:layout_margin="10dp"
                         android:text="Mes sgte. 2"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM2"
@@ -305,7 +331,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM2"
@@ -314,7 +341,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM2"
@@ -323,7 +351,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM2"
@@ -333,14 +362,16 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
@@ -348,7 +379,8 @@
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:text="Mes sgte. 3"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM3"
@@ -358,7 +390,8 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM3"
@@ -368,7 +401,8 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM3"
@@ -378,7 +412,8 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM3"
@@ -388,18 +423,23 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 4"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM4"
@@ -408,7 +448,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM4"
@@ -417,7 +458,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM4"
@@ -426,7 +468,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM4"
@@ -436,19 +479,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 5"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM5"
@@ -457,7 +505,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM5"
@@ -466,7 +515,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM5"
@@ -475,7 +525,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM5"
@@ -485,19 +536,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 6"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM6"
@@ -506,7 +562,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM6"
@@ -515,7 +572,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM6"
@@ -524,7 +582,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM6"
@@ -534,19 +593,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 7"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM7"
@@ -555,7 +619,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM7"
@@ -564,7 +629,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM7"
@@ -573,7 +639,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM7"
@@ -583,19 +650,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 8"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM8"
@@ -604,7 +676,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM8"
@@ -613,7 +686,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM8"
@@ -622,7 +696,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM8"
@@ -632,19 +707,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 9"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM9"
@@ -653,7 +733,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM9"
@@ -662,7 +743,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM9"
@@ -671,7 +753,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM9"
@@ -681,19 +764,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 10"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM10"
@@ -702,7 +790,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM10"
@@ -711,7 +800,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM10"
@@ -720,7 +810,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM10"
@@ -730,19 +821,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 11"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM11"
@@ -751,7 +847,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM11"
@@ -760,7 +857,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM11"
@@ -769,7 +867,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM11"
@@ -779,19 +878,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 12"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM12"
@@ -800,7 +904,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM12"
@@ -809,7 +914,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM12"
@@ -818,7 +924,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM12"
@@ -828,19 +935,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 13"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM13"
@@ -849,7 +961,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM13"
@@ -858,7 +971,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM13"
@@ -867,7 +981,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM13"
@@ -877,19 +992,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 14"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM14"
@@ -898,7 +1018,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM14"
@@ -907,7 +1028,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM14"
@@ -916,7 +1038,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM14"
@@ -926,19 +1049,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 15"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM15"
@@ -947,7 +1075,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM15"
@@ -956,7 +1085,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM15"
@@ -965,7 +1095,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM15"
@@ -975,19 +1106,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 16"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM16"
@@ -996,7 +1132,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM16"
@@ -1005,7 +1142,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM16"
@@ -1014,7 +1152,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM16"
@@ -1024,19 +1163,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 17"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM17"
@@ -1045,7 +1189,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM17"
@@ -1054,7 +1199,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM17"
@@ -1063,7 +1209,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM17"
@@ -1073,19 +1220,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 18"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM18"
@@ -1094,7 +1246,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM18"
@@ -1103,7 +1256,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM18"
@@ -1112,7 +1266,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM18"
@@ -1122,19 +1277,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 19"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM19"
@@ -1143,7 +1303,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM19"
@@ -1152,7 +1313,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM19"
@@ -1161,7 +1323,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM19"
@@ -1171,19 +1334,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 20"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM20"
@@ -1192,7 +1360,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM20"
@@ -1201,7 +1370,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM20"
@@ -1210,7 +1380,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM20"
@@ -1220,19 +1391,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 21"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM21"
@@ -1241,7 +1417,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM21"
@@ -1250,7 +1427,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM21"
@@ -1259,7 +1437,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM21"
@@ -1269,19 +1448,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 22"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM22"
@@ -1290,7 +1474,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM22"
@@ -1299,7 +1484,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM22"
@@ -1308,7 +1494,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM22"
@@ -1318,19 +1505,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 23"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM23"
@@ -1339,7 +1531,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM23"
@@ -1348,7 +1541,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM23"
@@ -1357,7 +1551,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM23"
@@ -1367,19 +1562,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 24"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM24"
@@ -1388,7 +1588,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM24"
@@ -1397,7 +1598,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM24"
@@ -1406,7 +1608,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM24"
@@ -1416,19 +1619,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 25"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM25"
@@ -1437,7 +1645,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM25"
@@ -1446,7 +1655,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM25"
@@ -1455,7 +1665,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM25"
@@ -1465,19 +1676,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 26"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM26"
@@ -1486,7 +1702,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM26"
@@ -1495,7 +1712,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM26"
@@ -1504,7 +1722,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM26"
@@ -1514,19 +1733,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 27"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM27"
@@ -1535,7 +1759,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM27"
@@ -1544,7 +1769,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM27"
@@ -1553,7 +1779,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM27"
@@ -1563,19 +1790,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 28"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM28"
@@ -1584,7 +1816,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM28"
@@ -1593,7 +1826,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM28"
@@ -1602,7 +1836,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM28"
@@ -1612,19 +1847,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 29"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM29"
@@ -1633,7 +1873,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM29"
@@ -1642,7 +1883,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM29"
@@ -1651,7 +1893,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM29"
@@ -1661,19 +1904,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 30"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM30"
@@ -1682,7 +1930,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM30"
@@ -1691,7 +1940,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM30"
@@ -1700,7 +1950,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM30"
@@ -1710,19 +1961,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 31"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM31"
@@ -1731,7 +1987,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM31"
@@ -1740,7 +1997,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM31"
@@ -1749,7 +2007,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM31"
@@ -1759,19 +2018,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 32"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM32"
@@ -1780,7 +2044,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM32"
@@ -1789,7 +2054,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM32"
@@ -1798,7 +2064,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM32"
@@ -1808,19 +2075,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 33"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM33"
@@ -1829,7 +2101,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM33"
@@ -1838,7 +2111,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM33"
@@ -1847,7 +2121,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM33"
@@ -1857,19 +2132,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 34"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM34"
@@ -1878,7 +2158,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM34"
@@ -1887,7 +2168,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM34"
@@ -1896,7 +2178,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM34"
@@ -1906,19 +2189,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 35"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM35"
@@ -1927,7 +2215,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM35"
@@ -1936,7 +2225,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM35"
@@ -1945,7 +2235,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM35"
@@ -1955,19 +2246,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 36"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM36"
@@ -1976,7 +2272,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM36"
@@ -1985,7 +2282,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM36"
@@ -1994,7 +2292,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM36"
@@ -2004,19 +2303,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 37"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM37"
@@ -2025,7 +2329,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM37"
@@ -2034,7 +2339,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM37"
@@ -2043,7 +2349,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM37"
@@ -2053,19 +2360,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 38"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM38"
@@ -2074,7 +2386,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM38"
@@ -2083,7 +2396,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM38"
@@ -2092,7 +2406,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM38"
@@ -2102,19 +2417,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 39"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM39"
@@ -2123,7 +2443,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM39"
@@ -2132,7 +2453,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM39"
@@ -2141,7 +2463,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM39"
@@ -2151,19 +2474,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 40"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM40"
@@ -2172,7 +2500,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM40"
@@ -2181,7 +2510,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM40"
@@ -2190,7 +2520,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM40"
@@ -2200,19 +2531,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 41"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM41"
@@ -2221,7 +2557,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM41"
@@ -2230,7 +2567,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM41"
@@ -2239,7 +2577,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM41"
@@ -2249,19 +2588,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 42"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM42"
@@ -2270,7 +2614,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM42"
@@ -2279,7 +2624,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM42"
@@ -2288,7 +2634,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM42"
@@ -2298,19 +2645,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 43"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM43"
@@ -2319,7 +2671,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM43"
@@ -2328,7 +2681,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM43"
@@ -2337,7 +2691,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM43"
@@ -2347,19 +2702,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 44"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM44"
@@ -2368,7 +2728,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM44"
@@ -2377,7 +2738,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM44"
@@ -2386,7 +2748,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM44"
@@ -2396,19 +2759,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 45"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM45"
@@ -2417,7 +2785,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM45"
@@ -2426,7 +2795,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM45"
@@ -2435,7 +2805,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM45"
@@ -2445,19 +2816,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 46"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM46"
@@ -2466,7 +2842,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM46"
@@ -2475,7 +2852,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM46"
@@ -2484,7 +2862,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM46"
@@ -2494,19 +2873,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 47"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM47"
@@ -2515,7 +2899,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM47"
@@ -2524,7 +2909,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM47"
@@ -2533,7 +2919,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM47"
@@ -2543,19 +2930,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 48"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM48"
@@ -2564,7 +2956,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM48"
@@ -2573,7 +2966,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM48"
@@ -2582,7 +2976,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM48"
@@ -2592,19 +2987,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 49"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM49"
@@ -2613,7 +3013,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM49"
@@ -2622,7 +3023,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM49"
@@ -2631,7 +3033,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM49"
@@ -2641,19 +3044,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 50"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM50"
@@ -2662,7 +3070,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM50"
@@ -2671,7 +3080,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM50"
@@ -2680,7 +3090,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM50"
@@ -2690,19 +3101,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 51"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM51"
@@ -2711,7 +3127,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM51"
@@ -2720,7 +3137,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM51"
@@ -2729,7 +3147,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM51"
@@ -2739,19 +3158,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 52"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM52"
@@ -2760,7 +3184,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM52"
@@ -2769,7 +3194,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM52"
@@ -2778,7 +3204,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM52"
@@ -2788,19 +3215,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 53"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM53"
@@ -2809,7 +3241,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM53"
@@ -2818,7 +3251,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM53"
@@ -2827,7 +3261,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM53"
@@ -2837,19 +3272,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 54"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM54"
@@ -2858,7 +3298,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM54"
@@ -2867,7 +3308,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM54"
@@ -2876,7 +3318,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM54"
@@ -2886,19 +3329,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 55"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM55"
@@ -2907,7 +3355,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM55"
@@ -2916,7 +3365,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM55"
@@ -2925,7 +3375,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM55"
@@ -2935,19 +3386,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 56"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM56"
@@ -2956,7 +3412,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM56"
@@ -2965,7 +3422,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM56"
@@ -2974,7 +3432,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM56"
@@ -2984,19 +3443,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 57"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM57"
@@ -3005,7 +3469,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM57"
@@ -3014,7 +3479,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM57"
@@ -3023,7 +3489,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM57"
@@ -3033,19 +3500,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 58"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM58"
@@ -3054,7 +3526,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM58"
@@ -3063,7 +3536,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM58"
@@ -3072,7 +3546,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM58"
@@ -3082,19 +3557,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 59"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM59"
@@ -3103,7 +3583,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM59"
@@ -3112,7 +3593,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM59"
@@ -3121,7 +3603,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM59"
@@ -3131,19 +3614,24 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#121212">
 
                     <TextView
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:text="Mes sigte. 60"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#656565" />
 
                     <TextView
                         android:id="@+id/etPromNetoM60"
@@ -3152,7 +3640,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etDesvTipNetoM60"
@@ -3161,7 +3650,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMinM60"
@@ -3170,7 +3660,8 @@
                         android:layout_margin="10dp"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                     <TextView
                         android:id="@+id/etMaxM60"
@@ -3180,7 +3671,8 @@
                         android:layout_weight="1"
                         android:text="0000"
                         android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#FDFDFD" />
 
                 </LinearLayout>
 

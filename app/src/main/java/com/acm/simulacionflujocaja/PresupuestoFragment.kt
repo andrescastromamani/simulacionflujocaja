@@ -230,7 +230,7 @@ if(it.get("Ventas contado mes 3") as String?==null){
             val ventas60d2:Double= parseDouble((it.get("totala60diasM2")).toString())
             val ventas60d3:Double= parseDouble((it.get("totala60diasM3")).toString())
             val totalRec60d:Double= r.redondear(ventas60d1 + ventas60d2 + ventas60d3)
-            binding.totalv3.setText(totalRec30d.toString())
+            binding.totalv3.setText(totalRec60d.toString())
 
             val totalMes1:Double= r.redondear(ventas1 + ventas30d1 + ventas60d1)
             val totalMes2:Double=r.redondear( ventas2 + ventas30d2 + ventas60d2)
@@ -413,6 +413,7 @@ if(it.get("Ventas contado mes 3") as String?==null){
             ))
 
     }
+
     private fun recuperarTodoPresupuesto(){
         db.collection("Users").document(email.toString()).collection("Entradas").document("DatosPresupuesto").get().addOnSuccessListener {
 
@@ -484,10 +485,10 @@ if(it.get("Ventas contado mes 3") as String?==null){
             binding.editText22.setText(it.get("aportePat1") as String?)
             binding.editText23.setText(it.get("aportePat2") as String?)
             binding.editText24.setText(it.get("aportePat3") as String?)
-            val aportePat1:Double= parseDouble(it.get("aportePat1") as String?)
-            val aportePat2:Double= parseDouble(it.get("aportePat2") as String?)
-            val aportePat3:Double= parseDouble(it.get("aportePat3") as String?)
-            val totalAportesPatr:Double=r.redondear(aportePat1+aportePat2+aportePat3)
+            val aportePat1:Double=r.redondear( parseDouble(it.get("aportePat1") as String?))
+            val aportePat2:Double= r.redondear(parseDouble(it.get("aportePat2") as String?))
+            val aportePat3:Double= r.redondear(parseDouble(it.get("aportePat3") as String?))
+            val totalAportesPatr:Double=aportePat1+aportePat2+aportePat3
             binding.totalv8.setText(totalAportesPatr.toString())
             binding.editText25.setText(it.get("retSuelXmes1") as String?)
             binding.editText26.setText(it.get("retSuelXmes2") as String?)
@@ -495,15 +496,15 @@ if(it.get("Ventas contado mes 3") as String?==null){
             val retSuelXmes1:Double= parseDouble(it.get("retSuelXmes1") as String?)
             val retSuelXmes2:Double= parseDouble(it.get("retSuelXmes2") as String?)
             val retSuelXmes3:Double= parseDouble(it.get("retSuelXmes3") as String?)
-            val totalRetSueldo:Double=r.redondear(retSuelXmes1+retSuelXmes2+retSuelXmes3)
+            val totalRetSueldo:Double=retSuelXmes1+retSuelXmes2+retSuelXmes3
             binding.totalv9.setText(totalRetSueldo.toString())
             binding.editText28.setText(it.get("retApXmes1") as String?)
             binding.editText29.setText(it.get("retApXmes2") as String?)
             binding.editText30.setText(it.get("retApXmes3") as String?)
-            val retApXmes1:Double= parseDouble(it.get("retApXmes1") as String?)
-            val retApXmes2:Double= parseDouble(it.get("retApXmes2") as String?)
-            val retApXmes3:Double= parseDouble(it.get("retApXmes3") as String?)
-            val totalRetAporte:Double=r.redondear(retApXmes1+retApXmes2+retApXmes3)
+            val retApXmes1:Double= r.redondear(parseDouble(it.get("retApXmes1") as String?))
+            val retApXmes2:Double= r.redondear(parseDouble(it.get("retApXmes2") as String?))
+            val retApXmes3:Double= r.redondear(parseDouble(it.get("retApXmes3") as String?))
+            val totalRetAporte:Double=retApXmes1+retApXmes2+retApXmes3
             binding.totalv10.setText(totalRetAporte.toString())
 
         }
